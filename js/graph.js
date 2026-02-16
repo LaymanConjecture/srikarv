@@ -310,6 +310,7 @@
       .force('x', d3.forceX(width / 2).strength(0.05))
       .force('y', d3.forceY(height / 2).strength(0.05))
       .alphaDecay(0.05)
+      .velocityDecay(0.5)
       .stop();
 
     simulation.tick(300);
@@ -331,10 +332,9 @@
     }
   }
 
-  // Drag handlers — disable expensive filters during drag for smooth interaction
+  // Drag handlers — move only the dragged node, no simulation overhead
   function dragStarted(event, d) {
     disableFilters();
-    if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
     d.fy = d.y;
   }
@@ -342,13 +342,15 @@
   function dragged(event, d) {
     d.fx = event.x;
     d.fy = event.y;
+    d.x = event.x;
+    d.y = event.y;
+    ticked();
   }
 
   function dragEnded(event, d) {
-    if (!event.active) simulation.alphaTarget(0);
     d.fx = null;
     d.fy = null;
-    // Re-enable filters after simulation settles (handled in ticked)
+    enableFilters();
   }
 
   // Highlight connected nodes and edges
