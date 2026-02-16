@@ -1,0 +1,404 @@
+/* ============================================
+   Blog Knowledge Graph — Excalidraw-style
+   ============================================ */
+
+@font-face {
+  font-family: 'Virgil';
+  src: url('../assets/fonts/Virgil.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Reset & Base --- */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #FAFAF8;
+  color: #1e1e1e;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout --- */
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Graph Container --- */
+
+#graph-container {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+#graph-container.shifted {
+  transform: translateX(-15%);
+  opacity: 0.6;
+}
+
+#graph-container svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- Graph Nodes (SVG) --- */
+
+.node {
+  cursor: pointer;
+}
+
+.node rect {
+  transition: filter 0.2s ease, stroke 0.2s ease;
+}
+
+.node:hover rect {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  stroke-width: 2.5;
+}
+
+.node text {
+  font-family: 'Virgil', cursive;
+  fill: #1e1e1e;
+  pointer-events: none;
+  user-select: none;
+}
+
+.node .node-title {
+  font-size: 15px;
+}
+
+.node .node-subtitle {
+  font-size: 11px;
+  fill: #666;
+}
+
+/* --- Graph Edges --- */
+
+.edge {
+  fill: none;
+  stroke: #c0bfbc;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.5;
+  transition: opacity 0.2s ease, stroke 0.2s ease;
+}
+
+.edge.highlighted {
+  opacity: 0.9;
+  stroke: #868583;
+  stroke-width: 2;
+}
+
+.edge.dimmed {
+  opacity: 0.15;
+}
+
+/* --- Edge Labels --- */
+
+.edge-label {
+  font-family: 'Virgil', cursive;
+  font-size: 11px;
+  fill: #999;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.2s ease, fill 0.2s ease;
+}
+
+.edge-label.highlighted {
+  fill: #666;
+  opacity: 1;
+}
+
+.edge-label.dimmed {
+  opacity: 0.1;
+}
+
+.node.dimmed rect {
+  opacity: 0.4;
+}
+
+.node.dimmed text {
+  opacity: 0.4;
+}
+
+/* --- Post Panel --- */
+
+#post-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  max-width: 720px;
+  height: 100%;
+  background: #FAFAF8;
+  border-left: 2px solid #e8e6e3;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#post-panel.open {
+  transform: translateX(0);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.08);
+}
+
+#post-panel .post-inner {
+  padding: 48px 48px 80px;
+  max-width: 600px;
+}
+
+/* --- Post Header --- */
+
+.post-close {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  background: linear-gradient(to bottom, #FAFAF8 60%, transparent);
+  z-index: 10;
+}
+
+.post-close button {
+  background: none;
+  border: 2px solid #d4d2cf;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  font-family: 'Virgil', cursive;
+}
+
+.post-close button:hover {
+  background: #eeedeb;
+  color: #1e1e1e;
+  border-color: #b0aeab;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.post-category {
+  font-family: 'Virgil', cursive;
+  font-size: 13px;
+  padding: 2px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.post-title {
+  font-family: 'Virgil', cursive;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+
+.post-subtitle {
+  font-size: 17px;
+  color: #777;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+/* --- Post Content --- */
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #2c2c2c;
+}
+
+.post-content p {
+  margin-bottom: 1.2em;
+}
+
+.post-content h2 {
+  font-family: 'Virgil', cursive;
+  font-size: 22px;
+  margin: 2em 0 0.8em;
+  color: #1e1e1e;
+}
+
+.post-content h3 {
+  font-family: 'Virgil', cursive;
+  font-size: 18px;
+  margin: 1.6em 0 0.6em;
+  color: #1e1e1e;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #d4d2cf;
+  padding-left: 20px;
+  margin: 1.5em 0;
+  color: #555;
+  font-style: italic;
+}
+
+.post-content ul, .post-content ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.post-content li {
+  margin-bottom: 0.4em;
+}
+
+.post-content code {
+  background: #eeedeb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background: #eeedeb;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-content a {
+  color: #5b8def;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-content hr {
+  border: none;
+  border-top: 1.5px solid #e8e6e3;
+  margin: 2em 0;
+}
+
+/* --- Related Posts --- */
+
+.post-related {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1.5px solid #e8e6e3;
+}
+
+.post-related h3 {
+  font-family: 'Virgil', cursive;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.post-related-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-related-list li {
+  margin-bottom: 8px;
+}
+
+.post-related-list a {
+  font-family: 'Virgil', cursive;
+  font-size: 15px;
+  color: #5b8def;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.post-related-list a:hover {
+  color: #3a6ed8;
+  text-decoration: underline;
+}
+
+/* --- Category Colors (semantic clusters) --- */
+
+.category-governance   { background: #daeef3; color: #3a7f91; }
+.category-epistemics   { background: #e8dff5; color: #6e44a0; }
+.category-critique     { background: #fef0d5; color: #9e7a1b; }
+.category-technology   { background: #daeef3; color: #3a7f91; }
+.category-philosophy   { background: #e8dff5; color: #6e44a0; }
+.category-culture      { background: #fef0d5; color: #9e7a1b; }
+.category-science      { background: #dcedc8; color: #4a7c2e; }
+.category-personal     { background: #fce4ec; color: #ad3a5e; }
+
+/* --- SVG Hand-drawn Filter (applied via defs) --- */
+
+/* --- Responsive --- */
+
+@media (max-width: 900px) {
+  #post-panel {
+    width: 100%;
+    max-width: none;
+    border-left: none;
+  }
+
+  #graph-container.shifted {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+
+  #post-panel .post-inner {
+    padding: 32px 24px 64px;
+  }
+
+  .post-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  #post-panel .post-inner {
+    padding: 24px 16px 48px;
+  }
+
+  .post-title {
+    font-size: 22px;
+  }
+
+  .post-content {
+    font-size: 15px;
+  }
+}

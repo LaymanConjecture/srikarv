@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Panel — Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- D3 force graph renders here -->
+    <div id="graph-container"></div>
+
+    <!-- Post detail panel (slides in from right) -->
+    <div id="post-panel"></div>
+  </div>
+
+  <!-- D3.js v7 -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+
+  <!-- App scripts (order matters: data first, then graph + posts) -->
+  <script src="js/data.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/posts.js"></script>
+</body>
+</html>
