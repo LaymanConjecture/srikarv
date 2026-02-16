@@ -72,11 +72,36 @@
       .attr('flood-color', 'rgba(0,0,0,0.07)');
   }
 
+  // Position edge labels once — computes geometry once per label
+  function positionEdgeLabels() {
+    edgeLabelElements.each(function (d) {
+      const dx = d.target.x - d.source.x;
+      const dy = d.target.y - d.source.y;
+      const len = Math.sqrt(dx * dx + dy * dy) || 1;
+      const offset = len * 0.1;
+      const mx = (d.source.x + d.target.x) / 2;
+      const my = (d.source.y + d.target.y) / 2;
+      const cx = Math.round(mx + (-dy / len * offset));
+      const cy = Math.round(my + (dx / len * offset));
+      let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+      if (angle > 90) angle -= 180;
+      if (angle < -90) angle += 180;
+
+      d3.select(this)
+        .attr('x', cx)
+        .attr('y', cy)
+        .attr('transform', `rotate(${angle}, ${cx}, ${cy})`);
+    });
+  }
+
   function enableFilters() {
     if (filtersActive) return;
     filtersActive = true;
     edgeElements.attr('filter', 'url(#rough)');
     nodeElements.selectAll('path').attr('filter', 'url(#shadow)');
+    // Show and position edge labels now that graph has settled
+    positionEdgeLabels();
+    edgeLabelElements.style('display', null);
   }
 
   function disableFilters() {
@@ -84,6 +109,8 @@
     filtersActive = false;
     edgeElements.attr('filter', null);
     nodeElements.selectAll('path').attr('filter', null);
+    // Hide edge labels during motion
+    edgeLabelElements.style('display', 'none');
   }
 
   // Generate a subtly wobbly rounded rect path
@@ -128,8 +155,8 @@
 
   // Curved edge path with slight hand-drawn wobble
   function edgePath(d) {
-    const sx = d.source.x, sy = d.source.y;
-    const tx = d.target.x, ty = d.target.y;
+    const sx = Math.round(d.source.x), sy = Math.round(d.source.y);
+    const tx = Math.round(d.target.x), ty = Math.round(d.target.y);
     const mx = (sx + tx) / 2;
     const my = (sy + ty) / 2;
     // Offset the midpoint perpendicular to the line for curvature
@@ -138,7 +165,7 @@
     const offset = len * 0.1;
     const nx = -dy / len * offset;
     const ny = dx / len * offset;
-    return `M ${sx},${sy} Q ${mx + nx},${my + ny} ${tx},${ty}`;
+    return `M ${sx},${sy} Q ${Math.round(mx + nx)},${Math.round(my + ny)} ${tx},${ty}`;
   }
 
   // Truncate text to fit within node width
@@ -195,7 +222,7 @@
       .append('path')
       .attr('class', 'edge');
 
-    // Edge labels
+    // Edge labels — hidden until simulation settles
     edgeLabelElements = g.selectAll('.edge-label')
       .data(edges.filter(e => e.label))
       .enter()
@@ -203,6 +230,7 @@
       .attr('class', 'edge-label')
       .attr('text-anchor', 'middle')
       .attr('dy', -8)
+      .style('display', 'none')
       .text(d => d.label);
 
     // Draw nodes
@@ -287,7 +315,7 @@
 
   function ticked() {
     nodeElements.attr('transform', d =>
-      `translate(${d.x - NODE_WIDTH / 2}, ${d.y - NODE_HEIGHT / 2})`
+      `translate(${Math.round(d.x - NODE_WIDTH / 2)}, ${Math.round(d.y - NODE_HEIGHT / 2)})`
     );
     edgeElements.attr('d', edgePath);
 
@@ -295,37 +323,6 @@
     if (!filtersActive && simulation.alpha() < 0.05) {
       enableFilters();
     }
-
-    // Position edge labels at the midpoint of the curved edge
-    edgeLabelElements
-      .attr('x', d => {
-        const mx = (d.source.x + d.target.x) / 2;
-        const dx = d.target.x - d.source.x, dy = d.target.y - d.source.y;
-        const len = Math.sqrt(dx * dx + dy * dy) || 1;
-        const offset = len * 0.1;
-        return mx + (-dy / len * offset);
-      })
-      .attr('y', d => {
-        const my = (d.source.y + d.target.y) / 2;
-        const dx = d.target.x - d.source.x, dy = d.target.y - d.source.y;
-        const len = Math.sqrt(dx * dx + dy * dy) || 1;
-        const offset = len * 0.1;
-        return my + (dx / len * offset);
-      })
-      .attr('transform', d => {
-        const mx = (d.source.x + d.target.x) / 2;
-        const my = (d.source.y + d.target.y) / 2;
-        let angle = Math.atan2(d.target.y - d.source.y, d.target.x - d.source.x) * 180 / Math.PI;
-        // Keep text readable (never upside-down)
-        if (angle > 90) angle -= 180;
-        if (angle < -90) angle += 180;
-        const dx = d.target.x - d.source.x, dy = d.target.y - d.source.y;
-        const len = Math.sqrt(dx * dx + dy * dy) || 1;
-        const offset = len * 0.1;
-        const cx = mx + (-dy / len * offset);
-        const cy = my + (dx / len * offset);
-        return `rotate(${angle}, ${cx}, ${cy})`;
-      });
   }
 
   // Drag handlers — disable expensive filters during drag for smooth interaction
@@ -392,10 +389,16 @@
     nodeElements.classed('dimmed', false);
   }
 
-  // Shift graph when post opens
+  // Shift graph when post opens — transition only active during shift
   window.shiftGraph = function (open) {
-    document.getElementById('graph-container')
-      .classList.toggle('shifted', open);
+    const el = document.getElementById('graph-container');
+    el.classList.add('shifting');
+    el.classList.toggle('shifted', open);
+    const onEnd = () => {
+      el.classList.remove('shifting');
+      el.removeEventListener('transitionend', onEnd);
+    };
+    el.addEventListener('transitionend', onEnd);
   };
 
   // Resize handler
