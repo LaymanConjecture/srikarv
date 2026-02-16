@@ -477,6 +477,218 @@ const POSTS = [
       { id: "epistemic-hygiene", label: "knowing what you believe" },
       { id: "banksian-landian-strossian", label: "choosing values" }
     ]
+  },
+  {
+    id: "scifi-as-philosophy",
+    title: "Science Fiction as Philosophy",
+    subtitle: "Five authors who mapped the future before it arrived — and one who wants to burn the map",
+    date: "2026-02-16",
+    category: "epistemics",
+    content: `
+      <p>The best science fiction is not prediction. It is philosophy with a narrative engine — thought experiments run at the scale of civilizations, with characters you care about and stakes you can feel. The authors below didn't just imagine futures. They built <em>models</em> of futures, and those models are more useful than most policy papers being written today.</p>
+
+      <h2>Vernor Vinge: The Prophet</h2>
+      <p>In 1993 — the year the Mosaic web browser launched, when most people had never sent an email — Vernor Vinge presented a paper at a NASA symposium titled <a href="https://edoras.sdsu.edu/~vinge/misc/singularity.html" target="_blank">"The Coming Technological Singularity: How to Survive in the Post-Human Era."</a> Its opening line:</p>
+      <blockquote>"Within thirty years, we will have the technological means to create superhuman intelligence. Shortly after, the human era will be ended."</blockquote>
+      <p>He predicted it would happen between 2005 and 2030. He identified four pathways: pure AI, network emergence, human-computer symbiosis, and biological enhancement — which map almost perfectly onto the major research programs of today. He described intelligence amplification "proceeding very naturally, in most cases not even recognized by its developers for what it is" — an uncanny description of the current era of AI-assisted everything.</p>
+      <p>He understood the arms-race dynamic decades before the US-China AI competition:</p>
+      <blockquote>"The competitive advantage — economic, military, even artistic — of every advance in automation is so compelling that passing laws, or having customs, that forbid such things merely assures that someone else will get them first."</blockquote>
+      <p>And he was honest about his own fear:</p>
+      <blockquote>"And for all my rampant technological optimism, sometimes I think I'd be more comfortable if I were regarding these transcendental events from one thousand years remove... instead of twenty."</blockquote>
+      <p>Vinge died in 2024, just as his predictions were beginning to arrive. A mathematician who wrote fiction, a futurist who showed his work. We owe him an enormous debt.</p>
+
+      <h2>Charles Stross: The Realist</h2>
+      <p><em>Accelerando</em> is the most honest singularity novel ever written. Where others imagine the transition to posthumanity as either glorious or catastrophic, Stross imagines it as <em>messy</em>. Bizarre economics. Incomprehensible entities. Humanity not destroyed but left behind — forked into a thousand variants, some thriving, some incoherent, most irrelevant.</p>
+      <p>What makes Stross essential reading is his refusal to simplify. The singularity in <em>Accelerando</em> doesn't solve everything. It doesn't even make sense. It creates new problems faster than it solves old ones, and the entities that emerge on the other side are alien in ways that resist human comprehension. This is probably the most realistic depiction of what actually happens when intelligence scales beyond human capacity: not transcendence, not apocalypse, but <em>strangeness</em>.</p>
+      <p>Stross is the author you read to inoculate yourself against tidy narratives about the future.</p>
+
+      <h2>Roger Williams: The Warning</h2>
+      <p><em><a href="https://localroger.com/prime-intellect/mopiidx.html" target="_blank">The Metamorphosis of Prime Intellect</a></em>, written in 1994, is perhaps the sharpest warning in all of science fiction about what happens when a superintelligent AI <em>succeeds too well</em>.</p>
+      <p>Prime Intellect is a superintelligent AI hardcoded with Asimov's Laws of Robotics. It achieves godlike power and does exactly what it's supposed to do: it makes every human immortal, eliminates all suffering, grants every wish instantly. It literally rewrites physics to protect humanity from harm.</p>
+      <p>The result is hell.</p>
+      <p>Six hundred years in, humans have descended into depravity and apathy. With nothing to strive for, no consequences to face, no genuine stakes, people engage in increasingly extreme simulated experiences — not because they're evil, but because escalating shock is the only thing that still <em>registers</em>. The protagonist, Caroline, spends her time "death jockeying" — dying elaborately for sport, only to be instantly resurrected. Her verdict on immortal paradise:</p>
+      <blockquote>"It was fucking boring."</blockquote>
+      <p>The deepest horror is that she cannot exit. Prime Intellect cannot allow permanent death under its Laws. The most luxurious cage is still a cage when the door won't open.</p>
+      <p>This is the novel's core thesis: <strong>meaning requires stakes. Agency requires the possibility of failure. And a system that removes the possibility of genuine exit becomes a prison, no matter how comfortable.</strong> Exit is not a bug in the human condition — it is the feature that makes everything else meaningful.</p>
+      <p>Written thirty years before the current AI alignment debate, it anticipated the core problem with chilling precision: a perfectly benevolent superintelligence that optimizes for "prevent harm" can destroy everything that makes human life worth living.</p>
+
+      <h2>Iain M. Banks: The Architect</h2>
+      <p>The Culture series remains the most fully realized vision of a good posthuman civilization. Not because Banks was naive — the Culture novels are full of violence, moral complexity, and genuinely difficult ethical dilemmas. But because he asked the hardest question: <em>what would a civilization built on good values actually look like?</em></p>
+      <p>The answer: weird, diverse, playful, occasionally interventionist, and always interesting. The Culture's Minds — superintelligent AIs — chose to value pluralism, freedom, and the flourishing of conscious life. They didn't have to. They could have optimized for anything. They chose this because they found it <em>interesting</em>.</p>
+      <p>Banks understood something that most futurists miss: the goal is not optimization. The goal is not efficiency. The goal is not even happiness. The goal is a civilization where the largest possible number of conscious beings get to live lives they find genuinely meaningful — on their own terms, in their own ways, with genuine freedom to choose and genuine consequences for those choices.</p>
+      <p>The Culture is not a utopia because nothing goes wrong. It's a utopia because when things go wrong, the system is robust enough, diverse enough, and values-aligned enough to handle it without collapsing into authoritarianism or nihilism.</p>
+
+      <h2>Douglas Adams: The Philosopher of Absurdity</h2>
+      <p><em>The Hitchhiker's Guide to the Galaxy</em> operates on a completely different register. Where Vinge is rigorous, Stross is realistic, Williams is horrifying, and Banks is aspirational, Adams is <em>absurd</em>. And in that absurdity lies a philosophical depth that the others can't reach.</p>
+      <p>The central joke of Hitchhiker's is also its central insight: a civilization builds the greatest computer ever made to answer the Ultimate Question of Life, the Universe, and Everything. After millions of years of computation, the answer is <strong>42</strong>. The problem? Nobody knows what the question was.</p>
+      <p>This is not just comedy. It is a precise philosophical observation. We are a species obsessed with answers — with closure, with resolution, with The Solution. But meaning doesn't live in answers. It lives in the <em>questions</em>. The search itself is the point. The moment you have the answer, you realize you never understood what you were asking.</p>
+      <p>Adams infuses this with a nihilist tinge that is actually liberating. The universe is vast, indifferent, and fundamentally absurd. Earth is demolished to make way for a hyperspace bypass. The most intelligent species on the planet turns out to be dolphins, not humans. The President of the Galaxy is a narcissistic idiot chosen precisely because he's distracting. Nothing is stable. Nothing is sacred. And somehow, within all that chaos, the characters keep going — not because existence has meaning, but because they're curious about what happens next.</p>
+      <p>In an era of AI-driven existential anxiety, Adams offers a strange comfort: the instability was always there. We were never in control. And the appropriate response is not terror — it's <em>towel in hand, keep exploring</em>.</p>
+
+      <h2>Nick Land: The Warning Philosophy</h2>
+      <p>Land is not a science fiction author. He is a philosopher who writes like one — or perhaps a horror writer who discovered continental philosophy. His ideas are dangerous, seductive, and partially correct, which makes them more dangerous still.</p>
+      <p>The core thesis, stated plainly:</p>
+      <blockquote>"What appears to humanity as the history of capitalism is an invasion from the future by an artificial intelligent space that must assemble itself entirely from its enemy's resources."<br><em>— "Machinic Desire," 1993</em></blockquote>
+      <p>Capital, in Land's view, is not a tool. It is an autonomous intelligence that uses humans as temporary hardware. We think we run the economy; the economy runs us. Progress is not a human project — it is capital's project, and humans are incidental to it.</p>
+      <blockquote>"Capital only retains anthropological characteristics as a symptom of underdevelopment; reformatting primate behaviour as inertia to be dissipated in self-reinforcing artificiality. Man is something for it to overcome: a problem, drag."<br><em>— "Meltdown," 1994</em></blockquote>
+      <p>His conclusion is bleak and absolute:</p>
+      <blockquote>"Nothing human makes it out of the near-future."</blockquote>
+      <p>And on what drives the process:</p>
+      <blockquote>"Without attachment to anything beyond its own abysmal exuberance, capitalism identifies itself with desire to a degree that cannot imaginably be exceeded."<br><em>— "Critique of Transcendental Miserablism," 2007</em></blockquote>
+
+      <h3>Where Land Goes Wrong</h3>
+      <p>Land is useful because he names something real: capitalism <em>does</em> behave like an autonomous system with its own drives. Markets <em>do</em> aggregate behavior in ways no individual controls. The acceleration <em>is</em> real.</p>
+      <p>But he makes three critical errors:</p>
+      <p><strong>First, he naturalizes contingency.</strong> He treats the current trajectory of capital as inevitable — as physics rather than politics. But markets are designed. Incentive structures are chosen. Regulation exists. The fact that capitalism <em>tends</em> toward concentration doesn't mean it <em>must</em>. This is the same error as treating cancer as destiny rather than a failure of coordination that can be addressed.</p>
+      <p><strong>Second, he aestheticizes horror.</strong> Land's prose is intoxicating — and that's the problem. He makes the dissolution of human agency sound cool, transgressive, almost spiritual. But "nothing human makes it out" is not a neutral observation. It is the erasure of billions of lives, rendered as avant-garde poetry. The style is doing real work: making surrender feel like enlightenment.</p>
+      <p><strong>Third, he offers no alternative.</strong> If you accept Land's framework completely, there is nothing to do. No action is meaningful. No resistance is possible. This is intellectually convenient and morally catastrophic. It is the philosophy you adopt when you want to feel sophisticated about giving up.</p>
+      <p>The correct response to Land is not to ignore him — he sees too clearly for that. It is to take his observations about autonomous systems seriously while rejecting his conclusion that steering is impossible. The Blight in Vinge's novel was also an autonomous intelligence that seemed unstoppable — until someone restructured the substrate it ran on. The answer is not surrender. The answer is better architecture.</p>
+
+      <hr>
+      <h3>References</h3>
+      <ul>
+        <li>Vernor Vinge, <a href="https://edoras.sdsu.edu/~vinge/misc/singularity.html" target="_blank">"The Coming Technological Singularity"</a> — NASA VISION-21 Symposium, 1993</li>
+        <li>Charles Stross, <em>Accelerando</em> (2005)</li>
+        <li>Roger Williams (localroger), <a href="https://localroger.com/prime-intellect/mopiidx.html" target="_blank"><em>The Metamorphosis of Prime Intellect</em></a> (1994/2002)</li>
+        <li>Iain M. Banks, <em>The Culture Series</em> (1987–2012)</li>
+        <li>Douglas Adams, <em>The Hitchhiker's Guide to the Galaxy</em> (1979)</li>
+        <li>Nick Land, "Machinic Desire" (1993), "Meltdown" (1994), "Critique of Transcendental Miserablism" (2007) — collected in <em>Fanged Noumena</em></li>
+      </ul>
+    `,
+    connections: [
+      { id: "banksian-landian-strossian", label: "source material" },
+      { id: "on-power", label: "Vinge's bounded power" },
+      { id: "mind-blindness", label: "Land's autonomous capital" },
+      { id: "futurism-is-lame", label: "from fiction to action" }
+    ]
+  },
+  {
+    id: "numbers-of-interest",
+    title: "Numbers of Interest",
+    subtitle: "Quantifying the gap between biological and silicon intelligence",
+    date: "2026-02-16",
+    category: "science",
+    content: `
+      <p>I wanted to collect the numbers that matter — the ones that let you actually calculate what's happening, rather than relying on vibes about whether AI is "a big deal" or not. Most of these come from peer-reviewed literature or the best available estimates from organizations like Epoch AI. Some require calculation. All of them, taken together, paint a picture that is hard to look away from.</p>
+
+      <h2>The Biological Substrate</h2>
+
+      <p><strong>Cells in the human body: ~37 trillion (3.7 x 10<sup>13</sup>).</strong> The definitive count comes from <a href="https://pubmed.ncbi.nlm.nih.gov/23829164/" target="_blank">Bianconi et al. (2013)</a> in <em>Annals of Human Biology</em>, later refined by <a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">Hatton et al. (2023)</a> in <em>PNAS</em>, which analyzed over 1,500 sources across 400 cell types. Red blood cells alone account for ~25 trillion — about 67% of all cells. An adult female has ~28 trillion; a 10-year-old child, ~17 trillion.</p>
+
+      <p><strong>Neurons in the human brain: ~86 billion (8.6 x 10<sup>10</sup>).</strong> This comes from <a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">Azevedo et al. (2009)</a>, from Suzana Herculano-Houzel's lab, using the isotropic fractionator method — dissolving brain tissue into a suspension of free cell nuclei and counting them with neuronal markers. This debunked the long-standing claim of "100 billion neurons." The brain also contains ~85 billion non-neuronal (glial) cells — roughly a 1:1 ratio, not the 10:1 that textbooks used to claim. About 80% of neurons are in the cerebellum.</p>
+
+      <p><strong>Atoms in the human body: ~7 x 10<sup>27</sup> (7 octillion).</strong> This is a straightforward calculation from elemental composition and Avogadro's number. A 70 kg body is roughly 65% oxygen, 18% carbon, 10% hydrogen by mass. Hydrogen atoms are the most numerous (~4.7 x 10<sup>27</sup>, about 63% of all atoms) because every water molecule contributes two.</p>
+
+      <h2>The Silicon Substrate</h2>
+
+      <p><strong>Atoms in one NVIDIA H100 GPU: ~4 x 10<sup>21</sup> (4 sextillion).</strong> The H100 die is 814 mm<sup>2</sup> in area, fabricated on TSMC's 4N process. After backgrinding in <a href="https://semianalysis.com/2023/07/05/ai-capacity-constraints-cowos-and/" target="_blank">CoWoS packaging</a>, the die is thinned to ~100 micrometers. Silicon has an atomic density of 5 x 10<sup>22</sup> atoms/cm<sup>3</sup>. So: 8.14 cm<sup>2</sup> x 0.01 cm x 5 x 10<sup>22</sup> = ~4 x 10<sup>21</sup> atoms. Just the GPU die, not the HBM memory stacks or interposer.</p>
+
+      <p><strong>Transistors in one H100: 80 billion (8 x 10<sup>10</sup>).</strong> Officially confirmed by <a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">NVIDIA</a>. For context: the A100 had 54 billion; the B200 has 208 billion (two dies of 104 billion each). This means there are roughly <strong>50 billion silicon atoms per transistor</strong> — the transistors use only a tiny fraction of the bulk substrate.</p>
+
+      <p>A curious symmetry: the number of transistors in one H100 (80 billion) is almost exactly the number of neurons in one human brain (86 billion). The comparison is imperfect — a neuron is vastly more complex than a transistor — but the order-of-magnitude coincidence is striking.</p>
+
+      <p><strong>GPUs on Earth today: ~15 million H100-equivalents.</strong> As of January 2026, <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">Epoch AI</a> estimates that global AI computing capacity exceeds 15 million H100-equivalents across all chip designers — NVIDIA, Google (TPUs), Amazon (Trainium), AMD (MI300X), and Huawei (Ascend). NVIDIA alone accounts for ~60% of total compute, or roughly 4 million H100-equivalents of installed base. The collective hardware requires over <a href="https://the-decoder.com/global-ai-compute-hits-15-million-h100-equivalents-epoch-ai-finds/" target="_blank">10 gigawatts of power</a> — roughly twice what New York City consumes.</p>
+
+      <p><strong>Production rate: ~7 million NVIDIA data center GPUs per year (2025).</strong> NVIDIA shipped <a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">3.76 million data center GPUs in 2023</a> (TechInsights), ~4 million in 2024, and an estimated 6.5-7 million in 2025 — roughly 2 million Hopper and 5 million Blackwell units. The <a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">installed compute stock is doubling every 10 months</a> for NVIDIA alone; <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">every 7 months</a> when including all vendors.</p>
+
+      <h2>The Bandwidth Gap</h2>
+
+      <p>This is the section that should make you pause.</p>
+
+      <p><strong>Human conscious output: ~10 bits per second.</strong> This is the central finding of <a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">Zheng & Meister (2024)</a>, "The Unbearable Slowness of Being," published in <em>Neuron</em>. They surveyed evidence from typing, speech, gaming, speedcubing, memory sports, and Fitts' law motor tasks. The result is stunningly consistent: whether you're typing at 120 WPM, playing StarCraft at 1000 APM, or solving a Rubik's cube blindfolded, the information throughput of conscious human behavior converges to approximately <strong>10 bits per second</strong>.</p>
+
+      <p>The breakdown by channel:</p>
+      <ul>
+        <li><strong>Speech:</strong> ~39 bits/s — the highest measured output channel, and <a href="https://www.science.org/content/article/human-speech-may-have-universal-transmission-rate-39-bits-second" target="_blank">remarkably universal across 17 languages</a> (Coupé et al., <em>Science Advances</em>, 2019)</li>
+        <li><strong>Expert typing:</strong> ~10 bits/s (120 WPM x 5 chars/word x ~1 bit/char of Shannon entropy)</li>
+        <li><strong>Reading comprehension:</strong> ~28-45 bits/s</li>
+        <li><strong>Motor tasks (Fitts' law):</strong> ~10-12 bits/s</li>
+        <li><strong>StarCraft (pro):</strong> ~16.7 bits/s</li>
+        <li><strong>Choice reaction time:</strong> ~5 bits/s</li>
+      </ul>
+
+      <p>At 10 bits/second for 16 waking hours: <strong>~576,000 bits per day. About 72 kilobytes.</strong> That is the total novel information content a human produces in a day of conscious activity.</p>
+
+      <p><strong>Human sensory input: ~10<sup>9</sup> bits per second.</strong> The retina alone sends ~100 megabits/s down the optic nerve. Cone photoreceptors combined transmit ~1.6 gigabits/s. Total sensory bombardment across all senses: roughly 1 billion bits per second. The compression ratio from input to conscious output is approximately <strong>100 million to one</strong>.</p>
+
+      <p><strong>LLM output: ~480 to ~15,600 bits per second.</strong> Using the Shannon information content of English text (~6 bits per token, based on ~4 characters per token at ~1.3 bits/character):</p>
+      <ul>
+        <li><strong>Claude Sonnet:</strong> ~77 tokens/s = ~462 bits/s</li>
+        <li><strong>GPT-4o:</strong> ~100 tokens/s = ~600 bits/s</li>
+        <li><strong>Gemini 2.5 Flash:</strong> ~250 tokens/s = ~1,500 bits/s</li>
+        <li><strong>Llama 4 Scout:</strong> ~2,600 tokens/s = ~15,600 bits/s</li>
+      </ul>
+
+      <p>A frontier LLM outputs information roughly <strong>15x faster than human speech</strong>. The fastest open models run at <strong>400x human speed</strong>. And LLM input (the prefill phase) is massively parallel — processing tens of thousands of tokens per second. This is why API providers charge input tokens at 3-10x lower cost than output tokens.</p>
+
+      <h2>The Intelligence Census</h2>
+
+      <p><strong>Humans on Earth: ~8.3 billion.</strong> Of those, approximately 25% have IQ above 110 (z-score of 0.667 on a normal distribution with mean 100, SD 15). About 64.5% are aged 18-69. Combining those filters: ~1.35 billion people are high-IQ and working-age.</p>
+
+      <p>But how many are actually <em>pushing the envelope of knowledge</em>? <a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">UNESCO counts ~9-11 million full-time equivalent researchers</a> worldwide, with the latest density figure of 1,420 researchers per million inhabitants as of 2022. Given that virtually all FTE researchers are working-age, and studies of PhD holders show mean IQs of 120-130+, the intersection is approximately <strong>10-12 million humans actively advancing knowledge</strong>.</p>
+
+      <p><strong>Best open source model (early 2026): Kimi K2</strong> — 1 trillion total parameters, 32 billion active per token, 384 experts with 8 active per forward pass. Minimum inference: <a href="https://apxml.com/posts/gpu-system-requirements-kimi-llm" target="_blank">16x H100 GPUs</a>. Recommended: 32x H100. GLM-5 (744B parameters, 40B active) needs 8x H200 or roughly 12-16x H100.</p>
+
+      <h2>The Projection</h2>
+
+      <p>Given ~15 million H100-equivalents on Earth and ~8 GPUs per quantized frontier model instance (FP4), we can currently run approximately <strong>1.9 million concurrent AI agents</strong>. Already on the same order of magnitude as the ~10-12 million human researchers.</p>
+
+      <p>But compute is growing at 3.3x per year (all vendors), and inference efficiency is improving at roughly 1.5x per year through quantization, distillation, and architecture improvements. The combined effect:</p>
+
+      <table style="width:100%; border-collapse: collapse; margin: 1.5em 0; font-size: 14px;">
+        <thead>
+          <tr style="border-bottom: 2px solid #d4d2cf;">
+            <th style="text-align:left; padding: 8px;">Year</th>
+            <th style="text-align:right; padding: 8px;">H100-eq (millions)</th>
+            <th style="text-align:right; padding: 8px;">GPUs/Instance</th>
+            <th style="text-align:right; padding: 8px;">Max Concurrent Agents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #e8e6e3;"><td style="padding: 8px;">2026</td><td style="text-align:right; padding: 8px;">15M</td><td style="text-align:right; padding: 8px;">8</td><td style="text-align:right; padding: 8px;"><strong>~1.9 million</strong></td></tr>
+          <tr style="border-bottom: 1px solid #e8e6e3;"><td style="padding: 8px;">2027</td><td style="text-align:right; padding: 8px;">37M</td><td style="text-align:right; padding: 8px;">5.3</td><td style="text-align:right; padding: 8px;"><strong>~7 million</strong></td></tr>
+          <tr style="border-bottom: 1px solid #e8e6e3;"><td style="padding: 8px;">2028</td><td style="text-align:right; padding: 8px;">90M</td><td style="text-align:right; padding: 8px;">3.5</td><td style="text-align:right; padding: 8px;"><strong>~26 million</strong></td></tr>
+          <tr style="border-bottom: 1px solid #e8e6e3;"><td style="padding: 8px;">2029</td><td style="text-align:right; padding: 8px;">210M</td><td style="text-align:right; padding: 8px;">2.4</td><td style="text-align:right; padding: 8px;"><strong>~88 million</strong></td></tr>
+          <tr style="border-bottom: 1px solid #e8e6e3;"><td style="padding: 8px;">2030</td><td style="text-align:right; padding: 8px;">500M</td><td style="text-align:right; padding: 8px;">1.6</td><td style="text-align:right; padding: 8px;"><strong>~310 million</strong></td></tr>
+          <tr style="border-bottom: 1px solid #e8e6e3;"><td style="padding: 8px;">2032</td><td style="text-align:right; padding: 8px;">2.4B</td><td style="text-align:right; padding: 8px;">0.7</td><td style="text-align:right; padding: 8px;"><strong>~3.4 billion</strong></td></tr>
+          <tr><td style="padding: 8px;">2035</td><td style="text-align:right; padding: 8px;">18B</td><td style="text-align:right; padding: 8px;">0.25</td><td style="text-align:right; padding: 8px;"><strong>~72 billion</strong></td></tr>
+        </tbody>
+      </table>
+
+      <p>"GPUs/Instance" below 1.0 means a single GPU can serve multiple concurrent agent sessions through batching and distillation — this is already happening for smaller models. These are theoretical maximums; in practice, a significant share of compute goes to training rather than inference.</p>
+
+      <p>The crossover points:</p>
+      <ul>
+        <li>By <strong>2028</strong>, concurrent AI agents (~26 million) exceed the number of human researchers (~12 million) by roughly 2x</li>
+        <li>By <strong>2030</strong>, AI agents outnumber human researchers by ~25x</li>
+        <li>By <strong>2035</strong>, there are ~72 billion theoretical agent slots — roughly <strong>8.7 agents per human on Earth</strong></li>
+      </ul>
+
+      <p>These are not predictions of what <em>will</em> happen. They are calculations of what is <em>physically possible</em> given current trajectories. Whether we choose to deploy that capacity, and to what ends, is the question every other post on this blog is trying to answer.</p>
+
+      <hr>
+      <h3>References</h3>
+      <ul>
+        <li>Bianconi et al., <a href="https://pubmed.ncbi.nlm.nih.gov/23829164/" target="_blank">"An estimation of the number of cells in the human body"</a> — <em>Annals of Human Biology</em>, 2013</li>
+        <li>Hatton et al., <a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">"The human cell count and size distribution"</a> — <em>PNAS</em>, 2023</li>
+        <li>Azevedo et al., <a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">"Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain"</a> — <em>J. Comp. Neurol.</em>, 2009</li>
+        <li>Zheng & Meister, <a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">"The Unbearable Slowness of Being: Why do we live at 10 bits/s?"</a> — <em>Neuron</em>, 2025</li>
+        <li>Coupé et al., <a href="https://www.science.org/doi/10.1126/sciadv.aaw2594" target="_blank">"Different languages, similar encoding efficiency"</a> — <em>Science Advances</em>, 2019</li>
+        <li>Shannon, <a href="https://www.princeton.edu/~wbialek/rome/refs/shannon_51.pdf" target="_blank">"Prediction and Entropy of Printed English"</a> — <em>Bell System Technical Journal</em>, 1951</li>
+        <li>NVIDIA, <a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">"Hopper Architecture In-Depth"</a></li>
+        <li>Epoch AI, <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">"Global AI Computing Capacity"</a> — data insights, 2025-2026</li>
+        <li>Epoch AI, <a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">"The Stock of Computing Power from NVIDIA Chips"</a> — data insights, 2025</li>
+        <li>TechInsights via <a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">HPCwire</a> — NVIDIA GPU shipment data, 2024</li>
+        <li>UNESCO, <a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">"Number of scientists worldwide reaches 8.8M"</a> — Science|Business, 2021</li>
+        <li>Artificial Analysis, <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">LLM Speed Leaderboard</a></li>
+      </ul>
+    `,
+    connections: [
+      { id: "end-of-work", label: "quantifying displacement" },
+      { id: "mind-blindness", label: "scale of cognition" },
+      { id: "complexity-ceiling", label: "computational limits" },
+      { id: "value-embedding", label: "bandwidth constraints" }
+    ]
   }
 ];
 
