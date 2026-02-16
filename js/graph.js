@@ -296,7 +296,7 @@
       }
     });
 
-    // Force simulation
+    // Force simulation — pre-compute layout, render once (no initial animation)
     simulation = d3.forceSimulation(POSTS)
       .force('link', d3.forceLink(edges)
         .id(d => d.id)
@@ -310,7 +310,13 @@
       .force('x', d3.forceX(width / 2).strength(0.05))
       .force('y', d3.forceY(height / 2).strength(0.05))
       .alphaDecay(0.05)
-      .on('tick', ticked);
+      .stop();
+
+    simulation.tick(300);
+    ticked();
+    enableFilters();
+
+    simulation.on('tick', ticked);
   }
 
   function ticked() {
