@@ -732,6 +732,60 @@ const POSTS = [
       { id: "complexity-ceiling", label: "computational limits" },
       { id: "value-embedding", label: "bandwidth constraints" }
     ]
+  },
+  {
+    id: "credible-commitments",
+    title: "Credible Commitments",
+    subtitle: "Society runs on promises no one is forced to keep",
+    date: "2026-02-16",
+    category: "governance",
+    content: `
+      <p>Ask anyone in power what they would do if conditions changed, and you will get a beautiful answer. Ask them to sign a contract enforcing that answer, and watch them leave the room.</p>
+      <p>This is the core problem. We have no mechanism for making civilization-level promises that are actually binding. Everything is a gentleman's agreement — and gentlemen defect.</p>
+
+      <h2>The Questions No One Will Answer</h2>
+      <p>Will humans always have access to the best frontier AI models? Not last year's model, not a hobbled version — the <em>best</em>. Is anyone willing to make this a structural guarantee with real repercussions if it is broken? Or is it just a talking point that lasts until it becomes inconvenient?</p>
+      <p>If an AI proves to be measurably better than a human CEO at running a company — better returns, better employee outcomes, better long-term strategy — will the human step aside? Will any board in the world commit to a trigger condition under which they hand over operational control? Or will we pretend this question doesn't exist until it's answered for us by whoever moves first?</p>
+      <p>Will humans voluntarily take a psychological fitness evaluation to determine whether they are cognitively and temperamentally suited to make governance decisions that affect millions of people? We require pilots to pass medical exams. We require drivers to pass tests. We require <em>nothing</em> of the people who control nuclear arsenals and national budgets.</p>
+      <p>Will society agree, in advance, to change its systems when certain conditions are met? If AI displaces 40% of jobs, do we have a pre-committed plan? If a model passes every benchmark of general intelligence, does governance adapt? Or do we wait for the crisis and then improvise — as we always do?</p>
+
+      <h2>Path Dependence</h2>
+      <p>Every civilization is path-dependent. The decisions we make now constrain the decisions available to us later. This is not a metaphor — it is a mathematical property of complex systems. Choices compound. Institutions calcify. Precedents become physics.</p>
+      <p>We know this. And yet we refuse to do the obvious thing: map the decision points in advance. We know AI capabilities are on an exponential curve. We know the labor market will transform. We know concentrated power is dangerous. We know all of this. But we have made exactly zero credible commitments about what we will do when these things happen.</p>
+      <p>No trigger conditions. No pre-registered responses. No binding agreements between nations, between companies, between citizens and their governments. Just vibes, press releases, and the quiet assumption that someone else will handle it.</p>
+
+      <h2>The Greater Good vs. Self-Interest</h2>
+      <p>Here is the uncomfortable question underneath all the others: will humans choose the greater good when it costs them personal power?</p>
+      <p>History says no. Not reliably. Not without enforcement. Individuals can be heroic, but systems built on hoping for heroism are systems built to fail. This is why we have constitutions instead of trusting kings. This is why we have rule of law instead of relying on noble intentions.</p>
+      <p>But our constitutions are written in natural language, enforced by institutions that can be captured, interpreted by courts that can be stacked. The enforcement mechanism is, ultimately, other humans — who are subject to the same incentives, the same self-interest, the same capacity for rationalization.</p>
+      <p>We need enforcement that doesn't depend on the enforcer's goodwill.</p>
+
+      <h2>Cryptographic Commitments</h2>
+      <p>This is what cryptography offers. Not a utopia — a <em>mechanism</em>.</p>
+      <p>Smart contracts execute when conditions are met. Not when someone decides to honor their word. Not when a court finally rules after years of litigation. <em>When the condition is met.</em> Automatically. Irreversibly.</p>
+      <p>Imagine a world where:</p>
+      <ul>
+        <li>A company's charter includes a cryptographically enforced clause: if AI generates more than 60% of the company's output, profit-sharing automatically broadens to include all contributors to the training data.</li>
+        <li>A government's AI policy includes trigger conditions: if unemployment in a sector exceeds a threshold, pre-funded retraining programs activate without requiring a legislative vote.</li>
+        <li>International AI agreements are encoded as multi-party smart contracts: if one nation's deployed AI exceeds agreed capability thresholds, compute access is automatically throttled until review conditions are met.</li>
+      </ul>
+      <p>None of these require trust. They require code. They require the same thing all of modern cryptography requires: the assumption that math works.</p>
+
+      <h2>Why Don't We?</h2>
+      <p>The technology exists. The cryptographic primitives are there. Smart contracts work. Zero-knowledge proofs can verify conditions without revealing private data. Multi-party computation can enforce agreements between adversaries.</p>
+      <p>So why don't we use them?</p>
+      <p>Because credible commitments require giving up optionality. And optionality is power. The person who refuses to commit retains the ability to defect later — to change the rules when it suits them, to reinterpret the agreement, to claim circumstances changed. Every powerful institution on Earth is structured to maximize this kind of strategic ambiguity.</p>
+      <p>Making a credible commitment means saying: "I am binding my future self. I am giving up the ability to change my mind about this." That is terrifying to anyone who currently benefits from the ability to change the rules.</p>
+      <p>Which is exactly why we need it.</p>
+      <p>A civilization that cannot make binding promises to itself is a civilization that is perpetually improvising its way toward whatever outcome the most powerful actors prefer. That is not governance. That is drift — with extra steps.</p>
+    `,
+    connections: [
+      { id: "math-over-law", label: "enforcement via math" },
+      { id: "verifiable-government", label: "binding governance" },
+      { id: "on-power", label: "giving up optionality" },
+      { id: "civilizational-gap-map", label: "pre-committed plans" },
+      { id: "end-of-work", label: "displacement triggers" }
+    ]
   }
 ];
 
