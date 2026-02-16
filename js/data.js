@@ -569,77 +569,119 @@ const POSTS = [
     date: "2026-02-16",
     category: "science",
     content: `
-      <p>I wanted to collect the numbers that matter — the ones that let you actually calculate what's happening, rather than relying on vibes about whether AI is "a big deal" or not. Most of these come from peer-reviewed literature or the best available estimates from organizations like Epoch AI. Some require calculation. All of them, taken together, paint a picture that is hard to look away from.</p>
+      <p>The numbers that let you calculate what's happening, rather than relying on vibes.</p>
 
       <h2>The Biological Substrate</h2>
 
-      <p><strong>Cells in the human body: ~37 trillion (3.7 x 10<sup>13</sup>).</strong> The definitive count comes from <a href="https://pubmed.ncbi.nlm.nih.gov/23829164/" target="_blank">Bianconi et al. (2013)</a> in <em>Annals of Human Biology</em>, later refined by <a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">Hatton et al. (2023)</a> in <em>PNAS</em>, which analyzed over 1,500 sources across 400 cell types. Red blood cells alone account for ~25 trillion — about 67% of all cells. An adult female has ~28 trillion; a 10-year-old child, ~17 trillion.</p>
+      <p><strong>Cells in the human body: ~37 trillion</strong> (3.7 x 10<sup>13</sup>)</p>
+      <ul>
+        <li>Red blood cells alone: ~25 trillion (67% of all cells)</li>
+        <li>Adult female: ~28 trillion; child (age 10): ~17 trillion</li>
+        <li>Source: <a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">Hatton et al. 2023</a>, 1,500+ sources across 400 cell types</li>
+      </ul>
 
-      <p><strong>Neurons in the human brain: ~86 billion (8.6 x 10<sup>10</sup>).</strong> This comes from <a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">Azevedo et al. (2009)</a>, from Suzana Herculano-Houzel's lab, using the isotropic fractionator method — dissolving brain tissue into a suspension of free cell nuclei and counting them with neuronal markers. This debunked the long-standing claim of "100 billion neurons." The brain also contains ~85 billion non-neuronal (glial) cells — roughly a 1:1 ratio, not the 10:1 that textbooks used to claim. About 80% of neurons are in the cerebellum.</p>
+      <p><strong>Neurons in the human brain: ~86 billion</strong> (8.6 x 10<sup>10</sup>)</p>
+      <ul>
+        <li>~85 billion glial cells — roughly 1:1 ratio, not the 10:1 textbooks claimed</li>
+        <li>80% of neurons are in the cerebellum</li>
+        <li>Debunked the "100 billion" myth. Source: <a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">Azevedo et al. 2009</a></li>
+      </ul>
 
-      <p><strong>Atoms in the human body: ~7 x 10<sup>27</sup> (7 octillion).</strong> This is a straightforward calculation from elemental composition and Avogadro's number. A 70 kg body is roughly 65% oxygen, 18% carbon, 10% hydrogen by mass. Hydrogen atoms are the most numerous (~4.7 x 10<sup>27</sup>, about 63% of all atoms) because every water molecule contributes two.</p>
+      <p><strong>Atoms in the human body: ~7 x 10<sup>27</sup></strong> (7 octillion)</p>
+      <ul>
+        <li>Hydrogen is most numerous (~63% of all atoms) — two per water molecule</li>
+        <li>Derived from elemental composition + Avogadro's number for a 70 kg adult</li>
+      </ul>
 
       <h2>The Silicon Substrate</h2>
 
-      <p><strong>Atoms in one NVIDIA H100 GPU: ~4 x 10<sup>21</sup> (4 sextillion).</strong> The H100 die is 814 mm<sup>2</sup> in area, fabricated on TSMC's 4N process. After backgrinding in <a href="https://semianalysis.com/2023/07/05/ai-capacity-constraints-cowos-and/" target="_blank">CoWoS packaging</a>, the die is thinned to ~100 micrometers. Silicon has an atomic density of 5 x 10<sup>22</sup> atoms/cm<sup>3</sup>. So: 8.14 cm<sup>2</sup> x 0.01 cm x 5 x 10<sup>22</sup> = ~4 x 10<sup>21</sup> atoms. Just the GPU die, not the HBM memory stacks or interposer.</p>
+      <p><strong>Atoms in one NVIDIA H100 GPU: ~4 x 10<sup>21</sup></strong> (4 sextillion)</p>
+      <ul>
+        <li>Die area: 814 mm<sup>2</sup>. Thickness after <a href="https://semianalysis.com/2023/07/05/ai-capacity-constraints-cowos-and/" target="_blank">CoWoS thinning</a>: ~100 um</li>
+        <li>Calculation: 8.14 cm<sup>2</sup> x 0.01 cm x 5 x 10<sup>22</sup> atoms/cm<sup>3</sup></li>
+        <li>GPU die only — excludes HBM stacks and interposer</li>
+      </ul>
 
-      <p><strong>Transistors in one H100: 80 billion (8 x 10<sup>10</sup>).</strong> Officially confirmed by <a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">NVIDIA</a>. For context: the A100 had 54 billion; the B200 has 208 billion (two dies of 104 billion each). This means there are roughly <strong>50 billion silicon atoms per transistor</strong> — the transistors use only a tiny fraction of the bulk substrate.</p>
+      <p><strong>Transistors in one H100: 80 billion</strong> (8 x 10<sup>10</sup>)</p>
+      <ul>
+        <li>A100: 54B. B200: 208B (two 104B dies). <a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">Source</a></li>
+        <li>~50 billion silicon atoms per transistor — transistors use a tiny fraction of substrate</li>
+        <li>Near-parity with human brain neuron count (80B vs 86B) — different in kind, same in scale</li>
+      </ul>
 
-      <p>A curious symmetry: the number of transistors in one H100 (80 billion) is almost exactly the number of neurons in one human brain (86 billion). The comparison is imperfect — a neuron is vastly more complex than a transistor — but the order-of-magnitude coincidence is striking.</p>
+      <p><strong>AI accelerators on Earth: ~15 million H100-equivalents</strong> (Jan 2026)</p>
+      <ul>
+        <li>All vendors: NVIDIA (~60%), Google TPUs, Amazon Trainium, AMD, Huawei</li>
+        <li>Requires <a href="https://the-decoder.com/global-ai-compute-hits-15-million-h100-equivalents-epoch-ai-finds/" target="_blank">10+ gigawatts</a> — twice NYC's consumption</li>
+        <li>Source: <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">Epoch AI</a></li>
+      </ul>
 
-      <p><strong>GPUs on Earth today: ~15 million H100-equivalents.</strong> As of January 2026, <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">Epoch AI</a> estimates that global AI computing capacity exceeds 15 million H100-equivalents across all chip designers — NVIDIA, Google (TPUs), Amazon (Trainium), AMD (MI300X), and Huawei (Ascend). NVIDIA alone accounts for ~60% of total compute, or roughly 4 million H100-equivalents of installed base. The collective hardware requires over <a href="https://the-decoder.com/global-ai-compute-hits-15-million-h100-equivalents-epoch-ai-finds/" target="_blank">10 gigawatts of power</a> — roughly twice what New York City consumes.</p>
-
-      <p><strong>Production rate: ~7 million NVIDIA data center GPUs per year (2025).</strong> NVIDIA shipped <a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">3.76 million data center GPUs in 2023</a> (TechInsights), ~4 million in 2024, and an estimated 6.5-7 million in 2025 — roughly 2 million Hopper and 5 million Blackwell units. The <a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">installed compute stock is doubling every 10 months</a> for NVIDIA alone; <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">every 7 months</a> when including all vendors.</p>
+      <p><strong>Production rate: ~7 million NVIDIA datacenter GPUs/year</strong> (2025)</p>
+      <ul>
+        <li>2023: 3.76M (<a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">TechInsights</a>). 2024: ~4M. 2025: ~6.5-7M</li>
+        <li>Installed compute doubling every <a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">10 months</a> (NVIDIA); <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">7 months</a> (all vendors)</li>
+      </ul>
 
       <h2>The Bandwidth Gap</h2>
 
-      <p>This is the section that should make you pause.</p>
-
-      <p><strong>Human conscious output: ~10 bits per second.</strong> This is the central finding of <a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">Zheng & Meister (2024)</a>, "The Unbearable Slowness of Being," published in <em>Neuron</em>. They surveyed evidence from typing, speech, gaming, speedcubing, memory sports, and Fitts' law motor tasks. The result is stunningly consistent: whether you're typing at 120 WPM, playing StarCraft at 1000 APM, or solving a Rubik's cube blindfolded, the information throughput of conscious human behavior converges to approximately <strong>10 bits per second</strong>.</p>
-
-      <p>The breakdown by channel:</p>
+      <p><strong>Human conscious output: ~10 bits/second</strong></p>
       <ul>
-        <li><strong>Speech:</strong> ~39 bits/s — the highest measured output channel, and <a href="https://www.science.org/content/article/human-speech-may-have-universal-transmission-rate-39-bits-second" target="_blank">remarkably universal across 17 languages</a> (Coupé et al., <em>Science Advances</em>, 2019)</li>
-        <li><strong>Expert typing:</strong> ~10 bits/s (120 WPM x 5 chars/word x ~1 bit/char of Shannon entropy)</li>
-        <li><strong>Reading comprehension:</strong> ~28-45 bits/s</li>
-        <li><strong>Motor tasks (Fitts' law):</strong> ~10-12 bits/s</li>
-        <li><strong>StarCraft (pro):</strong> ~16.7 bits/s</li>
-        <li><strong>Choice reaction time:</strong> ~5 bits/s</li>
+        <li>Speech: ~39 bits/s — highest channel, <a href="https://www.science.org/content/article/human-speech-may-have-universal-transmission-rate-39-bits-second" target="_blank">universal across 17 languages</a></li>
+        <li>Expert typing: ~10 bits/s. Reading: ~28-45 bits/s. StarCraft (pro): ~16.7 bits/s</li>
+        <li>All tasks converge to ~10 bits/s of Shannon information content</li>
+        <li>Per day (16 waking hours): ~576,000 bits. <strong>About 72 kilobytes.</strong></li>
+        <li>Source: <a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">Zheng & Meister, <em>Neuron</em>, 2025</a></li>
       </ul>
 
-      <p>At 10 bits/second for 16 waking hours: <strong>~576,000 bits per day. About 72 kilobytes.</strong> That is the total novel information content a human produces in a day of conscious activity.</p>
-
-      <p><strong>Human sensory input: ~10<sup>9</sup> bits per second.</strong> The retina alone sends ~100 megabits/s down the optic nerve. Cone photoreceptors combined transmit ~1.6 gigabits/s. Total sensory bombardment across all senses: roughly 1 billion bits per second. The compression ratio from input to conscious output is approximately <strong>100 million to one</strong>.</p>
-
-      <p><strong>LLM output: ~480 to ~15,600 bits per second.</strong> Using the Shannon information content of English text (~6 bits per token, based on ~4 characters per token at ~1.3 bits/character):</p>
+      <p><strong>Human sensory input: ~10<sup>9</sup> bits/second</strong> (1 billion)</p>
       <ul>
-        <li><strong>Claude Sonnet:</strong> ~77 tokens/s = ~462 bits/s</li>
-        <li><strong>GPT-4o:</strong> ~100 tokens/s = ~600 bits/s</li>
-        <li><strong>Gemini 2.5 Flash:</strong> ~250 tokens/s = ~1,500 bits/s</li>
-        <li><strong>Llama 4 Scout:</strong> ~2,600 tokens/s = ~15,600 bits/s</li>
+        <li>Optic nerve alone: ~100 Mbits/s. Cone photoreceptors combined: ~1.6 Gbits/s</li>
+        <li>Compression ratio from input to conscious output: <strong>100 million to one</strong></li>
       </ul>
 
-      <p>A frontier LLM outputs information roughly <strong>15x faster than human speech</strong>. The fastest open models run at <strong>400x human speed</strong>. And LLM input (the prefill phase) is massively parallel — processing tens of thousands of tokens per second. This is why API providers charge input tokens at 3-10x lower cost than output tokens.</p>
+      <p><strong>LLM output: ~480 to ~15,600 bits/second</strong></p>
+      <ul>
+        <li>Claude Sonnet: ~77 tok/s = ~462 bits/s</li>
+        <li>GPT-4o: ~100 tok/s = ~600 bits/s</li>
+        <li>Gemini 2.5 Flash: ~250 tok/s = ~1,500 bits/s</li>
+        <li>Llama 4 Scout: ~2,600 tok/s = ~15,600 bits/s</li>
+        <li>Using ~6 bits/token (Shannon entropy of English at ~1.3 bits/char x ~4 chars/token)</li>
+        <li>Frontier LLMs: <strong>15x faster than speech</strong>. Fastest open models: <strong>400x</strong></li>
+      </ul>
 
       <h2>The Intelligence Census</h2>
 
-      <p><strong>Humans on Earth: ~8.3 billion.</strong> Of those, approximately 25% have IQ above 110 (z-score of 0.667 on a normal distribution with mean 100, SD 15). About 64.5% are aged 18-69. Combining those filters: ~1.35 billion people are high-IQ and working-age.</p>
+      <p><strong>Humans on Earth: ~8.3 billion</strong></p>
+      <ul>
+        <li>IQ > 110: ~25% (normal distribution, mean 100, SD 15)</li>
+        <li>Aged 18-69: ~64.5%</li>
+        <li>Both filters combined: ~1.35 billion</li>
+      </ul>
 
-      <p>But how many are actually <em>pushing the envelope of knowledge</em>? <a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">UNESCO counts ~9-11 million full-time equivalent researchers</a> worldwide, with the latest density figure of 1,420 researchers per million inhabitants as of 2022. Given that virtually all FTE researchers are working-age, and studies of PhD holders show mean IQs of 120-130+, the intersection is approximately <strong>10-12 million humans actively advancing knowledge</strong>.</p>
+      <p><strong>Active researchers: ~10-12 million</strong></p>
+      <ul>
+        <li><a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">UNESCO</a>: ~9-11M FTE researchers worldwide (1,420 per million inhabitants, 2022)</li>
+        <li>PhD holders average IQ 120-130+; ~90% exceed 110</li>
+      </ul>
 
-      <p><strong>Best open source model (early 2026): Kimi K2</strong> — 1 trillion total parameters, 32 billion active per token, 384 experts with 8 active per forward pass. Minimum inference: <a href="https://apxml.com/posts/gpu-system-requirements-kimi-llm" target="_blank">16x H100 GPUs</a>. Recommended: 32x H100. GLM-5 (744B parameters, 40B active) needs 8x H200 or roughly 12-16x H100.</p>
+      <p><strong>Best open source model (early 2026): <a href="https://apxml.com/posts/gpu-system-requirements-kimi-llm" target="_blank">Kimi K2</a></strong></p>
+      <ul>
+        <li>1 trillion total parameters, 32 billion active per token</li>
+        <li>Minimum: 16x H100. Recommended: 32x H100</li>
+        <li>FP4 quantized: ~8x H100</li>
+      </ul>
 
       <h2>The Projection</h2>
 
-      <p>Given ~15 million H100-equivalents on Earth and ~8 GPUs per quantized frontier model instance (FP4), we can currently run approximately <strong>1.9 million concurrent AI agents</strong>. Already on the same order of magnitude as the ~10-12 million human researchers.</p>
+      <p><strong>Concurrent AI agents today: ~1.9 million</strong> (15M GPUs / 8 GPUs per instance)</p>
 
-      <p>But compute is growing at 3.3x per year (all vendors), and inference efficiency is improving at roughly 1.5x per year through quantization, distillation, and architecture improvements. The combined effect:</p>
+      <p>Compute growing at 3.3x/year. Inference efficiency improving ~1.5x/year.</p>
 
       <table style="width:100%; border-collapse: collapse; margin: 1.5em 0; font-size: 14px;">
         <thead>
           <tr style="border-bottom: 2px solid #d4d2cf;">
             <th style="text-align:left; padding: 8px;">Year</th>
-            <th style="text-align:right; padding: 8px;">H100-eq (millions)</th>
+            <th style="text-align:right; padding: 8px;">H100-eq</th>
             <th style="text-align:right; padding: 8px;">GPUs/Instance</th>
             <th style="text-align:right; padding: 8px;">Max Concurrent Agents</th>
           </tr>
@@ -655,32 +697,33 @@ const POSTS = [
         </tbody>
       </table>
 
-      <p>"GPUs/Instance" below 1.0 means a single GPU can serve multiple concurrent agent sessions through batching and distillation — this is already happening for smaller models. These are theoretical maximums; in practice, a significant share of compute goes to training rather than inference.</p>
-
-      <p>The crossover points:</p>
       <ul>
-        <li>By <strong>2028</strong>, concurrent AI agents (~26 million) exceed the number of human researchers (~12 million) by roughly 2x</li>
-        <li>By <strong>2030</strong>, AI agents outnumber human researchers by ~25x</li>
-        <li>By <strong>2035</strong>, there are ~72 billion theoretical agent slots — roughly <strong>8.7 agents per human on Earth</strong></li>
+        <li>GPUs/Instance < 1.0 = multiple agents per GPU via batching (already happening for smaller models)</li>
+        <li>Theoretical maximums — training consumes a significant share of compute in practice</li>
       </ul>
 
-      <p>These are not predictions of what <em>will</em> happen. They are calculations of what is <em>physically possible</em> given current trajectories. Whether we choose to deploy that capacity, and to what ends, is the question every other post on this blog is trying to answer.</p>
+      <p><strong>Crossover points:</strong></p>
+      <ul>
+        <li><strong>2028:</strong> AI agents (~26M) exceed human researchers (~12M) by 2x</li>
+        <li><strong>2030:</strong> AI agents outnumber researchers ~25x</li>
+        <li><strong>2035:</strong> ~72 billion agent slots — <strong>8.7 per human on Earth</strong></li>
+      </ul>
+
+      <p>These are not predictions. They are calculations of what is physically possible given current trajectories.</p>
 
       <hr>
       <h3>References</h3>
       <ul>
-        <li>Bianconi et al., <a href="https://pubmed.ncbi.nlm.nih.gov/23829164/" target="_blank">"An estimation of the number of cells in the human body"</a> — <em>Annals of Human Biology</em>, 2013</li>
-        <li>Hatton et al., <a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">"The human cell count and size distribution"</a> — <em>PNAS</em>, 2023</li>
-        <li>Azevedo et al., <a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">"Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain"</a> — <em>J. Comp. Neurol.</em>, 2009</li>
-        <li>Zheng & Meister, <a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">"The Unbearable Slowness of Being: Why do we live at 10 bits/s?"</a> — <em>Neuron</em>, 2025</li>
-        <li>Coupé et al., <a href="https://www.science.org/doi/10.1126/sciadv.aaw2594" target="_blank">"Different languages, similar encoding efficiency"</a> — <em>Science Advances</em>, 2019</li>
-        <li>Shannon, <a href="https://www.princeton.edu/~wbialek/rome/refs/shannon_51.pdf" target="_blank">"Prediction and Entropy of Printed English"</a> — <em>Bell System Technical Journal</em>, 1951</li>
-        <li>NVIDIA, <a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">"Hopper Architecture In-Depth"</a></li>
-        <li>Epoch AI, <a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">"Global AI Computing Capacity"</a> — data insights, 2025-2026</li>
-        <li>Epoch AI, <a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">"The Stock of Computing Power from NVIDIA Chips"</a> — data insights, 2025</li>
-        <li>TechInsights via <a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">HPCwire</a> — NVIDIA GPU shipment data, 2024</li>
-        <li>UNESCO, <a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">"Number of scientists worldwide reaches 8.8M"</a> — Science|Business, 2021</li>
-        <li>Artificial Analysis, <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">LLM Speed Leaderboard</a></li>
+        <li><a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">Hatton et al.</a> — human cell count, <em>PNAS</em>, 2023</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">Azevedo et al.</a> — neuron count, <em>J. Comp. Neurol.</em>, 2009</li>
+        <li><a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">Zheng & Meister</a> — human information throughput, <em>Neuron</em>, 2025</li>
+        <li><a href="https://www.science.org/doi/10.1126/sciadv.aaw2594" target="_blank">Coupé et al.</a> — speech encoding rate, <em>Science Advances</em>, 2019</li>
+        <li><a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">NVIDIA</a> — Hopper architecture</li>
+        <li><a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">Epoch AI</a> — global AI computing capacity, 2026</li>
+        <li><a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">Epoch AI</a> — NVIDIA compute stock, 2025</li>
+        <li><a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">TechInsights/HPCwire</a> — GPU shipment data</li>
+        <li><a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">UNESCO/Science|Business</a> — global researcher count</li>
+        <li><a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis</a> — LLM speed benchmarks</li>
       </ul>
     `,
     connections: [
