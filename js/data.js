@@ -190,10 +190,38 @@ const POSTS = [
       <p>These assumptions are, in a deep sense, our Zones of Thought. They are the boundaries within which power is constrained. As long as the assumptions hold, your private key is yours, your vote is secret, your communication is sealed. If they fall — if someone finds a fast factoring algorithm, if quantum computers break the curves — the boundaries collapse, and power floods through.</p>
       <p>But here's the hopeful part: we can <em>build on this</em>. We can construct a society that progresses with a diversity of ideas, thoughts, species, intelligences, and minds — and does so with <em>provable guarantees</em> on its functioning. Not guarantees that depend on trust, or goodwill, or institutional memory. Guarantees that are mathematical. Verifiable. Auditable. Guarantees that hold even when the participants are adversarial.</p>
       <p>We have the tools. We have the theory. What we lack is the conviction that this is worth building — and the political will to insist on it.</p>
+
+      <h2>Two Kinds of Power</h2>
+      <p>There is a power that overcomes. It builds. It creates capacity where there was none. It lifts the person who wields it <em>and</em> those around them. This is power as generative force — the scientist who discovers, the engineer who builds, the leader who coordinates. This power grows the total sum. It is not zero-sum. When someone gains it, the world does not lose.</p>
+      <p>Then there is the other kind. Power gained not by rising, but by pushing others down. Power through suppression — through restricting information, through eliminating competitors, through making others smaller so that you appear large by contrast. This power does not create. It redistributes — always upward, always toward the one who holds it. It does not grow the sum. It captures it.</p>
+      <p>Every institution, every leader, every system can be evaluated on this axis. Is the power here generative or extractive? Is it making the whole larger, or making everything else smaller?</p>
+
+      <h2>The Black Hole</h2>
+      <p>Extractive power concentrates like a black hole. Past a certain density, nothing escapes. Resources flow in. Talent flows in. Information flows in. And nothing comes back out. The gravitational pull of concentrated power warps everything around it — incentives bend, truth distorts, independent actors fall into orbit or get consumed.</p>
+      <p>This is not a metaphor. It is the literal dynamic of monopoly, of autocracy, of any system where power has crossed the threshold beyond which it becomes self-reinforcing. The powerful use power to acquire more power. The feedback loop closes. The event horizon forms.</p>
+      <p>But here is the thing about black holes: <em>even they die.</em></p>
+      <p>Hawking radiation — the slow quantum leak at the boundary of a black hole — means that a black hole which consumes no new matter will eventually evaporate. It takes an almost incomprehensible amount of time. But it happens. The most extreme concentration of matter and energy in the known universe is not, in fact, permanent. It is just very, very slow to die.</p>
+      <p>And this may be the deepest truth about power: nothing is permanent. No empire. No dynasty. No monopoly. No concentration of force, no matter how absolute, survives forever without continuous feeding. Cut off the supply of new matter — new resources, new legitimacy, new consent — and even the most total power slowly, inexorably, radiates away.</p>
+
+      <h2>The Fight for Perpetuity</h2>
+      <p>If nothing is permanent, then the fundamental question is not "who has power?" but "what kind of perpetuity are you fighting for?"</p>
+      <p>Because everyone is fighting for some kind. Whether they articulate it or not, every human is engaged in a project of continuation — an attempt to make something outlast their own finite existence. The drive is universal. The forms it takes are not.</p>
+      <p>Some fight for perpetuity through <strong>children</strong> — the oldest strategy, the most biological. Your genes continue. Your name continues. Someone remembers you, at least for a generation or two. This is perpetuity through replication.</p>
+      <p>Some fight through <strong>ideas</strong> — writing, philosophy, art, scientific discovery. You put a thought into the world and hope it propagates. Plato is more alive than most people who lived in the 20th century. Darwin's idea has more causal influence on the present than any living human. This is perpetuity through memetic survival. Though it is worth noting: with LLMs, ideas are becoming cheaper currency. When anyone can generate plausible-sounding philosophy in seconds, the mere production of ideas loses its scarcity premium. What remains valuable is ideas that <em>meaningfully shift the token distribution</em> — thoughts so novel, so true, so structurally important that they change what the models themselves generate. Everything else is noise with a byline.</p>
+      <p>Some fight through <strong>systems</strong> — institutions, constitutions, nations, movements. The American founders are not alive, but the system they built still processes decisions for 330 million people. This is perpetuity through structural survival. It is arguably the most powerful form, because a system that outlives its creators continues to shape the world long after the creators' individual ideas have been forgotten or distorted.</p>
+      <p>And some fight for perpetuity through <strong>the species itself</strong> — through ensuring that humanity (or whatever we become) continues to exist and flourish. This is the most abstract form and the hardest to pursue, because it requires subordinating personal legacy to collective survival. It is the perpetuity of the unnamed — the people who make choices that benefit a future they will never see and that will never know their names.</p>
+
+      <h2>Choosing</h2>
+      <p>These are all drives. They are not equally noble, and they are not equally useful. But they are all real, and pretending they don't operate is a failure of self-knowledge that leads to bad governance, bad institutions, and bad decisions.</p>
+      <p>The question is which kind of perpetuity we choose to optimize for — collectively, deliberately, with eyes open. Because the default is not stability. The default is not the status quo. The default is death.</p>
+      <p>Death is easy. Death is what happens when no one chooses. When no one maintains the system. When no one fights for the thing that matters. Entropy is not dramatic — it is the quiet accumulation of neglect. Civilizations do not collapse in a single moment. They stop being maintained. They stop being chosen. And then, one day, they are simply gone.</p>
+      <p>So the choice is not whether to fight for perpetuity. You are already fighting for it — through your children, your work, your ideas, your systems. The choice is whether to do it consciously. Whether to pick the form that matters most. Whether to build the kind of perpetuity that deserves to last.</p>
     `,
     connections: [
       { id: "banksian-landian-strossian", label: "bounding power" },
-      { id: "complexity-ceiling", label: "difficulty assumptions" }
+      { id: "complexity-ceiling", label: "difficulty assumptions" },
+      { id: "credible-commitments", label: "binding future selves" },
+      { id: "new-society", label: "systems that outlive us" }
     ]
   },
   {
