@@ -68,12 +68,7 @@ body {
   cursor: pointer;
 }
 
-.node rect {
-  transition: filter 0.2s ease, stroke 0.2s ease;
-}
-
-.node:hover rect {
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+.node:hover path {
   stroke-width: 2.5;
 }
 

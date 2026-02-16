@@ -33,9 +33,10 @@
     return edges;
   }
 
-  // Create hand-drawn SVG filter for rough edges
+  // SVG filters — expensive, applied only after simulation settles
+  let filtersActive = false;
+
   function createFilters(defs) {
-    // Subtle turbulence for hand-drawn feel
     const filter = defs.append('filter')
       .attr('id', 'rough')
       .attr('x', '-5%')
@@ -57,7 +58,6 @@
       .attr('xChannelSelector', 'R')
       .attr('yChannelSelector', 'G');
 
-    // Soft shadow for nodes
     const shadow = defs.append('filter')
       .attr('id', 'shadow')
       .attr('x', '-20%')
@@ -70,6 +70,20 @@
       .attr('dy', '3')
       .attr('stdDeviation', '6')
       .attr('flood-color', 'rgba(0,0,0,0.07)');
+  }
+
+  function enableFilters() {
+    if (filtersActive) return;
+    filtersActive = true;
+    edgeElements.attr('filter', 'url(#rough)');
+    nodeElements.selectAll('path').attr('filter', 'url(#shadow)');
+  }
+
+  function disableFilters() {
+    if (!filtersActive) return;
+    filtersActive = false;
+    edgeElements.attr('filter', null);
+    nodeElements.selectAll('path').attr('filter', null);
   }
 
   // Generate a subtly wobbly rounded rect path
@@ -149,10 +163,15 @@
     createFilters(defs);
 
     // Zoom behavior
+    let zoomTimer;
     const zoom = d3.zoom()
       .scaleExtent([0.3, 3])
       .on('zoom', (event) => {
         g.attr('transform', event.transform);
+        // Disable filters during active pan/zoom
+        disableFilters();
+        clearTimeout(zoomTimer);
+        zoomTimer = setTimeout(enableFilters, 300);
       });
 
     svg.call(zoom);
@@ -174,8 +193,7 @@
       .data(edges)
       .enter()
       .append('path')
-      .attr('class', 'edge')
-      .attr('filter', 'url(#rough)');
+      .attr('class', 'edge');
 
     // Edge labels
     edgeLabelElements = g.selectAll('.edge-label')
@@ -207,8 +225,7 @@
         .attr('d', wobbleRect(NODE_WIDTH, NODE_HEIGHT, NODE_RX, seed))
         .attr('fill', colors.fill)
         .attr('stroke', colors.stroke)
-        .attr('stroke-width', 2)
-        .attr('filter', 'url(#shadow)');
+        .attr('stroke-width', 2);
     });
 
     // Node title text
@@ -264,6 +281,7 @@
         .radius(NODE_WIDTH / 2 + 30))
       .force('x', d3.forceX(width / 2).strength(0.05))
       .force('y', d3.forceY(height / 2).strength(0.05))
+      .alphaDecay(0.05)
       .on('tick', ticked);
   }
 
@@ -272,6 +290,11 @@
       `translate(${d.x - NODE_WIDTH / 2}, ${d.y - NODE_HEIGHT / 2})`
     );
     edgeElements.attr('d', edgePath);
+
+    // Enable expensive filters only once simulation has nearly settled
+    if (!filtersActive && simulation.alpha() < 0.05) {
+      enableFilters();
+    }
 
     // Position edge labels at the midpoint of the curved edge
     edgeLabelElements
@@ -305,8 +328,9 @@
       });
   }
 
-  // Drag handlers
+  // Drag handlers — disable expensive filters during drag for smooth interaction
   function dragStarted(event, d) {
+    disableFilters();
     if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
     d.fy = d.y;
@@ -321,6 +345,7 @@
     if (!event.active) simulation.alphaTarget(0);
     d.fx = null;
     d.fy = null;
+    // Re-enable filters after simulation settles (handled in ticked)
   }
 
   // Highlight connected nodes and edges
@@ -375,6 +400,7 @@
 
   // Resize handler
   function handleResize() {
+    disableFilters();
     const container = document.getElementById('graph-container');
     width = container.clientWidth;
     height = container.clientHeight;
