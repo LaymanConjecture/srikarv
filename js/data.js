@@ -871,6 +871,54 @@ const POSTS = [
       { id: "on-power", label: "exit as power bound" },
       { id: "end-of-work", label: "compute as right" }
     ]
+  },
+  {
+    id: "information-generating-processes",
+    title: "Competing Information Generators",
+    subtitle: "The system that produces information fastest wins. That's the natural law.",
+    date: "2026-02-16",
+    category: "philosophy",
+    content: `
+      <p>I increasingly subscribe to a view of natural law that reduces to a single principle: the universe favors systems that generate and rapidly propagate new information. Everything else is commentary.</p>
+
+      <h2>Systems as Living Creatures</h2>
+      <p>We treat our systems dogmatically. Evolution is sacred. Capitalism is natural. Democracy is self-evident. Communism is evil — or inevitable, depending on who you ask. But these are not moral truths. They are <em>information-generating processes.</em> And if you treat them as living creatures rather than ideologies, their behavior becomes legible.</p>
+      <p>A system survives if it produces and propagates new information faster than its environment degrades it. A system dies when it stops generating — when it becomes repetitive, rigid, self-referential. When the information it produces is just recycled noise.</p>
+      <p>Look at any system through this lens:</p>
+      <ul>
+        <li><strong>Capitalism</strong> generates enormous amounts of information — prices, products, business models, market signals. It propagates that information through competition. It is extraordinarily efficient at this and extraordinarily bad at everything else.</li>
+        <li><strong>Democracy</strong> generates information through debate, elections, free press, protest. It propagates it through policy change. It is slow but self-correcting — errors become information too.</li>
+        <li><strong>Communism</strong> (as practiced) suppressed information generation. Central planning replaced distributed signal with dictated output. The system didn't die because it was morally wrong. It died because it was informationally starved. It couldn't see reality clearly enough to respond to it.</li>
+        <li><strong>Evolution</strong> is the oldest information generator. Random mutation + selection + reproduction = an algorithm that has been producing novel biological information for 3.8 billion years without a designer, a plan, or a meeting.</li>
+      </ul>
+      <p>Capital, attention, and power flow to the systems that generate information most efficiently. This is not a value judgment. It is an observation about what survives.</p>
+
+      <h2>The More Efficient System Wins</h2>
+      <p>If this framing is correct, then the long-term outcome is determined: the system that produces and propagates novel information fastest will outcompete the others. Not because it is morally superior. Because it is informationally dominant.</p>
+      <p>This is why AI is so disruptive. It is not just a tool within existing systems — it is a <em>new information-generating process</em> that is orders of magnitude faster than anything biological. When you can produce, test, and propagate ideas at machine speed, every human-speed system is at a structural disadvantage. Not today, not next year, but eventually and inevitably.</p>
+      <p>The question is not whether AI-augmented systems will replace slower ones. They will. The question is what we do about the transition.</p>
+
+      <h2>The Concession of Separation</h2>
+      <p>Here is where it gets interesting: the old system does not need to be destroyed.</p>
+      <p>If the new information-generating process is genuinely more efficient, it does not need to conquer. It only needs to exist — in a physically and structurally separated space. The old system can continue, with its own rules, its own pace, its own information dynamics. It will not outcompete. But it does not need to. People who prefer it can remain in it. People who want the new system can migrate.</p>
+      <p>This is likely the only stable compromise. Forced coexistence within the same governance structure creates constant friction — the fast system is frustrated by the slow one, the slow system is threatened by the fast one. But <em>separated</em> systems, with exit rights between them, can coexist indefinitely. Each serves the people who choose it. Each is legitimate within its own domain.</p>
+      <p>The key is that exit must be real. Not theoretical. Not punished. Not made so costly that it is exit in name only. The right to move between systems is what keeps both honest — and what prevents the more powerful system from simply absorbing the weaker one.</p>
+
+      <h2>Evolutionary vs. Planned Creation</h2>
+      <p>There is a deeper question underneath all of this, and we do not yet have an answer to it.</p>
+      <p>Evolution — the process that produced us, our brains, our societies, our biosphere — is unplanned. It has no designer. It operates through random variation, selection pressure, and time. It is breathtakingly creative and breathtakingly wasteful. It produces genius and horror with equal indifference. It has no goal. It simply generates information and keeps what propagates.</p>
+      <p>Planned creation — engineering, design, architecture, AI training — is intentional. It has goals. It optimizes for specific outcomes. It is fast, efficient, and directed. It can accomplish in months what evolution takes millennia to stumble toward. But it is also brittle in ways evolution is not. A designed system reflects the biases and blind spots of its designer. Evolution has no blind spots because it has no eyes — it tests everything.</p>
+      <p>Which is better? We genuinely do not know. Evolution produced everything we have — every species, every ecosystem, every neural architecture. Its track record is 3.8 billion years of continuous operation. But it is slow, cruel, and has no interest in individual welfare. Planned creation is humane, fast, and goal-directed — but it has existed for an evolutionary eyeblink and its long-term failure modes are unknown.</p>
+      <p>The honest position is uncertainty. We are at the earliest moments of a transition from evolutionary to planned information generation, and we have no basis for declaring which process will prove more durable. What we can say is that they are <em>different</em> — fundamentally different in mechanism, in timescale, in failure mode, and in what they optimize for. And a wise civilization would not bet everything on one while abandoning the other.</p>
+      <p>Run them both. Separate them. Let them compete. And watch which one produces the information that lasts.</p>
+    `,
+    connections: [
+      { id: "complexity-ceiling", label: "information limits" },
+      { id: "on-power", label: "power follows information" },
+      { id: "new-society", label: "exit between systems" },
+      { id: "numbers-of-interest", label: "throughput differential" },
+      { id: "banksian-landian-strossian", label: "competing futures" }
+    ]
   }
 ];
 
