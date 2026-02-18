@@ -7,6 +7,10 @@
 (function () {
   'use strict';
 
+  // Only enable annotations locally (file:// or localhost), not on the public site
+  var host = window.location.hostname;
+  if (host && host !== 'localhost' && host !== '127.0.0.1') return;
+
   const STORAGE_KEY = 'lifepanel-annotations';
   let annotationMode = false;
   let currentArticleId = null;

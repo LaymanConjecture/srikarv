@@ -161,15 +161,20 @@
   });
 
   // Handle in-text reference links (e.g. href="#ref-6") — scroll panel to matching <li>
-  panel.addEventListener('click', function (e) {
+  document.addEventListener('click', function (e) {
     const link = e.target.closest('a[href^="#ref-"]');
     if (!link || !currentPostId) return;
     e.preventDefault();
+    e.stopPropagation();
     const refNum = link.getAttribute('href').replace('#ref-', '');
     // Find the <li> whose id ends with -ref-N within the panel
     const target = panel.querySelector('li[id$="-ref-' + refNum + '"]');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Manual scroll within the panel (scrollIntoView unreliable in overflow containers)
+      var targetTop = target.getBoundingClientRect().top;
+      var panelTop = panel.getBoundingClientRect().top;
+      var offset = targetTop - panelTop + panel.scrollTop - panel.clientHeight / 3;
+      panel.scrollTo({ top: offset, behavior: 'smooth' });
       // Brief highlight flash
       target.style.transition = 'background 0.3s ease';
       target.style.background = '#fff3a8';
