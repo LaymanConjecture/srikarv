@@ -1,5 +1,5 @@
 // ============================================
-// Blog Knowledge Graph — Post Panel
+// Blog Knowledge Graph — Post Panel + Routing
 // ============================================
 
 (function () {
@@ -7,6 +7,7 @@
 
   const panel = document.getElementById('post-panel');
   let currentPostId = null;
+  let handlingPopstate = false;
 
   // Find a post by ID
   function findPost(id) {
@@ -90,6 +91,14 @@
     // Scroll to top of panel
     panel.scrollTop = 0;
 
+    // Update URL (safe for file:// protocol)
+    if (!handlingPopstate) {
+      try { history.pushState({ postId: postId }, '', '/' + postId); } catch (e) {}
+    }
+
+    // Update page title
+    document.title = post.title + ' — Life Panel';
+
     // Trigger transitions
     requestAnimationFrame(() => {
       panel.classList.add('open');
@@ -108,7 +117,41 @@
     if (typeof shiftGraph === 'function') {
       shiftGraph(false);
     }
+
+    // Update URL (safe for file:// protocol)
+    if (!handlingPopstate) {
+      try { history.pushState({}, '', '/'); } catch (e) {}
+    }
+
+    // Restore page title
+    document.title = 'Life Panel — Blog';
   };
+
+  // Handle browser back/forward
+  window.addEventListener('popstate', function (event) {
+    handlingPopstate = true;
+    if (event.state && event.state.postId) {
+      const post = findPost(event.state.postId);
+      if (post) {
+        currentPostId = event.state.postId;
+        renderPost(post);
+        panel.scrollTop = 0;
+        document.title = post.title + ' — Life Panel';
+        requestAnimationFrame(() => {
+          panel.classList.add('open');
+          if (typeof shiftGraph === 'function') shiftGraph(true);
+        });
+      }
+    } else {
+      if (currentPostId) {
+        currentPostId = null;
+        panel.classList.remove('open');
+        if (typeof shiftGraph === 'function') shiftGraph(false);
+        document.title = 'Life Panel — Blog';
+      }
+    }
+    handlingPopstate = false;
+  });
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
@@ -116,5 +159,26 @@
       closePost();
     }
   });
+
+  // Check URL on load for direct article links
+  function checkInitialRoute() {
+    const path = window.location.pathname;
+    const segments = path.split('/').filter(Boolean);
+    const postId = segments[segments.length - 1];
+    if (postId && postId !== 'index.html') {
+      const post = findPost(postId);
+      if (post) {
+        history.replaceState({ postId: postId }, '', path);
+        openPost(postId);
+      }
+    }
+  }
+
+  // Run after graph init (which also fires on DOMContentLoaded)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(checkInitialRoute, 50));
+  } else {
+    setTimeout(checkInitialRoute, 50);
+  }
 
 })();

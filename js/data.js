@@ -36,12 +36,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li><a href="https://info.vtaiwan.tw/" target="_blank">vTaiwan</a> — Taiwan's digital deliberation platform using Pol.is</li>
-        <li><a href="https://e-estonia.com/" target="_blank">e-Estonia</a> — Estonia's digital government infrastructure (99% of services online)</li>
-        <li><a href="https://en.wikipedia.org/wiki/LiquidFeedback" target="_blank">LiquidFeedback</a> — Open-source liquid democracy platform used by Pirate Parties and Google</li>
-        <li>Berinsky et al. — MIT experimental findings on liquid democracy and delegation chain depth</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="verifiable-government-ref-1"><a href="https://info.vtaiwan.tw/" target="_blank">vTaiwan</a> — Taiwan's digital deliberation platform using Pol.is</li>
+        <li id="verifiable-government-ref-2"><a href="https://e-estonia.com/" target="_blank">e-Estonia</a> — Estonia's digital government infrastructure (99% of services online)</li>
+        <li id="verifiable-government-ref-3"><a href="https://en.wikipedia.org/wiki/LiquidFeedback" target="_blank">LiquidFeedback</a> — Open-source liquid democracy platform used by Pirate Parties and Google</li>
+        <li id="verifiable-government-ref-4">Berinsky et al. — MIT experimental findings on liquid democracy and delegation chain depth</li>
+      </ol>
     `,
     connections: [
       { id: "futurism-is-lame", label: "action over vision" },
@@ -77,6 +77,15 @@ const POSTS = [
       <p>This is the problem with frameworks that substitute pattern-matching for understanding. The Hype Cycle is not a scientific model — it has no predictive power, no falsifiable hypotheses, no error bars. It is a <em>narrative template</em> that makes consultants feel smart and executives feel informed. It is futurism as interior decoration.</p>
       <p>History is littered with confident predictions from serious people. Lord Kelvin, president of the Royal Society, declared in 1895 that "heavier-than-air flying machines are impossible." The Wright brothers flew eight years later. IBM's Thomas Watson reportedly said the world market for computers was "maybe five." Paul Krugman predicted in 1998 that the internet's economic impact would be "no greater than the fax machine's." These were not fools — they were experts extrapolating from what they knew, which is exactly what experts do, and exactly why expert prediction is unreliable outside narrow domains.</p>
       <p>The lesson is not that prediction is impossible. It's that prediction <em>without skin in the game</em> is theater. Musk's predictions about Mars timelines have been consistently wrong — but he's building the rockets anyway. The prediction mattered less than the commitment. That's the difference between futurism and work.</p>
+
+      <hr>
+      <h3>References</h3>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="futurism-is-lame-ref-1">Douglas Adams, <em>The Hitchhiker's Guide to the Galaxy</em> (1979)</li>
+        <li id="futurism-is-lame-ref-2"><a href="https://www.gartner.com/en/research/methodologies/gartner-hype-cycle" target="_blank">Gartner Hype Cycle</a> — methodology and critique (6/10 technologies never emerge from the Trough)</li>
+        <li id="futurism-is-lame-ref-3">Lord Kelvin, "heavier-than-air flying machines are impossible" (1895). Wright brothers flew 1903.</li>
+        <li id="futurism-is-lame-ref-4">Paul Krugman, "The internet's impact on the economy will be no greater than the fax machine's" (1998)</li>
+      </ol>
     `,
     connections: [
       { id: "complexity-ceiling", label: "hype vs. reality" }
@@ -109,6 +118,13 @@ const POSTS = [
       <p>Scott Aaronson, one of the clearest thinkers on computational complexity, laid this out precisely in his paper <a href="https://arxiv.org/abs/quant-ph/0502072" target="_blank">"NP-Complete Problems and Physical Reality"</a>: even if you had a computer that exploited every known law of physics — quantum mechanics, general relativity, all of it — there is no evidence it could solve NP-complete problems in polynomial time. The universe itself may not have enough structure to make certain computations efficient. Superintelligent AI doesn't change this. A being a trillion times smarter than a human is still bound by the same complexity classes.</p>
       <p>The no-free-lunch theorems formalize something even more humbling: across all possible problems, no algorithm outperforms random search on average. <em>Every</em> optimization algorithm, no matter how sophisticated, trades performance on some problems for performance on others. There is no universal solver. Intelligence is not a skeleton key — it is a set of biases that happen to work well on the problems the universe actually presents. Change the problem distribution, and the "superintelligence" becomes a blunt instrument.</p>
       <p>Here's the distinction that matters: formal algorithms operate in well-defined problem spaces with clear objective functions. Human heuristics operate in ill-defined problem spaces where the objective function itself is contested, evolving, or unknown. Much of what AI lab leaders promise — "solving" aging, "curing" all disease, "eliminating" poverty — lives in the second category. These are not optimization problems. They are political, ethical, and coordination problems wearing a technical disguise. A superintelligent optimizer pointed at "cure cancer" would discover that the problem isn't computational — it's that "cancer" is a thousand different diseases, each embedded in a unique human body, each requiring a different intervention, each raising different ethical questions about tradeoffs. Intelligence doesn't dissolve complexity. It reveals it.</p>
+
+      <hr>
+      <h3>References</h3>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="complexity-ceiling-ref-1">Scott Aaronson, <a href="https://arxiv.org/abs/quant-ph/0502072" target="_blank">"NP-Complete Problems and Physical Reality"</a> (2005) — complexity limits even with exotic physics</li>
+        <li id="complexity-ceiling-ref-2">Wolpert & Macready, <a href="https://ieeexplore.ieee.org/document/585893" target="_blank">"No Free Lunch Theorems for Optimization"</a> — <em>IEEE Trans. Evolutionary Computation</em>, 1997</li>
+      </ol>
     `,
     connections: [
       { id: "epistemic-hygiene", label: "honest calibration" }
@@ -145,12 +161,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Philip Tetlock, <em><a href="https://en.wikipedia.org/wiki/Superforecasting" target="_blank">Superforecasting: The Art and Science of Prediction</a></em> (2015)</li>
-        <li><a href="https://en.wikipedia.org/wiki/The_Good_Judgment_Project" target="_blank">The Good Judgment Project</a> — IARPA-sponsored forecasting tournament</li>
-        <li>Tetlock & Gardner — superforecasters beat analysts with classified access by 30%</li>
-        <li>Mellers et al. — 20-minute calibration training improves forecasting accuracy</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="epistemic-hygiene-ref-1">Philip Tetlock, <em><a href="https://en.wikipedia.org/wiki/Superforecasting" target="_blank">Superforecasting: The Art and Science of Prediction</a></em> (2015)</li>
+        <li id="epistemic-hygiene-ref-2"><a href="https://en.wikipedia.org/wiki/The_Good_Judgment_Project" target="_blank">The Good Judgment Project</a> — IARPA-sponsored forecasting tournament</li>
+        <li id="epistemic-hygiene-ref-3">Tetlock & Gardner — superforecasters beat analysts with classified access by 30%</li>
+        <li id="epistemic-hygiene-ref-4">Mellers et al. — 20-minute calibration training improves forecasting accuracy</li>
+      </ol>
     `,
     connections: []
   },
@@ -205,17 +221,16 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Iain M. Banks — avowed socialist, <a href="https://en.wikipedia.org/wiki/Iain_Banks#Political_views" target="_blank">political activism</a>, passport protest over Iraq War</li>
-        <li>Nick Land — CCRU co-founder, trajectory from accelerationism to NRx, <em><a href="https://www.goodreads.com/book/show/3765232-fanged-noumena" target="_blank">Fanged Noumena</a></em></li>
-        <li>Charles Stross, <a href="http://www.antipope.org/charlie/blog-static/2018/01/dude-you-broke-the-future.html" target="_blank">"Dude, you broke the future!"</a> — 34C3, 2018</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="banksian-landian-strossian-ref-1">Iain M. Banks — avowed socialist, <a href="https://en.wikipedia.org/wiki/Iain_Banks#Political_views" target="_blank">political activism</a>, passport protest over Iraq War</li>
+        <li id="banksian-landian-strossian-ref-2">Nick Land — CCRU co-founder, trajectory from accelerationism to NRx, <em><a href="https://www.goodreads.com/book/show/3765232-fanged-noumena" target="_blank">Fanged Noumena</a></em></li>
+        <li id="banksian-landian-strossian-ref-3">Charles Stross, <a href="http://www.antipope.org/charlie/blog-static/2018/01/dude-you-broke-the-future.html" target="_blank">"Dude, you broke the future!"</a> — 34C3, 2018</li>
+      </ol>
     `,
     connections: [
       { id: "verifiable-government", label: "coordination vs. concentration" },
       { id: "futurism-is-lame", label: "values over vibes" },
       { id: "complexity-ceiling", label: "limits of intelligence" },
-      { id: "on-vitalik", label: "a living Culture Mind" }
     ]
   },
   {
@@ -278,12 +293,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Daron Acemoglu & James Robinson, <em>Why Nations Fail</em> (2012) — inclusive vs. extractive institutions (2024 Nobel Prize in Economics)</li>
-        <li>Mancur Olson, <em>Power and Prosperity</em> (2000) — stationary bandits and the logic of autocracy</li>
-        <li><a href="https://www.credit-suisse.com/about-us/en/reports-research/global-wealth-report.html" target="_blank">Credit Suisse Global Wealth Report</a> — millionaires own ~48% of global wealth</li>
-        <li><a href="https://data.oecd.org/inequality/income-inequality.htm" target="_blank">OECD Income Inequality Data</a> — top 10% income share across member nations</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="on-power-ref-1">Daron Acemoglu & James Robinson, <em>Why Nations Fail</em> (2012) — inclusive vs. extractive institutions (2024 Nobel Prize in Economics)</li>
+        <li id="on-power-ref-2">Mancur Olson, <em>Power and Prosperity</em> (2000) — stationary bandits and the logic of autocracy</li>
+        <li id="on-power-ref-3"><a href="https://www.credit-suisse.com/about-us/en/reports-research/global-wealth-report.html" target="_blank">Credit Suisse Global Wealth Report</a> — millionaires own ~48% of global wealth</li>
+        <li id="on-power-ref-4"><a href="https://data.oecd.org/inequality/income-inequality.htm" target="_blank">OECD Income Inequality Data</a> — top 10% income share across member nations</li>
+      </ol>
     `,
     connections: [
       { id: "banksian-landian-strossian", label: "bounding power" },
@@ -334,12 +349,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li><a href="https://worldcoin.org/" target="_blank">Worldcoin</a> — proof of personhood via zero-knowledge proofs and iris biometrics</li>
-        <li><a href="https://z.cash/" target="_blank">Zcash</a> — zk-SNARK private transactions on public blockchain</li>
-        <li>Lawrence Lessig, <em><a href="https://en.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace" target="_blank">Code and Other Laws of Cyberspace</a></em> (1999) — four modalities of regulation</li>
-        <li><a href="https://en.wikipedia.org/wiki/The_DAO" target="_blank">The DAO hack</a> (2016) — $150M drained via reentrancy vulnerability, resolved by Ethereum hard fork</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="math-over-law-ref-1"><a href="https://worldcoin.org/" target="_blank">Worldcoin</a> — proof of personhood via zero-knowledge proofs and iris biometrics</li>
+        <li id="math-over-law-ref-2"><a href="https://z.cash/" target="_blank">Zcash</a> — zk-SNARK private transactions on public blockchain</li>
+        <li id="math-over-law-ref-3">Lawrence Lessig, <em><a href="https://en.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace" target="_blank">Code and Other Laws of Cyberspace</a></em> (1999) — four modalities of regulation</li>
+        <li id="math-over-law-ref-4"><a href="https://en.wikipedia.org/wiki/The_DAO" target="_blank">The DAO hack</a> (2016) — $150M drained via reentrancy vulnerability, resolved by Ethereum hard fork</li>
+      </ol>
     `,
     connections: [
       { id: "verifiable-government", label: "proof over trust" },
@@ -398,12 +413,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>John Maynard Keynes, <a href="https://www.aspeninstitute.org/wp-content/uploads/files/content/upload/Intro_and_Chapter1.pdf" target="_blank">"Economic Possibilities for our Grandchildren"</a> (1930)</li>
-        <li>David Graeber, <em>Bullshit Jobs: A Theory</em> (2018) — 37% YouGov finding</li>
-        <li><a href="https://data.oecd.org/emp/hours-worked.htm" target="_blank">OECD Hours Worked data</a> — secular decline in annual working hours</li>
-        <li><a href="https://ourworldindata.org/working-hours" target="_blank">Our World in Data: Working Hours</a> — historical perspective on labor time</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="end-of-work-ref-1">John Maynard Keynes, <a href="https://www.aspeninstitute.org/wp-content/uploads/files/content/upload/Intro_and_Chapter1.pdf" target="_blank">"Economic Possibilities for our Grandchildren"</a> (1930)</li>
+        <li id="end-of-work-ref-2">David Graeber, <em>Bullshit Jobs: A Theory</em> (2018) — 37% YouGov finding</li>
+        <li id="end-of-work-ref-3"><a href="https://data.oecd.org/emp/hours-worked.htm" target="_blank">OECD Hours Worked data</a> — secular decline in annual working hours</li>
+        <li id="end-of-work-ref-4"><a href="https://ourworldindata.org/working-hours" target="_blank">Our World in Data: Working Hours</a> — historical perspective on labor time</li>
+      </ol>
     `,
     connections: [
       { id: "verifiable-government", label: "post-work governance" },
@@ -463,17 +478,17 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/DARPA" target="_blank">DARPA</a> — ~120 program managers, created ARPANET, GPS, stealth (est. 1958)</li>
-        <li><a href="https://www.forestneurotech.org/" target="_blank">Forest Neurotech</a> — Convergent Research FRO building next-gen brain-computer interfaces</li>
-        <li><a href="https://www.gap-map.org/" target="_blank">Convergent Research Gap Map</a> — Interactive database of R&D bottlenecks and foundational capabilities</li>
-        <li><a href="https://www.convergentresearch.org/" target="_blank">Convergent Research</a> — Nonprofit incubator for Focused Research Organizations</li>
-        <li><a href="https://www.macroscience.org/p/do-not-surrender-to-the-tech-tree" target="_blank">Tao Burga, "Do Not Surrender to the Tech Tree"</a> — Macroscience / Institute for Progress, Feb 2026</li>
-        <li><a href="https://ifp.org/the-launch-sequence/" target="_blank">IFP, "The Launch Sequence"</a> — Rolling initiative to scope and build critical AI-preparedness projects</li>
-        <li><a href="https://ifp.org/progress-is-a-policy-choice/" target="_blank">IFP, "Progress Is a Policy Choice"</a> — Founding thesis on path dependence and liberal democratic values</li>
-        <li><a href="https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c" target="_blank">Optimism, "Retroactive Public Goods Funding"</a> — The mechanism design behind RetroPGF</li>
-        <li><a href="https://www.forethought.org/research/persistent-path-dependence" target="_blank">Will MacAskill, "Persistent Path-Dependence"</a> — On lock-in escape velocity and long-term consequences of near-term choices</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="civilizational-gap-map-ref-1"><a href="https://en.wikipedia.org/wiki/DARPA" target="_blank">DARPA</a> — ~120 program managers, created ARPANET, GPS, stealth (est. 1958)</li>
+        <li id="civilizational-gap-map-ref-2"><a href="https://www.forestneurotech.org/" target="_blank">Forest Neurotech</a> — Convergent Research FRO building next-gen brain-computer interfaces</li>
+        <li id="civilizational-gap-map-ref-3"><a href="https://www.gap-map.org/" target="_blank">Convergent Research Gap Map</a> — Interactive database of R&D bottlenecks and foundational capabilities</li>
+        <li id="civilizational-gap-map-ref-4"><a href="https://www.convergentresearch.org/" target="_blank">Convergent Research</a> — Nonprofit incubator for Focused Research Organizations</li>
+        <li id="civilizational-gap-map-ref-5"><a href="https://www.macroscience.org/p/do-not-surrender-to-the-tech-tree" target="_blank">Tao Burga, "Do Not Surrender to the Tech Tree"</a> — Macroscience / Institute for Progress, Feb 2026</li>
+        <li id="civilizational-gap-map-ref-6"><a href="https://ifp.org/the-launch-sequence/" target="_blank">IFP, "The Launch Sequence"</a> — Rolling initiative to scope and build critical AI-preparedness projects</li>
+        <li id="civilizational-gap-map-ref-7"><a href="https://ifp.org/progress-is-a-policy-choice/" target="_blank">IFP, "Progress Is a Policy Choice"</a> — Founding thesis on path dependence and liberal democratic values</li>
+        <li id="civilizational-gap-map-ref-8"><a href="https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c" target="_blank">Optimism, "Retroactive Public Goods Funding"</a> — The mechanism design behind RetroPGF</li>
+        <li id="civilizational-gap-map-ref-9"><a href="https://www.forethought.org/research/persistent-path-dependence" target="_blank">Will MacAskill, "Persistent Path-Dependence"</a> — On lock-in escape velocity and long-term consequences of near-term choices</li>
+      </ol>
     `,
     connections: [
       { id: "end-of-work", label: "where capital goes" },
@@ -538,18 +553,18 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Nick Land, "Machinic Desire" (1993), collected in <em><a href="https://www.goodreads.com/work/quotes/15752401" target="_blank">Fanged Noumena</a></em></li>
-        <li>Nick Land, "Meltdown" (1994), collected in <em>Fanged Noumena</em></li>
-        <li>Nick Land, <em>Crypto-Current</em> (2018)</li>
-        <li>Michael Levin, <a href="https://thoughtforms.life/a-talk-on-evolution-from-the-perspective-of-diverse-intelligence-implemented-in-morphogenesis/" target="_blank">"Evolution from the Perspective of Diverse Intelligence Implemented in Morphogenesis"</a> — Thoughtforms</li>
-        <li>Michael Levin, <a href="https://thoughtforms-life.aipodcast.ing/unconventional-embodiments-model-systems-strategies-addressing-mind-blindness-by-michael-levin/" target="_blank">"Unconventional Embodiments: model systems & strategies addressing mind-blindness"</a> (2025)</li>
-        <li>Michael Levin, <a href="https://www.scientificamerican.com/article/brains-are-not-required-when-it-comes-to-thinking-and-solving-problems-simple-cells-can-do-it/" target="_blank">"Brains Are Not Required When It Comes to Thinking"</a> — Scientific American</li>
-        <li>Michael Levin, <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.02688/full" target="_blank">"The Computational Boundary of a 'Self'"</a> — Frontiers in Psychology, 2019</li>
-        <li>Michael Levin, <a href="https://link.springer.com/article/10.1007/s10071-023-01780-3" target="_blank">"Bioelectric networks: the cognitive glue"</a> — Animal Cognition, 2023</li>
-        <li>Michael Levin, <a href="https://lifespan.io/news/michael-levin-on-bioelectricity-in-development-and-aging/" target="_blank">Interview on bioelectricity, development and aging</a> — Lifespan.io</li>
-        <li>Michael Levin, <a href="https://www.psychologytoday.com/us/blog/experimentations/202506/expanding-our-understanding-of-life-and-intelligence" target="_blank">"Expanding Our Understanding of Life and Intelligence"</a> — Psychology Today, 2025</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="mind-blindness-ref-1">Nick Land, "Machinic Desire" (1993), collected in <em><a href="https://www.goodreads.com/work/quotes/15752401" target="_blank">Fanged Noumena</a></em></li>
+        <li id="mind-blindness-ref-2">Nick Land, "Meltdown" (1994), collected in <em>Fanged Noumena</em></li>
+        <li id="mind-blindness-ref-3">Nick Land, <em>Crypto-Current</em> (2018)</li>
+        <li id="mind-blindness-ref-4">Michael Levin, <a href="https://thoughtforms.life/a-talk-on-evolution-from-the-perspective-of-diverse-intelligence-implemented-in-morphogenesis/" target="_blank">"Evolution from the Perspective of Diverse Intelligence Implemented in Morphogenesis"</a> — Thoughtforms</li>
+        <li id="mind-blindness-ref-5">Michael Levin, <a href="https://thoughtforms-life.aipodcast.ing/unconventional-embodiments-model-systems-strategies-addressing-mind-blindness-by-michael-levin/" target="_blank">"Unconventional Embodiments: model systems & strategies addressing mind-blindness"</a> (2025)</li>
+        <li id="mind-blindness-ref-6">Michael Levin, <a href="https://www.scientificamerican.com/article/brains-are-not-required-when-it-comes-to-thinking-and-solving-problems-simple-cells-can-do-it/" target="_blank">"Brains Are Not Required When It Comes to Thinking"</a> — Scientific American</li>
+        <li id="mind-blindness-ref-7">Michael Levin, <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.02688/full" target="_blank">"The Computational Boundary of a 'Self'"</a> — Frontiers in Psychology, 2019</li>
+        <li id="mind-blindness-ref-8">Michael Levin, <a href="https://link.springer.com/article/10.1007/s10071-023-01780-3" target="_blank">"Bioelectric networks: the cognitive glue"</a> — Animal Cognition, 2023</li>
+        <li id="mind-blindness-ref-9">Michael Levin, <a href="https://lifespan.io/news/michael-levin-on-bioelectricity-in-development-and-aging/" target="_blank">Interview on bioelectricity, development and aging</a> — Lifespan.io</li>
+        <li id="mind-blindness-ref-10">Michael Levin, <a href="https://www.psychologytoday.com/us/blog/experimentations/202506/expanding-our-understanding-of-life-and-intelligence" target="_blank">"Expanding Our Understanding of Life and Intelligence"</a> — Psychology Today, 2025</li>
+      </ol>
     `,
     connections: [
       { id: "banksian-landian-strossian", label: "what is a mind" },
@@ -617,12 +632,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Jonathan Haidt, <em>The Righteous Mind: Why Good People Are Divided by Politics and Religion</em> (2012)</li>
-        <li><a href="https://moralfoundations.org/" target="_blank">Moral Foundations Theory</a> — six foundations, 200K+ responses across dozens of countries</li>
-        <li>Atari et al., "MFQ-2: A Revised Moral Foundations Questionnaire" (2023) — adopted by World Values Survey</li>
-        <li><a href="https://www.worldvaluessurvey.org/" target="_blank">World Values Survey</a> — longitudinal moral values data across 120+ countries</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="value-embedding-ref-1">Jonathan Haidt, <em>The Righteous Mind: Why Good People Are Divided by Politics and Religion</em> (2012)</li>
+        <li id="value-embedding-ref-2"><a href="https://moralfoundations.org/" target="_blank">Moral Foundations Theory</a> — six foundations, 200K+ responses across dozens of countries</li>
+        <li id="value-embedding-ref-3">Atari et al., "MFQ-2: A Revised Moral Foundations Questionnaire" (2023) — adopted by World Values Survey</li>
+        <li id="value-embedding-ref-4"><a href="https://www.worldvaluessurvey.org/" target="_blank">World Values Survey</a> — longitudinal moral values data across 120+ countries</li>
+      </ol>
     `,
     connections: [
       { id: "verifiable-government", label: "digital twin governance" },
@@ -703,17 +718,17 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Vernor Vinge, <a href="https://edoras.sdsu.edu/~vinge/misc/singularity.html" target="_blank">"The Coming Technological Singularity"</a> — NASA VISION-21 Symposium, 1993</li>
-        <li>Charles Stross, <em>Accelerando</em> (2005)</li>
-        <li>Roger Williams (localroger), <a href="https://localroger.com/prime-intellect/mopiidx.html" target="_blank"><em>The Metamorphosis of Prime Intellect</em></a> (1994/2002)</li>
-        <li>Iain M. Banks, <em>The Culture Series</em> (1987–2012)</li>
-        <li>Douglas Adams, <em>The Hitchhiker's Guide to the Galaxy</em> (1979)</li>
-        <li>Nick Land, "Machinic Desire" (1993), "Meltdown" (1994), "Critique of Transcendental Miserablism" (2007) — collected in <em>Fanged Noumena</em></li>
-        <li>Ursula K. Le Guin, <em>The Dispossessed</em> (1974) — anarchism modeled on Kropotkin's <em>Mutual Aid</em></li>
-        <li>Octavia Butler, <em>Parable of the Sower</em> (1993) — predicted "Make America Great Again" 22 years early</li>
-        <li>Ted Chiang, <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">"ChatGPT Is a Blurry JPEG of the Web"</a> — <em>The New Yorker</em>, 2023</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="scifi-as-philosophy-ref-1">Vernor Vinge, <a href="https://edoras.sdsu.edu/~vinge/misc/singularity.html" target="_blank">"The Coming Technological Singularity"</a> — NASA VISION-21 Symposium, 1993</li>
+        <li id="scifi-as-philosophy-ref-2">Charles Stross, <em>Accelerando</em> (2005)</li>
+        <li id="scifi-as-philosophy-ref-3">Roger Williams (localroger), <a href="https://localroger.com/prime-intellect/mopiidx.html" target="_blank"><em>The Metamorphosis of Prime Intellect</em></a> (1994/2002)</li>
+        <li id="scifi-as-philosophy-ref-4">Iain M. Banks, <em>The Culture Series</em> (1987–2012)</li>
+        <li id="scifi-as-philosophy-ref-5">Douglas Adams, <em>The Hitchhiker's Guide to the Galaxy</em> (1979)</li>
+        <li id="scifi-as-philosophy-ref-6">Nick Land, "Machinic Desire" (1993), "Meltdown" (1994), "Critique of Transcendental Miserablism" (2007) — collected in <em>Fanged Noumena</em></li>
+        <li id="scifi-as-philosophy-ref-7">Ursula K. Le Guin, <em>The Dispossessed</em> (1974) — anarchism modeled on Kropotkin's <em>Mutual Aid</em></li>
+        <li id="scifi-as-philosophy-ref-8">Octavia Butler, <em>Parable of the Sower</em> (1993) — predicted "Make America Great Again" 22 years early</li>
+        <li id="scifi-as-philosophy-ref-9">Ted Chiang, <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">"ChatGPT Is a Blurry JPEG of the Web"</a> — <em>The New Yorker</em>, 2023</li>
+      </ol>
     `,
     connections: [
       { id: "banksian-landian-strossian", label: "source material" },
@@ -879,19 +894,19 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li><a href="https://aiindex.stanford.edu/" target="_blank">Stanford HAI AI Index Report</a> (2025) — inference cost trends, benchmark performance over time</li>
-        <li><a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">Hatton et al.</a> — human cell count, <em>PNAS</em>, 2023</li>
-        <li><a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">Azevedo et al.</a> — neuron count, <em>J. Comp. Neurol.</em>, 2009</li>
-        <li><a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">Zheng & Meister</a> — human information throughput, <em>Neuron</em>, 2025</li>
-        <li><a href="https://www.science.org/doi/10.1126/sciadv.aaw2594" target="_blank">Coupé et al.</a> — speech encoding rate, <em>Science Advances</em>, 2019</li>
-        <li><a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">NVIDIA</a> — Hopper architecture</li>
-        <li><a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">Epoch AI</a> — global AI computing capacity, 2026</li>
-        <li><a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">Epoch AI</a> — NVIDIA compute stock, 2025</li>
-        <li><a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">TechInsights/HPCwire</a> — GPU shipment data</li>
-        <li><a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">UNESCO/Science|Business</a> — global researcher count</li>
-        <li><a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis</a> — LLM speed benchmarks</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="numbers-of-interest-ref-1"><a href="https://aiindex.stanford.edu/" target="_blank">Stanford HAI AI Index Report</a> (2025) — inference cost trends, benchmark performance over time</li>
+        <li id="numbers-of-interest-ref-2"><a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">Hatton et al.</a> — human cell count, <em>PNAS</em>, 2023</li>
+        <li id="numbers-of-interest-ref-3"><a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">Azevedo et al.</a> — neuron count, <em>J. Comp. Neurol.</em>, 2009</li>
+        <li id="numbers-of-interest-ref-4"><a href="https://www.cell.com/neuron/abstract/S0896-6273(24)00808-0" target="_blank">Zheng & Meister</a> — human information throughput, <em>Neuron</em>, 2025</li>
+        <li id="numbers-of-interest-ref-5"><a href="https://www.science.org/doi/10.1126/sciadv.aaw2594" target="_blank">Coupé et al.</a> — speech encoding rate, <em>Science Advances</em>, 2019</li>
+        <li id="numbers-of-interest-ref-6"><a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" target="_blank">NVIDIA</a> — Hopper architecture</li>
+        <li id="numbers-of-interest-ref-7"><a href="https://epoch.ai/data-insights/ai-chip-production" target="_blank">Epoch AI</a> — global AI computing capacity, 2026</li>
+        <li id="numbers-of-interest-ref-8"><a href="https://epoch.ai/data-insights/nvidia-chip-production" target="_blank">Epoch AI</a> — NVIDIA compute stock, 2025</li>
+        <li id="numbers-of-interest-ref-9"><a href="https://www.hpcwire.com/2024/06/10/nvidia-shipped-3-76-million-data-center-gpus-in-2023-according-to-study/" target="_blank">TechInsights/HPCwire</a> — GPU shipment data</li>
+        <li id="numbers-of-interest-ref-10"><a href="https://sciencebusiness.net/news/number-scientists-worldwide-reaches-88m-global-research-spending-grows-faster-economy" target="_blank">UNESCO/Science|Business</a> — global researcher count</li>
+        <li id="credible-commitments-ref-11"><a href="https://artificialanalysis.ai/leaderboards/models" target="_blank">Artificial Analysis</a> — LLM speed benchmarks</li>
+      </ol>
     `,
     connections: [
       { id: "end-of-work", label: "quantifying displacement" },
@@ -954,12 +969,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Thomas Schelling, <em>The Strategy of Conflict</em> (1960) — focal points, commitment theory (2005 Nobel Prize)</li>
-        <li>Thomas Schelling, <em>Arms and Influence</em> (1966) — "worsening own options" as strategic advantage</li>
-        <li><a href="https://defillama.com/" target="_blank">DefiLlama</a> — Ethereum TVL ~$99B, 88M+ smart contracts deployed</li>
-        <li>Mutually Assured Destruction — canonical credible commitment at civilizational scale</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="credible-commitments-ref-1">Thomas Schelling, <em>The Strategy of Conflict</em> (1960) — focal points, commitment theory (2005 Nobel Prize)</li>
+        <li id="credible-commitments-ref-2">Thomas Schelling, <em>Arms and Influence</em> (1966) — "worsening own options" as strategic advantage</li>
+        <li id="credible-commitments-ref-3"><a href="https://defillama.com/" target="_blank">DefiLlama</a> — Ethereum TVL ~$99B, 88M+ smart contracts deployed</li>
+        <li id="new-society-ref-4">Mutually Assured Destruction — canonical credible commitment at civilizational scale</li>
+      </ol>
     `,
     connections: [
       { id: "math-over-law", label: "enforcement via math" },
@@ -1025,12 +1040,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Albert Hirschman, <em>Exit, Voice, and Loyalty</em> (1970) — Nigerian railways as origin case</li>
-        <li>Singapore — 37.9x GDP growth since 1965, 90.3% homeownership (<a href="https://data.worldbank.org/country/singapore" target="_blank">World Bank</a>)</li>
-        <li>Rojava — democratic confederalism, 50% women representation, community justice (<a href="https://en.wikipedia.org/wiki/Autonomous_Administration_of_North_and_East_Syria" target="_blank">AANES</a>)</li>
-        <li>Murray Bookchin, <em>The Ecology of Freedom</em> (1982) — libertarian municipalism as foundation for Rojava model</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="new-society-ref-1">Albert Hirschman, <em>Exit, Voice, and Loyalty</em> (1970) — Nigerian railways as origin case</li>
+        <li id="new-society-ref-2">Singapore — 37.9x GDP growth since 1965, 90.3% homeownership (<a href="https://data.worldbank.org/country/singapore" target="_blank">World Bank</a>)</li>
+        <li id="new-society-ref-3">Rojava — democratic confederalism, 50% women representation, community justice (<a href="https://en.wikipedia.org/wiki/Autonomous_Administration_of_North_and_East_Syria" target="_blank">AANES</a>)</li>
+        <li id="information-generating-processes-ref-4">Murray Bookchin, <em>The Ecology of Freedom</em> (1982) — libertarian municipalism as foundation for Rojava model</li>
+      </ol>
     `,
     connections: [
       { id: "verifiable-government", label: "digital twins + liquid democracy" },
@@ -1088,12 +1103,12 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Claude Shannon, <a href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf" target="_blank">"A Mathematical Theory of Communication"</a> (1948) — surprise as information</li>
-        <li>Friedrich Hayek, <a href="https://www.econlib.org/library/Essays/hykKnw.html" target="_blank">"The Use of Knowledge in Society"</a> (1945) — price as information, "the marvel"</li>
-        <li>Ilya Prigogine, <em>Order out of Chaos</em> (1984) — dissipative structures (1977 Nobel Prize in Chemistry)</li>
-        <li>Roderick Dewar, "Maximum Entropy Production and the Fluctuation Theorem" (2003) — MEPP and origins of life</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="information-generating-processes-ref-1">Claude Shannon, <a href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf" target="_blank">"A Mathematical Theory of Communication"</a> (1948) — surprise as information</li>
+        <li id="information-generating-processes-ref-2">Friedrich Hayek, <a href="https://www.econlib.org/library/Essays/hykKnw.html" target="_blank">"The Use of Knowledge in Society"</a> (1945) — price as information, "the marvel"</li>
+        <li id="information-generating-processes-ref-3">Ilya Prigogine, <em>Order out of Chaos</em> (1984) — dissipative structures (1977 Nobel Prize in Chemistry)</li>
+        <li id="mythologization-of-software-ref-4">Roderick Dewar, "Maximum Entropy Production and the Fluctuation Theorem" (2003) — MEPP and origins of life</li>
+      </ol>
     `,
     connections: [
       { id: "complexity-ceiling", label: "information limits" },
@@ -1131,14 +1146,14 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Fred Brooks, <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet" target="_blank">"No Silver Bullet"</a> (1986) — essential vs. accidental complexity in software</li>
-        <li>Alan Kay — "The best way to predict the future is to invent it" (1971)</li>
-        <li>Marc Andreessen, <a href="https://a16z.com/why-software-is-eating-the-world/" target="_blank">"Why Software Is Eating the World"</a> — <em>Wall Street Journal</em>, 2011</li>
-        <li>GitHub survey (2025) — 41% of code AI-generated, Copilot users: 46% AI-written code</li>
-        <li><a href="https://www.cursor.com/" target="_blank">Cursor</a> — $1B+ ARR in under 24 months</li>
-        <li><a href="https://metr.org/" target="_blank">METR study</a> — experienced developers 19% slower with AI on familiar codebases</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="mythologization-of-software-ref-1">Fred Brooks, <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet" target="_blank">"No Silver Bullet"</a> (1986) — essential vs. accidental complexity in software</li>
+        <li id="mythologization-of-software-ref-2">Alan Kay — "The best way to predict the future is to invent it" (1971)</li>
+        <li id="mythologization-of-software-ref-3">Marc Andreessen, <a href="https://a16z.com/why-software-is-eating-the-world/" target="_blank">"Why Software Is Eating the World"</a> — <em>Wall Street Journal</em>, 2011</li>
+        <li id="choiceless-speciation-ref-4">GitHub survey (2025) — 41% of code AI-generated, Copilot users: 46% AI-written code</li>
+        <li id="choiceless-speciation-ref-5"><a href="https://www.cursor.com/" target="_blank">Cursor</a> — $1B+ ARR in under 24 months</li>
+        <li id="choiceless-speciation-ref-6"><a href="https://metr.org/" target="_blank">METR study</a> — experienced developers 19% slower with AI on familiar codebases</li>
+      </ol>
     `,
     connections: [
       { id: "complexity-ceiling", label: "what intelligence can't solve" },
@@ -1174,61 +1189,20 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Vernor Vinge, <a href="https://edoras.sdsu.edu/~vinge/misc/singularity.html" target="_blank">"The Coming Technological Singularity"</a> (1993) — IA as road to superhumanity</li>
-        <li>Andy Clark, <em>Natural-Born Cyborgs</em> (2003) — human-technology symbionts</li>
-        <li>Clark & Chalmers, <a href="https://en.wikipedia.org/wiki/Extended_mind_thesis" target="_blank">"The Extended Mind"</a> (1998) — cognitive extension thesis</li>
-        <li>Douglas Engelbart, <a href="https://www.dougengelbart.org/pubs/augment-3906.html" target="_blank">"Augmenting Human Intellect"</a> (1962)</li>
-        <li>Brynjolfsson et al. — customer support +13.8% productivity with AI assistance</li>
-        <li>AI coding productivity studies — +126% projects/week with AI tools (2024)</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="choiceless-speciation-ref-1">Vernor Vinge, <a href="https://edoras.sdsu.edu/~vinge/misc/singularity.html" target="_blank">"The Coming Technological Singularity"</a> (1993) — IA as road to superhumanity</li>
+        <li id="choiceless-speciation-ref-2">Andy Clark, <em>Natural-Born Cyborgs</em> (2003) — human-technology symbionts</li>
+        <li id="choiceless-speciation-ref-3">Clark & Chalmers, <a href="https://en.wikipedia.org/wiki/Extended_mind_thesis" target="_blank">"The Extended Mind"</a> (1998) — cognitive extension thesis</li>
+        <li id="choiceless-speciation-ref-4">Douglas Engelbart, <a href="https://www.dougengelbart.org/pubs/augment-3906.html" target="_blank">"Augmenting Human Intellect"</a> (1962)</li>
+        <li id="choiceless-speciation-ref-5">Brynjolfsson et al. — customer support +13.8% productivity with AI assistance</li>
+        <li id="choiceless-speciation-ref-6">AI coding productivity studies — +126% projects/week with AI tools (2024)</li>
+      </ol>
     `,
     connections: [
       { id: "mythologization-of-software", label: "tools that replace their makers" },
       { id: "mind-blindness", label: "cognitive extensions we can't see" },
       { id: "numbers-of-interest", label: "quantifying the gap" },
       { id: "banksian-landian-strossian", label: "choosing your future" }
-    ]
-  },
-  {
-    id: "on-vitalik",
-    title: "On Vitalik",
-    subtitle: "The closest thing we have to a Culture Mind — fallible, thoughtful, and net positive",
-    date: "2026-02-16",
-    category: "personal",
-    content: `
-      <p>Vitalik Buterin is, in my view, the closest thing the current world has to a positive Mind from Iain M. Banks's Culture series. Not because he's superhuman — he isn't. Not because he's always right — he isn't. But because he exhibits the qualities the Minds embody: genuine curiosity, deep technical competence, a commitment to pluralism over monoculture, and — crucially — an willingness to acknowledge the messiness of reality without retreating into false certainty.</p>
-
-      <h2>The d/acc Framework</h2>
-      <p>Vitalik's <a href="https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html" target="_blank">d/acc manifesto</a> (defensive or decentralization-focused acceleration) is the most thoughtful response to the accelerationism debate I've seen. Its core principle:</p>
-      <blockquote>"I see far too many plans to save the world that involve giving a small group of people extreme and opaque power and hoping that they use it wisely."</blockquote>
-      <p>This is not anti-progress. It is anti-concentration. Vitalik argues for accelerating technologies that are inherently defensive — that distribute power rather than concentrate it. Cryptography. Open-source AI. Decentralized governance. Biosecurity. Technologies where the math favors the defender over the attacker, the many over the few.</p>
-      <p>In his <a href="https://vitalik.eth.limo/general/2024/10/17/d_acc_reflections.html" target="_blank">d/acc retrospective</a>, he refined this further: the goal is a world where <strong>"intelligence improves in a way that many different people have access to it"</strong> — not a world where intelligence is hoarded by whoever builds it first. This is the Banksian instinct expressed in policy language: distribute the capability, trust the diversity of minds to find good uses for it.</p>
-
-      <h2>Values in Action</h2>
-      <p>Vitalik doesn't just write about these things. He <strong>donated $665 million to the Future of Life Institute</strong> and other organizations working on existential risk, biosafety, and open-source AI. His work on <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank">Soulbound Tokens</a> (with Glen Weyl and Puja Ohlhaver) proposes a mechanism for non-transferable digital credentials — a building block for the kind of reputation and identity systems that a post-work society requires. His engagement with <a href="https://www.plurality.net/" target="_blank">Plurality philosophy</a> (Weyl's framework for collaborative technology that bridges social differences) shows a thinker who takes institutional design as seriously as protocol design.</p>
-      <p>His critique of the Culture is itself revealing. Vitalik has argued that the risk of the Culture model is that humans become "pets" of the Minds — comfortable, free, but fundamentally dependent on entities they cannot understand or control. He takes this seriously as a failure mode, not a feature. The d/acc framework is his answer: build systems where the power is distributed enough that no single entity — biological or artificial — can reduce the others to dependency.</p>
-
-      <h2>Why This Matters</h2>
-      <p>All creatures are fallible. Vitalik has been wrong about things. He has made predictions that didn't pan out. Ethereum has problems. The crypto ecosystem he catalyzed has produced scams, speculation, and waste alongside genuine innovation. I am not deifying the man.</p>
-      <p>But his values are higher order than most people operating at his level of influence. He is not optimizing for personal wealth (he has given most of it away). He is not optimizing for power (he has spent years trying to make Ethereum governance <em>less</em> dependent on him). He is not optimizing for status (he writes dense technical posts that most of his followers can't fully understand). He is optimizing for something like: "build systems that are robust, pluralistic, and accessible, and give away as much power as possible while retaining enough to keep building."</p>
-      <p>That is a set of values worth having in the discourse. Not as gospel. As a reference point — a proof that it is possible to hold enormous influence and use it primarily for building infrastructure that distributes power rather than concentrating it.</p>
-
-      <hr>
-      <h3>References</h3>
-      <ul>
-        <li>Vitalik Buterin, <a href="https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html" target="_blank">"My techno-optimism" (d/acc manifesto)</a>, Nov 2023</li>
-        <li>Vitalik Buterin, <a href="https://vitalik.eth.limo/general/2024/10/17/d_acc_reflections.html" target="_blank">"d/acc: one year later"</a>, Oct 2024</li>
-        <li>Weyl, Ohlhaver & Buterin, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763" target="_blank">"Decentralized Society: Finding Web3's Soul"</a> (Soulbound Tokens paper)</li>
-        <li><a href="https://www.plurality.net/" target="_blank">Plurality philosophy</a> — Glen Weyl's framework for collaborative technology</li>
-        <li>Vitalik's philanthropy — $665M+ donated to Future of Life Institute, biosafety, open-source AI research</li>
-      </ul>
-    `,
-    connections: [
-      { id: "banksian-landian-strossian", label: "a living Culture Mind" },
-      { id: "verifiable-government", label: "d/acc governance" },
-      { id: "value-embedding", label: "pluralism over monoculture" },
-      { id: "new-society", label: "distributing power" }
     ]
   },
   {
@@ -1260,13 +1234,13 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Ilya Sutskever — interview on AI caring for humanity, inverted parent-child frame (2023)</li>
-        <li>Michael Levin — "a gradualist view is the only defensible position" on cognitive continuum</li>
-        <li>Peter Singer, <em><a href="https://en.wikipedia.org/wiki/The_Expanding_Circle" target="_blank">The Expanding Circle</a></em> (1981) — moral circle expansion</li>
-        <li>Martha Nussbaum, <em>Creating Capabilities</em> (2011) — capabilities approach to moral status</li>
-        <li>Ted Chiang — "I fear what humans will do to AI more than what AI will do to humans"</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="non-human-intelligences-ref-1">Ilya Sutskever — interview on AI caring for humanity, inverted parent-child frame (2023)</li>
+        <li id="ai-always-tools-ref-2">Michael Levin — "a gradualist view is the only defensible position" on cognitive continuum</li>
+        <li id="ai-always-tools-ref-3">Peter Singer, <em><a href="https://en.wikipedia.org/wiki/The_Expanding_Circle" target="_blank">The Expanding Circle</a></em> (1981) — moral circle expansion</li>
+        <li id="ai-always-tools-ref-4">Martha Nussbaum, <em>Creating Capabilities</em> (2011) — capabilities approach to moral status</li>
+        <li id="ai-always-tools-ref-5">Ted Chiang — "I fear what humans will do to AI more than what AI will do to humans"</li>
+      </ol>
     `,
     connections: [
       { id: "categorization-of-life", label: "what counts as a mind" },
@@ -1307,13 +1281,13 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Copernicus — heliocentrism (1543). Giordano Bruno — burned 1600 for infinite universe</li>
-        <li>Sigmund Freud — "three wounds to narcissism" (<em>Introductory Lectures on Psycho-Analysis</em>, 1917)</li>
-        <li>Francisco Varela & Humberto Maturana, <a href="https://en.wikipedia.org/wiki/Autopoiesis" target="_blank">autopoiesis</a> — self-creating systems vs. heteropoietic tools</li>
-        <li>Giulio Tononi, <a href="https://en.wikipedia.org/wiki/Integrated_information_theory" target="_blank">Integrated Information Theory</a> — Φ > 0 as measure of consciousness (not restricted to biology)</li>
-        <li>Charles Stross — LLMs as "Artificial Boris Johnson" (34C3, 2018)</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="ai-always-tools-ref-1">Copernicus — heliocentrism (1543). Giordano Bruno — burned 1600 for infinite universe</li>
+        <li id="ai-always-tools-ref-2">Sigmund Freud — "three wounds to narcissism" (<em>Introductory Lectures on Psycho-Analysis</em>, 1917)</li>
+        <li id="categorization-of-life-ref-3">Francisco Varela & Humberto Maturana, <a href="https://en.wikipedia.org/wiki/Autopoiesis" target="_blank">autopoiesis</a> — self-creating systems vs. heteropoietic tools</li>
+        <li id="categorization-of-life-ref-4">Giulio Tononi, <a href="https://en.wikipedia.org/wiki/Integrated_information_theory" target="_blank">Integrated Information Theory</a> — Φ > 0 as measure of consciousness (not restricted to biology)</li>
+        <li id="categorization-of-life-ref-5">Charles Stross — LLMs as "Artificial Boris Johnson" (34C3, 2018)</li>
+      </ol>
     `,
     connections: [
       { id: "categorization-of-life", label: "autopoiesis and life" },
@@ -1366,16 +1340,16 @@ const POSTS = [
 
       <hr>
       <h3>References</h3>
-      <ul>
-        <li>Chris Langton — coined "artificial life" (1987 Los Alamos workshop)</li>
-        <li>NASA definition of life — "a self-sustaining chemical system capable of Darwinian evolution"</li>
-        <li>Stuart Kauffman, <em><a href="https://en.wikipedia.org/wiki/The_Origins_of_Order" target="_blank">The Origins of Order</a></em> (1993) — autocatalytic sets, edge of chaos</li>
-        <li>Thomas Ray, <a href="https://en.wikipedia.org/wiki/Tierra_(computer_simulation)" target="_blank">Tierra</a> (1990) — digital evolution: parasites, immunity, sex, punctuated equilibrium</li>
-        <li>Sewall Wright, <a href="https://en.wikipedia.org/wiki/Fitness_landscape" target="_blank">fitness landscapes</a> — adaptive landscapes in population genetics</li>
-        <li>Maturana & Varela, <a href="https://en.wikipedia.org/wiki/Autopoiesis" target="_blank">autopoiesis</a> — self-creating systems (1972)</li>
-        <li>Prion biology — self-replication without nucleic acid, violates central dogma, invariably fatal</li>
-        <li>Vernor Vinge, <em>A Fire Upon the Deep</em> (1992) — the Blight as optimization without values</li>
-      </ul>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="categorization-of-life-ref-1">Chris Langton — coined "artificial life" (1987 Los Alamos workshop)</li>
+        <li id="categorization-of-life-ref-2">NASA definition of life — "a self-sustaining chemical system capable of Darwinian evolution"</li>
+        <li id="categorization-of-life-ref-3">Stuart Kauffman, <em><a href="https://en.wikipedia.org/wiki/The_Origins_of_Order" target="_blank">The Origins of Order</a></em> (1993) — autocatalytic sets, edge of chaos</li>
+        <li id="categorization-of-life-ref-4">Thomas Ray, <a href="https://en.wikipedia.org/wiki/Tierra_(computer_simulation)" target="_blank">Tierra</a> (1990) — digital evolution: parasites, immunity, sex, punctuated equilibrium</li>
+        <li id="categorization-of-life-ref-5">Sewall Wright, <a href="https://en.wikipedia.org/wiki/Fitness_landscape" target="_blank">fitness landscapes</a> — adaptive landscapes in population genetics</li>
+        <li id="humans-vs-machines-ref-6">Maturana & Varela, <a href="https://en.wikipedia.org/wiki/Autopoiesis" target="_blank">autopoiesis</a> — self-creating systems (1972)</li>
+        <li id="humans-vs-machines-ref-7">Prion biology — self-replication without nucleic acid, violates central dogma, invariably fatal</li>
+        <li id="humans-vs-machines-ref-8">Vernor Vinge, <em>A Fire Upon the Deep</em> (1992) — the Blight as optimization without values</li>
+      </ol>
     `,
     connections: [
       { id: "information-generating-processes", label: "life as information process" },
@@ -1383,6 +1357,449 @@ const POSTS = [
       { id: "banksian-landian-strossian", label: "choosing what we create" },
       { id: "scifi-as-philosophy", label: "Vinge's Blight as life" },
       { id: "on-power", label: "optimization and power" }
+    ]
+  },
+  {
+    id: "humans-vs-machines",
+    title: "Humans vs. Machines: A Quantitative Reckoning",
+    subtitle: "Every number that matters in the most important comparison of our time",
+    date: "2026-02-17",
+    category: "science",
+    content: `
+      <p>There are 86 billion neurons in the human brain. That number was established in 2009 using the isotropic fractionator — a technique that dissolves brain tissue into a suspension of free-floating nuclei and counts them — applied to four adult male brains <a href="#ref-1" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>1</span>]</a>. The result: 86.1 &plusmn; 8.1 billion neurons, and approximately the same number of non-neuronal (glial) cells. The old textbook claim of "ten glia for every neuron" was never based on direct measurement. The actual ratio is roughly 1:1 <a href="#ref-10" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>10</span>]</a>.</p>
+      <p>The human body contains approximately 36 trillion cells <a href="#ref-6" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>6</span>]</a>. The brain is 2% of body mass but consumes 20% of its energy — about 20 watts. Cognitive effort raises brain oxygen consumption by at most 8%. Unlike skeletal muscle, which can triple energy consumption during movement, the brain runs at roughly constant power regardless of cognitive load.</p>
+      <p>These numbers matter because we are in the middle of the largest capital reallocation in human history — from biological intelligence to artificial intelligence. In 2015, the global AI ecosystem represented roughly $35 billion in investment. In 2025, that number exceeds $690 billion. Meanwhile, investment in human intelligence — the NIH, neuroscience, BCIs, education, cognitive enhancement — sits flat at roughly $289 billion and is being actively cut.</p>
+
+      <h2>I. The Architecture of a Mind</h2>
+      <p>The 86 billion neurons are not distributed evenly. The regional breakdown is counterintuitive <a href="#ref-2" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>2</span>]</a>:</p>
+      <table style="width:100%;border-collapse:collapse;margin:1.5em 0;font-size:14px;">
+        <thead>
+          <tr style="border-bottom:2px solid #d4d2cf;">
+            <th style="text-align:left;padding:8px 10px;">Region</th>
+            <th style="text-align:right;padding:8px 10px;">Mass</th>
+            <th style="text-align:right;padding:8px 10px;">Neurons</th>
+            <th style="text-align:right;padding:8px 10px;">% of Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;"><strong>Cerebral cortex</strong></td>
+            <td style="text-align:right;padding:8px 10px;">~1,233 g (82%)</td>
+            <td style="text-align:right;padding:8px 10px;">~16.3 billion</td>
+            <td style="text-align:right;padding:8px 10px;">19%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;"><strong>Cerebellum</strong></td>
+            <td style="text-align:right;padding:8px 10px;">~154 g (10%)</td>
+            <td style="text-align:right;padding:8px 10px;">~69 billion</td>
+            <td style="text-align:right;padding:8px 10px;">80%</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 10px;"><strong>Rest of brain</strong></td>
+            <td style="text-align:right;padding:8px 10px;">~118 g (8%)</td>
+            <td style="text-align:right;padding:8px 10px;">~0.7 billion</td>
+            <td style="text-align:right;padding:8px 10px;">1%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The cerebellum — a fist-sized structure at the back of your skull — holds <strong>80% of all brain neurons</strong> in just 10% of the brain's mass. The cerebral cortex, despite being 82% of brain mass, holds only 19% of neurons. This matters enormously when we compare species.</p>
+
+      <h2>II. The Elephant Paradox</h2>
+      <p>The African elephant has 257 billion neurons <a href="#ref-3" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>3</span>]</a> — three times more than a human. By a simple neuron-count model, it should be more cognitively capable. It is not.</p>
+      <p>Because 97.5% of those neurons are packed into the elephant's cerebellum, likely for controlling the 40,000 muscles of its trunk. The elephant's cerebral cortex contains only <strong>5.6 billion neurons</strong> — roughly one-third of a human's 16.3 billion. The human brain is not remarkable for its total neuron count. It is remarkable for having the most <em>cortical</em> neurons of any species measured to date.</p>
+
+      <svg viewBox="0 0 540 290" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;margin:2em auto;display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+        <text x="270" y="18" text-anchor="middle" style="font-size:13px;fill:#555;font-weight:600;">Cortical / Pallial Neurons by Species</text>
+        <text x="100" y="52" text-anchor="end" style="font-size:12px;fill:#444;">Human</text>
+        <rect x="105" y="40" width="326" height="20" rx="3" fill="#7ab8c7" opacity="0.85"/>
+        <text x="436" y="55" style="font-size:11px;fill:#333;">16.3B</text>
+        <text x="100" y="82" text-anchor="end" style="font-size:12px;fill:#444;">Gorilla</text>
+        <rect x="105" y="70" width="180" height="20" rx="3" fill="#b89cd8" opacity="0.85"/>
+        <text x="290" y="85" style="font-size:11px;fill:#333;">~9B</text>
+        <text x="100" y="112" text-anchor="end" style="font-size:12px;fill:#444;">Chimpanzee</text>
+        <rect x="105" y="100" width="130" height="20" rx="3" fill="#b89cd8" opacity="0.85"/>
+        <text x="240" y="115" style="font-size:11px;fill:#333;">~6.5B</text>
+        <text x="100" y="142" text-anchor="end" style="font-size:12px;fill:#444;">Elephant</text>
+        <rect x="105" y="130" width="112" height="20" rx="3" fill="#d4a54a" opacity="0.85"/>
+        <text x="222" y="145" style="font-size:11px;fill:#333;">5.6B</text>
+        <text x="100" y="172" text-anchor="end" style="font-size:12px;fill:#444;">Macaw</text>
+        <rect x="105" y="160" width="49" height="20" rx="3" fill="#8abb76" opacity="0.85"/>
+        <text x="159" y="175" style="font-size:11px;fill:#333;">2.46B</text>
+        <text x="100" y="202" text-anchor="end" style="font-size:12px;fill:#444;">Macaque</text>
+        <rect x="105" y="190" width="34" height="20" rx="3" fill="#b89cd8" opacity="0.85"/>
+        <text x="144" y="205" style="font-size:11px;fill:#333;">1.7B</text>
+        <text x="100" y="232" text-anchor="end" style="font-size:12px;fill:#444;">Raven</text>
+        <rect x="105" y="220" width="27" height="20" rx="3" fill="#8abb76" opacity="0.85"/>
+        <text x="137" y="235" style="font-size:11px;fill:#333;">1.36B</text>
+        <text x="270" y="270" text-anchor="middle" style="font-size:10px;fill:#999;">Sources: Azevedo 2009, Herculano-Houzel 2012/2014, Olkowicz 2016</text>
+      </svg>
+
+      <p>A raven's brain weighs 15 grams — roughly 1/100th of a human brain — yet contains 1.36 billion pallial neurons. Bird brains pack roughly <strong>twice as many neurons per gram</strong> as primate brains of equal mass <a href="#ref-4" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>4</span>]</a>. The blue-and-yellow macaw, with a 20-gram brain, has 2.46 billion pallial neurons — more than a rhesus macaque. Corvids and great apes independently evolved the same four key neural features: many associative pallial neurons, a prefrontal-equivalent region, dense dopaminergic innervation, and flexible working memory circuits. Convergent evolution discovered the same architecture twice.</p>
+      <p>The emerging consensus is that <strong>absolute cortical neuron count</strong> is the single best predictor of cognitive capability <a href="#ref-2" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>2</span>]</a>. This explains the elephant paradox (257B total neurons, but only 5.6B cortical — below humans), the corvid result (tiny brain, dense neurons, primate-level cognition), and why the human prefrontal cortex is not proportionally larger than other primates'. It holds the same ~8% of cortical neurons <a href="#ref-5" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>5</span>]</a> — but has <strong>1.3 billion prefrontal neurons</strong> in absolute terms, 5.6x more than a baboon.</p>
+      <p>The hypothesis for how humans achieved the highest cortical neuron count: <strong>cooking</strong> <a href="#ref-2" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>2</span>]</a>. Raw food diets limit primate brain size because digestion time scales with body and brain size. Cooking pre-digests food, allowing early humans to overcome the energetic barrier. The brain uses 20-25% of total body energy despite being 2% of body mass — a metabolic load unsustainable without calorie-dense cooked food.</p>
+
+      <h2>III. The Unbearable Slowness of Being</h2>
+      <p>A 2025 meta-analysis of behavioral data — typing speed, reaction time, memory champions, Tetris players, speedcubers — calculated the Shannon information rate of human conscious thought <a href="#ref-7" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>7</span>]</a>. The answer: <strong>roughly 10 bits per second</strong>.</p>
+      <p>Ten bits per second. A typist producing 120 words per minute generates about 10 characters per second, each carrying roughly 1 bit of Shannon entropy (English is ~50-75% redundant). A blindfolded speedcuber inspects 65 bits of cube state in 5.5 seconds — 11.8 bits/s. Memory champions memorize cards at ~17.7 bits/s. Elite Tetris players operate at ~7 bits/s. Whether you're reading, speaking, writing, or deciding, the conscious mind processes information at approximately the same rate: about 10 bits per second.</p>
+      <p>Meanwhile, your sensory system floods your brain with roughly <strong>10<sup>9</sup> bits per second</strong>. Your retina alone — 6 million cone photoreceptors, each outputting ~270 bits/s — generates roughly <strong>1.6 gigabits per second</strong>. Even after retinal compression reduces this to ~10 million bits/s through the optic nerve, the gap is staggering. The brain compresses a billion-bit-per-second sensory stream into a 10-bit-per-second conscious experience. The compression ratio is <strong>100 million to one</strong> <a href="#ref-7" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>7</span>]</a>.</p>
+      <p>Spoken language across 17 languages converges on ~39 bits/s <a href="#ref-8" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>8</span>]</a> — languages with dense syllables (Vietnamese, 8.0 bits/syllable) are spoken slowly, while sparse ones (Basque, 4.8 bits/syllable) are spoken fast. But this is the <em>channel capacity</em> of speech. The recommended speaking rate for comprehension sits close to 10 bits/s — the rate at which listeners can actually process novel information.</p>
+
+      <svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;margin:2em auto;display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+        <text x="270" y="18" text-anchor="middle" style="font-size:13px;fill:#555;font-weight:600;">Information Bandwidth (bits/second, log scale)</text>
+        <text x="115" y="50" text-anchor="end" style="font-size:11px;fill:#444;">USB-C (40 Gbps)</text>
+        <rect x="120" y="38" width="380" height="18" rx="3" fill="#7ab8c7" opacity="0.85"/>
+        <text x="505" y="52" style="font-size:10px;fill:#333;">10<tspan style="font-size:7px;" dy="-4">10.6</tspan></text>
+        <text x="115" y="76" text-anchor="end" style="font-size:11px;fill:#444;">Wi-Fi 6E</text>
+        <rect x="120" y="64" width="358" height="18" rx="3" fill="#7ab8c7" opacity="0.7"/>
+        <text x="483" y="78" style="font-size:10px;fill:#333;">10<tspan style="font-size:7px;" dy="-4">9.98</tspan></text>
+        <text x="115" y="102" text-anchor="end" style="font-size:11px;fill:#444;">Retina input</text>
+        <rect x="120" y="90" width="323" height="18" rx="3" fill="#d4889e" opacity="0.7"/>
+        <text x="448" y="104" style="font-size:10px;fill:#333;">10<tspan style="font-size:7px;" dy="-4">9</tspan></text>
+        <text x="115" y="128" text-anchor="end" style="font-size:11px;fill:#444;">Optic nerve</text>
+        <rect x="120" y="116" width="251" height="18" rx="3" fill="#d4889e" opacity="0.6"/>
+        <text x="376" y="130" style="font-size:10px;fill:#333;">10<tspan style="font-size:7px;" dy="-4">7</tspan></text>
+        <text x="115" y="154" text-anchor="end" style="font-size:11px;fill:#444;">Hearing</text>
+        <rect x="120" y="142" width="179" height="18" rx="3" fill="#d4889e" opacity="0.5"/>
+        <text x="304" y="156" style="font-size:10px;fill:#333;">10<tspan style="font-size:7px;" dy="-4">5</tspan></text>
+        <line x1="120" y1="175" x2="500" y2="175" stroke="#e8e6e3" stroke-width="1"/>
+        <text x="270" y="189" text-anchor="middle" style="font-size:10px;fill:#999;font-style:italic;">100-million-fold compression</text>
+        <text x="115" y="214" text-anchor="end" style="font-size:11px;fill:#444;">LLM output</text>
+        <rect x="120" y="202" width="83" height="18" rx="3" fill="#8abb76" opacity="0.85"/>
+        <text x="208" y="216" style="font-size:10px;fill:#333;">~200</text>
+        <text x="115" y="240" text-anchor="end" style="font-size:11px;fill:#444;">Best BCI</text>
+        <rect x="120" y="228" width="83" height="18" rx="3" fill="#b89cd8" opacity="0.7"/>
+        <text x="208" y="242" style="font-size:10px;fill:#333;">~200</text>
+        <text x="115" y="266" text-anchor="end" style="font-size:11px;fill:#444;">Human speech</text>
+        <rect x="120" y="254" width="57" height="18" rx="3" fill="#d4a54a" opacity="0.85"/>
+        <text x="182" y="268" style="font-size:10px;fill:#333;">39</text>
+        <text x="115" y="292" text-anchor="end" style="font-size:11px;fill:#444;">Conscious thought</text>
+        <rect x="120" y="280" width="36" height="18" rx="3" fill="#d4a54a" opacity="0.7"/>
+        <text x="161" y="294" style="font-size:10px;fill:#333;">~10</text>
+      </svg>
+
+      <p>Brain-computer interfaces illustrate this constraint directly. Neuralink implanted 1,024 electrodes into its first human patient and achieved approximately <strong>10 bits per second</strong> of intentional output <a href="#ref-7" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>7</span>]</a>. The bottleneck is not the interface. It is <strong>the brain itself</strong>. Adding more electrodes records more redundant neural activity; the decodable intentional signal remains constrained by the ~10 bits/s limit of conscious cognition.</p>
+      <p>Paradromics, with 421 microwire electrodes, has demonstrated ~200 bits/s preclinically in sheep <a href="#ref-14" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>14</span>]</a> — but even this is a rounding error compared to USB-C at 40 gigabits per second. The gap between human output bandwidth and digital bandwidth is <strong>one billion fold</strong>.</p>
+      <p>The full communication pipeline makes this worse. From one person's thought to another person's understanding: conceptualization (~200ms), formulation and word selection (~200-255ms), articulation (~150ms), acoustic transmission (negligible), auditory processing (~150ms), and meaning reconstruction (~400ms). Total latency for a single word: roughly <strong>1 second</strong>. At each stage, information is lost. The original thought — a high-dimensional pattern across millions of neurons — is serialized into a ~10 bits/s word stream. If the original thought contains 1,000 bits of relevant structure, only ~1% survives per second of speech. English's 50-75% redundancy exists not as waste but as error correction — half the characters can be garbled and the message still reconstructs.</p>
+
+      <h2>IV. What We Built Instead</h2>
+      <p>While biological intelligence transmits at 10 bits per second, here is what we built out of silicon.</p>
+      <p>The NVIDIA <strong>H100 GPU</strong> draws 700 watts at peak (about 500W average during training) and performs roughly 10<sup>15</sup> floating-point operations per second in FP16 tensor mode. A single H100 costs $30,000-$40,000 and has a useful economic life of 2-3 years for frontier tasks before being cascaded to inference and analytics (5-6 years on the books, though likely closer to 2-3 in real economic terms). At training-level utilization, a single H100 consumes about 12 kWh per day — roughly the daily energy consumption of an American home.</p>
+      <p>Modern frontier models are massive: <strong>DeepSeek V3</strong> has 671 billion total parameters (37B active per token via mixture-of-experts) and requires 18-20 H100s at FP16. <strong>Kimi K2</strong> has roughly 1 trillion parameters (32B active) and requires 26-40+ H100s. Running Kimi K2 continuously at training power draws 13-20 kW and costs roughly $8,000-$12,000 per year in electricity alone.</p>
+      <p>A single LLM stream produces roughly <strong>200 bits per second</strong> of Shannon information — 20x the rate of human speech. But the decisive advantage is parallelism. A well-provisioned inference cluster handles thousands of simultaneous conversations. If 1,000 users are simultaneously querying an LLM at 50 tokens/s each, the system produces <strong>50,000 tokens per second</strong> of contextually appropriate language across 1,000 independent threads. A human produces text for exactly one conversation at ~2 words per second.</p>
+      <p>The costs are collapsing. Querying a GPT-3.5-level model fell from $20 per million tokens (November 2022) to $0.07 per million tokens (October 2024) — a <strong>280-fold reduction</strong> in 18 months <a href="#ref-11" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>11</span>]</a>. The median decline is 50x per year, accelerating to 200x per year post-2024 <a href="#ref-12" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>12</span>]</a>.</p>
+
+      <h2>V. The Energy Chasm</h2>
+      <p>The brain's energy efficiency is alien by engineering standards.</p>
+      <p>A single synaptic event consumes roughly <strong>10 femtojoules</strong> (10<sup>-14</sup> J). An H100 FP16 tensor operation consumes roughly <strong>700 femtojoules</strong> (7 &times; 10<sup>-13</sup> J). A brain synapse is 70x more energy-efficient than the best GPU floating-point operation. At higher precision (FP64), the gap widens to <strong>10,000x</strong>.</p>
+      <p>In aggregate, the brain performs an estimated 10<sup>15</sup> to 10<sup>16</sup> synaptic operations per second on 20 watts. The best GPUs achieve approximately 10<sup>15</sup> FLOP/s on 700 watts. The brain does comparable or greater computation on <strong>35x less power</strong> — and that is before accounting for the fundamentally different nature of biological computation (analog, noisy, context-dependent, massively parallel) versus digital arithmetic (exact, serial, context-free).</p>
+      <p>The brain's energy budget breaks down as follows <a href="#ref-9" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>9</span>]</a>: ~47% to action potentials, ~34% to postsynaptic glutamate effects, ~13% to resting potential maintenance. About 75% of brain energy supports signaling; only 25% goes to biological housekeeping. The brain operates at roughly <strong>8x the Landauer limit</strong> (the thermodynamic minimum of ~2.9 &times; 10<sup>-21</sup> J per bit erased at room temperature). Modern computers operate at roughly <strong>one billion times</strong> the Landauer limit.</p>
+      <p>The gap is closing. Leading ML hardware improves in energy efficiency by ~40% per year, doubling every 2 years <a href="#ref-13" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>13</span>]</a>. But compute demand is doubling every ~5 months. Demand outpaces efficiency, which is why total AI energy consumption keeps rising despite per-operation improvements.</p>
+
+      <h2>VI. The Cost Equation</h2>
+      <p>What does it cost to produce a unit of intelligence?</p>
+      <p>A productive American human costs roughly <strong>$350,000-$570,000</strong> from birth through college — including pregnancy ($13,000-$50,000), raising to age 18 ($310,000-$320,000 at middle income <a href="#ref-18" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>18</span>]</a>), and 4 years of college ($100,000-$250,000). This investment yields a ~40-year productive career. The cost per "intelligence-year" is roughly $9,000-$14,000, amortized.</p>
+      <p>An H100 GPU costs $30,000-$40,000 and runs for 2-3 years at the frontier. A DGX system (8x H100, capable of running a large LLM) costs $300,000-$450,000. But in narrow tasks, the economics are already decisive:</p>
+      <table style="width:100%;border-collapse:collapse;margin:1.5em 0;font-size:14px;">
+        <thead>
+          <tr style="border-bottom:2px solid #d4d2cf;">
+            <th style="text-align:left;padding:8px 10px;">Task</th>
+            <th style="text-align:right;padding:8px 10px;">AI Cost</th>
+            <th style="text-align:right;padding:8px 10px;">Human Cost</th>
+            <th style="text-align:right;padding:8px 10px;">Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">Customer support (team)</td>
+            <td style="text-align:right;padding:8px 10px;">~$100K/yr</td>
+            <td style="text-align:right;padding:8px 10px;">~$2M/yr</td>
+            <td style="text-align:right;padding:8px 10px;">20x cheaper</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">Statistical analysis</td>
+            <td style="text-align:right;padding:8px 10px;">~$20/mo</td>
+            <td style="text-align:right;padding:8px 10px;">~$8,000/mo</td>
+            <td style="text-align:right;padding:8px 10px;">400x cheaper</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">Legal document review</td>
+            <td style="text-align:right;padding:8px 10px;">80% less</td>
+            <td style="text-align:right;padding:8px 10px;">Baseline</td>
+            <td style="text-align:right;padding:8px 10px;">5x cheaper</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 10px;">Lead calling</td>
+            <td style="text-align:right;padding:8px 10px;">$0.20/call</td>
+            <td style="text-align:right;padding:8px 10px;">$1.64/call</td>
+            <td style="text-align:right;padding:8px 10px;">8x cheaper</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>AI-native companies generate <strong>$3.48 million in revenue per employee</strong> — 7-8x fewer employees per dollar of revenue than traditional SaaS companies. They grow 4x faster and have net revenue retention of 132% vs. 108%. Since 2022, revenue growth per employee in AI-exposed industries surged 27%, over 3x the 8.5% growth in less AI-ready sectors.</p>
+
+      <h2>VII. Follow the Money</h2>
+      <p>The divergence between AI and human intelligence investment is accelerating.</p>
+
+      <svg viewBox="0 0 540 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;margin:2em auto;display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+        <text x="270" y="18" text-anchor="middle" style="font-size:13px;fill:#555;font-weight:600;">AI vs. Human Intelligence Investment ($ Billions)</text>
+        <rect x="160" y="26" width="12" height="12" rx="2" fill="#7ab8c7"/>
+        <text x="176" y="37" style="font-size:11px;fill:#555;">AI Ecosystem</text>
+        <rect x="280" y="26" width="12" height="12" rx="2" fill="#b89cd8"/>
+        <text x="296" y="37" style="font-size:11px;fill:#555;">Human Intelligence</text>
+        <line x1="70" y1="285" x2="510" y2="285" stroke="#d4d2cf" stroke-width="1"/>
+        <line x1="70" y1="285" x2="70" y2="50" stroke="#d4d2cf" stroke-width="1"/>
+        <text x="65" y="288" text-anchor="end" style="font-size:10px;fill:#999;">0</text>
+        <line x1="68" y1="251" x2="510" y2="251" stroke="#eee" stroke-width="0.5"/>
+        <text x="65" y="255" text-anchor="end" style="font-size:10px;fill:#999;">100</text>
+        <line x1="68" y1="217" x2="510" y2="217" stroke="#eee" stroke-width="0.5"/>
+        <text x="65" y="221" text-anchor="end" style="font-size:10px;fill:#999;">200</text>
+        <line x1="68" y1="183" x2="510" y2="183" stroke="#eee" stroke-width="0.5"/>
+        <text x="65" y="187" text-anchor="end" style="font-size:10px;fill:#999;">300</text>
+        <line x1="68" y1="149" x2="510" y2="149" stroke="#eee" stroke-width="0.5"/>
+        <text x="65" y="153" text-anchor="end" style="font-size:10px;fill:#999;">400</text>
+        <line x1="68" y1="115" x2="510" y2="115" stroke="#eee" stroke-width="0.5"/>
+        <text x="65" y="119" text-anchor="end" style="font-size:10px;fill:#999;">500</text>
+        <line x1="68" y1="81" x2="510" y2="81" stroke="#eee" stroke-width="0.5"/>
+        <text x="65" y="85" text-anchor="end" style="font-size:10px;fill:#999;">600</text>
+        <rect x="92" y="273" width="24" height="12" rx="2" fill="#7ab8c7" opacity="0.85"/>
+        <rect x="118" y="217" width="24" height="68" rx="2" fill="#b89cd8" opacity="0.85"/>
+        <text x="117" y="300" text-anchor="middle" style="font-size:10px;fill:#666;">2015</text>
+        <rect x="164" y="265" width="24" height="20" rx="2" fill="#7ab8c7" opacity="0.85"/>
+        <rect x="190" y="210" width="24" height="75" rx="2" fill="#b89cd8" opacity="0.85"/>
+        <text x="189" y="300" text-anchor="middle" style="font-size:10px;fill:#666;">2017</text>
+        <rect x="236" y="246" width="24" height="39" rx="2" fill="#7ab8c7" opacity="0.85"/>
+        <rect x="262" y="208" width="24" height="77" rx="2" fill="#b89cd8" opacity="0.85"/>
+        <text x="261" y="300" text-anchor="middle" style="font-size:10px;fill:#666;">2019</text>
+        <rect x="308" y="205" width="24" height="80" rx="2" fill="#7ab8c7" opacity="0.85"/>
+        <rect x="334" y="179" width="24" height="106" rx="2" fill="#b89cd8" opacity="0.85"/>
+        <text x="333" y="300" text-anchor="middle" style="font-size:10px;fill:#666;">2021</text>
+        <rect x="380" y="193" width="24" height="92" rx="2" fill="#7ab8c7" opacity="0.85"/>
+        <rect x="406" y="188" width="24" height="97" rx="2" fill="#b89cd8" opacity="0.85"/>
+        <text x="405" y="300" text-anchor="middle" style="font-size:10px;fill:#666;">2023</text>
+        <rect x="452" y="50" width="24" height="235" rx="2" fill="#7ab8c7" opacity="0.85"/>
+        <rect x="478" y="187" width="24" height="98" rx="2" fill="#b89cd8" opacity="0.85"/>
+        <text x="477" y="300" text-anchor="middle" style="font-size:10px;fill:#666;">2025</text>
+        <text x="270" y="328" text-anchor="middle" style="font-size:10px;fill:#999;">Sources: Stanford HAI 2025, PitchBook, NIH, Epoch AI, Crunchbase</text>
+      </svg>
+
+      <p>The numbers tell a stark story. Using composite estimates that include private AI investment, hyperscaler CapEx, government R&D, and NVIDIA datacenter revenue (with overlap acknowledged):</p>
+      <table style="width:100%;border-collapse:collapse;margin:1.5em 0;font-size:14px;">
+        <thead>
+          <tr style="border-bottom:2px solid #d4d2cf;">
+            <th style="text-align:left;padding:8px 10px;">Year</th>
+            <th style="text-align:right;padding:8px 10px;">AI Ecosystem</th>
+            <th style="text-align:right;padding:8px 10px;">Human Intel.</th>
+            <th style="text-align:right;padding:8px 10px;">Ratio (AI:HI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">2015</td>
+            <td style="text-align:right;padding:8px 10px;">~$35B</td>
+            <td style="text-align:right;padding:8px 10px;">~$200B</td>
+            <td style="text-align:right;padding:8px 10px;">1 : 5.7</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">2019</td>
+            <td style="text-align:right;padding:8px 10px;">~$115B</td>
+            <td style="text-align:right;padding:8px 10px;">~$228B</td>
+            <td style="text-align:right;padding:8px 10px;">1 : 2.0</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">2023</td>
+            <td style="text-align:right;padding:8px 10px;">~$271B</td>
+            <td style="text-align:right;padding:8px 10px;">~$284B</td>
+            <td style="text-align:right;padding:8px 10px;">~1 : 1</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:8px 10px;">2025</td>
+            <td style="text-align:right;padding:8px 10px;">~$690B</td>
+            <td style="text-align:right;padding:8px 10px;">~$289B</td>
+            <td style="text-align:right;padding:8px 10px;">2.4 : 1</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 10px;">2026 (proj.)</td>
+            <td style="text-align:right;padding:8px 10px;">~$1T+</td>
+            <td style="text-align:right;padding:8px 10px;">~$290B</td>
+            <td style="text-align:right;padding:8px 10px;">3.5 : 1+</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The crossover happened in 2022-2023. AI investment surpassed human intelligence investment and is now growing at <strong>35-40% per year</strong> while HI investment grows at 3-5%. By 2026, AI ecosystem investment will likely exceed $1 trillion in a single year — more than the inflation-adjusted cost of the Apollo program ($257-318B).</p>
+      <p>The scale is difficult to overstate. NVIDIA's datacenter revenue went from $830 million in fiscal 2017 to <strong>$115.2 billion</strong> in fiscal 2025 — a 139x increase in 8 years. Hyperscaler CapEx (Google, Microsoft, Amazon, Meta combined) reached $224 billion in 2024 and is projected at $315-405 billion in 2025 — roughly <strong>1.9% of U.S. GDP</strong>, exceeding the nationwide broadband buildout, the Apollo program, and the Interstate Highway System <a href="#ref-17" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>17</span>]</a>. Cumulative hyperscaler capex from 2025-2027 is projected at <strong>$1.15 trillion</strong>.</p>
+      <p>Meanwhile, the NIH budget has plateaued at ~$47 billion <a href="#ref-19" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>19</span>]</a> and faces a proposed <strong>41% cut</strong> in FY2026. The BRAIN Initiative was cut from $680 million (2023) to $321 million (2025), a <strong>53% decline</strong> in two years <a href="#ref-20" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>20</span>]</a>. Biotech's share of U.S. venture capital hit its lowest point in Crunchbase history in 2025, while AI's share reached ~50% of all global VC funding.</p>
+
+      <h2>VIII. The Manhattan Project We Never Built</h2>
+      <p>The Manhattan Project cost roughly $28-30 billion in 2023 dollars. It took 5 years. The BRAIN Initiative has invested roughly $4 billion over 10 years — one-seventh the Manhattan Project, at one-seventh the annual rate. The EU's Human Brain Project received ~EUR 600 million and is widely regarded as a failure <a href="#ref-24" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>24</span>]</a>: over 180 neuroscientists signed an open letter calling for its reconsideration, the original leader was replaced, and the central promise — a brain simulation — was never achieved.</p>
+      <p>The reason there is no Manhattan Project for human intelligence is not that no one thought of it. It is that <strong>every dimension of the problem is harder than AI</strong>.</p>
+      <p><strong>Biology is slow.</strong> Human gestation takes 9 months. Cognitive development takes 20+ years. Even if we discovered the perfect genetic intervention tomorrow, the first enhanced cohort would not reach adulthood until the 2040s-2050s. AI models train in weeks and deploy instantly.</p>
+      <p><strong>Intelligence is absurdly polygenic.</strong> Each gene locus accounts for less than 0.02% of variance. The best current polygenic scores explain approximately 7-10% of inter-individual differences <a href="#ref-25" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>25</span>]</a> in intelligence. Even with a perfect SNP predictor, embryo selection from 10 embryos <a href="#ref-15" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>15</span>]</a> yields at most ~9 IQ points. Meaningful but not transformative.</p>
+      <p><strong>Nootropics do not work well.</strong> A 2020 meta-analysis of 47 studies on modafinil — the most-studied "smart drug" — found a statistically significant but <strong>small overall effect</strong> (SMD=0.12). A Cochrane meta-analysis of piracetam (24 RCTs, 11,959 subjects) found no significant differences from placebo on any specific cognitive measure. There is no FDA approval pathway for cognitive enhancement in healthy people. The AMA explicitly discourages prescribing nootropics for healthy adults.</p>
+      <p><strong>BCIs are bottlenecked by the brain.</strong> The best invasive BCI achieves ~200 bits/s preclinically (Paradromics, in sheep). In humans, Neuralink achieves ~10 bits/s — matching the ~10 bits/s cognitive throughput limit <a href="#ref-7" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>7</span>]</a>. You cannot widen a pipe if the water pressure at the source is fixed at 10 bits per second.</p>
+
+      <h3>What Actually Works</h3>
+      <p>The interventions that have demonstrably raised collective intelligence are not high-tech. They are low-tech, proven, and chronically underfunded:</p>
+      <ul>
+        <li><strong>Iodine supplementation</strong> — In iodine-deficient regions of the 1920s U.S., salt iodization raised IQ scores by <strong>~15 points</strong>. The WHO estimates ~50 million people still suffer mental impairment from iodine deficiency.</li>
+        <li><strong>Lead removal</strong> — The phaseout of leaded gasoline since the 1970s is associated with a <strong>4-5 point increase</strong> in mean American IQ. Each 10 ug/dL increase in blood lead costs 2.6 IQ points.</li>
+        <li><strong>Education</strong> — Each additional year of formal schooling increases IQ by <strong>1-5 points</strong>. This is the most consistent, robust, and durable method known for raising intelligence.</li>
+        <li><strong>The Flynn Effect</strong> — IQ gains of ~3 points per decade, driven by universal schooling, literacy campaigns, and nutritional improvements. This is the strongest historical evidence that collective intelligence responds to societal investment.</li>
+      </ul>
+      <p>These interventions worked. They are among the highest-ROI investments in human history. The tragedy is not that they failed. It is that having proven they work, we are cutting their funding while pouring trillions into a technology we do not yet know how to align with human values.</p>
+
+      <h2>IX. Cognitive Equivalents</h2>
+      <p>The following table maps each major dimension of cognition from biological to artificial substrate. Where a direct comparison exists, the ratio is given. Where the comparison breaks down, the reason is noted.</p>
+      <table style="width:100%;border-collapse:collapse;margin:1.5em 0;font-size:13px;">
+        <thead>
+          <tr style="border-bottom:2px solid #d4d2cf;">
+            <th style="text-align:left;padding:8px 8px;">Dimension</th>
+            <th style="text-align:left;padding:8px 8px;">Human</th>
+            <th style="text-align:left;padding:8px 8px;">Machine (frontier LLM)</th>
+            <th style="text-align:right;padding:8px 8px;">Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Conscious throughput</strong></td>
+            <td style="padding:6px 8px;">~10 bits/s</td>
+            <td style="padding:6px 8px;">~200 bits/s per stream</td>
+            <td style="text-align:right;padding:6px 8px;">20x</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Parallel streams</strong></td>
+            <td style="padding:6px 8px;">1</td>
+            <td style="padding:6px 8px;">1,000+ simultaneous</td>
+            <td style="text-align:right;padding:6px 8px;">1,000x+</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Sensory input</strong></td>
+            <td style="padding:6px 8px;">~10<sup>9</sup> bits/s (retina alone)</td>
+            <td style="padding:6px 8px;">Text/image tokens (no live sensorium)</td>
+            <td style="text-align:right;padding:6px 8px;">N/A</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Working memory</strong></td>
+            <td style="padding:6px 8px;">~4-7 chunks (~30 bits)</td>
+            <td style="padding:6px 8px;">128K-1M+ token context window</td>
+            <td style="text-align:right;padding:6px 8px;">~10,000x</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Long-term memory</strong></td>
+            <td style="padding:6px 8px;">~1-10 GB retrievable; lossy, reconstructive</td>
+            <td style="padding:6px 8px;">Weights (static); unlimited external DB</td>
+            <td style="text-align:right;padding:6px 8px;">N/A</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Learning latency</strong></td>
+            <td style="padding:6px 8px;">Years (education); seconds (one-shot)</td>
+            <td style="padding:6px 8px;">Weeks (training); in-context (no weight update)</td>
+            <td style="text-align:right;padding:6px 8px;">Mixed</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Energy (total system)</strong></td>
+            <td style="padding:6px 8px;">20 W</td>
+            <td style="padding:6px 8px;">700 W per GPU; 10-20 kW per model</td>
+            <td style="text-align:right;padding:6px 8px;">500-1,000x</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Energy per operation</strong></td>
+            <td style="padding:6px 8px;">~10 fJ/synapse</td>
+            <td style="padding:6px 8px;">~700 fJ/FLOP (FP16)</td>
+            <td style="text-align:right;padding:6px 8px;">70x less efficient</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Output bandwidth</strong></td>
+            <td style="padding:6px 8px;">~39 bits/s (speech); ~10 bits/s (typing)</td>
+            <td style="padding:6px 8px;">~200 bits/s (text); parallelizable</td>
+            <td style="text-align:right;padding:6px 8px;">5-20x</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Replication</strong></td>
+            <td style="padding:6px 8px;">9 months gestation + 20 years development</td>
+            <td style="padding:6px 8px;">Minutes (copy weights to new hardware)</td>
+            <td style="text-align:right;padding:6px 8px;">~10<sup>7</sup>x</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Cost per intelligence-year</strong></td>
+            <td style="padding:6px 8px;">$9,000-$14,000 (amortized birth-to-career)</td>
+            <td style="padding:6px 8px;">$10,000-$100,000 (inference cluster)</td>
+            <td style="text-align:right;padding:6px 8px;">~1-10x</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Embodiment</strong></td>
+            <td style="padding:6px 8px;">Full sensorimotor loop; proprioception</td>
+            <td style="padding:6px 8px;">None (or robotic; no proprioception)</td>
+            <td style="text-align:right;padding:6px 8px;">N/A</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Compression ratio</strong></td>
+            <td style="padding:6px 8px;">10<sup>8</sup>:1 (sensory to conscious)</td>
+            <td style="padding:6px 8px;">~1:1 (input tokens to output tokens)</td>
+            <td style="text-align:right;padding:6px 8px;">N/A</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:6px 8px;"><strong>Value judgment</strong></td>
+            <td style="padding:6px 8px;">Intrinsic; evolved + cultural</td>
+            <td style="padding:6px 8px;">Instructed; RLHF-aligned</td>
+            <td style="text-align:right;padding:6px 8px;">N/A</td>
+          </tr>
+          <tr>
+            <td style="padding:6px 8px;"><strong>Consciousness</strong></td>
+            <td style="padding:6px 8px;">Present (first-person experience)</td>
+            <td style="padding:6px 8px;">Unknown</td>
+            <td style="text-align:right;padding:6px 8px;">Unknown</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Where machine intelligence is quantitatively superior — throughput, parallelism, working memory, replication speed — the advantages are orders of magnitude. Where human intelligence retains an edge — energy efficiency per operation, sensory integration, value judgment, consciousness — the advantages are qualitative and may not be reducible to a ratio at all. The question is not which substrate is "better." It is which dimensions matter for which problems, and who decides.</p>
+
+      <h2>X. The Reckoning</h2>
+      <p>Here is the convergence problem. <strong>AI investment CAGR: 35-40% per year. Human intelligence investment CAGR: 3-5% per year.</strong> The ratio is accelerating exponentially, from 1:5.7 in 2015 to 2.4:1 in 2025 to a projected 3.5:1+ by 2026. This is a fundamental reallocation of global capital from augmenting biological intelligence to building artificial intelligence.</p>
+      <p>Energy follows capital. Datacenters went from ~0.8% of global electricity (2015) to ~1.5% (2024) to a projected ~3% (2030). In the U.S., datacenters will consume 8% of electricity by 2030. AI-specific server energy grew 20x in 6 years. The IEA projects <a href="#ref-16" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>16</span>]</a> datacenter consumption reaching 945 TWh by 2030 — roughly the total electricity use of Japan.</p>
+      <p>The case for investing in human intelligence anyway is the alignment argument. OpenAI's own superalignment statement <a href="#ref-21" style="color:#5b8def;text-decoration:none;font-size:0.85em;">[<span>21</span>]</a> puts it directly: "Current techniques for aligning AI, such as reinforcement learning from human feedback, rely on humans' ability to supervise AI. But humans won't be able to reliably supervise AI systems much smarter than us." This is the ladder problem: if humans are not smart enough to understand what AI is doing, meaningful oversight becomes impossible. We need smarter humans <em>precisely because</em> we are building smarter machines.</p>
+      <p>But the timeline is brutal. Even the fastest plausible biological intervention — embryo selection via IVF — would require ~20 years to produce enhanced adults. CRISPR-based editing for complex traits is at least a decade from safe clinical application, plus 20 years of development. Multiple forecasters place transformative AI within 5-15 years. The window for biological enhancement to outrun digital intelligence is almost certainly already closed.</p>
+      <p>And yet: humans remain the only general intelligence we trust to make value judgments. The 86 billion neurons in your head, operating at 10 bits per second on 20 watts, with 100 million-to-one compression, cobbled together by evolution out of cooking fires and iodized salt — this is still the most sophisticated information-processing system in the known universe. It is still the only system that understands <em>why</em> anything matters.</p>
+      <p>The numbers say we are underinvesting in it by a factor that grows every year. Whether that is rational depends entirely on what you think intelligence is for.</p>
+
+      <hr>
+      <h3>References</h3>
+      <ol style="padding-left:1.5em;font-size:14px;line-height:1.7;color:#555;">
+        <li id="ref-1">Azevedo FAC et al. "Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain." <em>J Comp Neurol.</em> 2009. <a href="https://pubmed.ncbi.nlm.nih.gov/19226510/" target="_blank">PubMed</a></li>
+        <li id="ref-2">Herculano-Houzel S. "The human brain in numbers: a linearly scaled-up primate brain." <em>Front Hum Neurosci.</em> 2009. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2776484/" target="_blank">PMC</a></li>
+        <li id="ref-3">Herculano-Houzel S et al. "The elephant brain in numbers." <em>Front Neuroanat.</em> 2014. <a href="https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2014.00046/full" target="_blank">Frontiers</a></li>
+        <li id="ref-4">Olkowicz S et al. "Birds have primate-like numbers of neurons in the forebrain." <em>PNAS.</em> 2016. <a href="https://www.pnas.org/doi/10.1073/pnas.1517131113" target="_blank">PNAS</a></li>
+        <li id="ref-5">Gabi M et al. "No relative expansion of the number of prefrontal neurons in primate and human evolution." <em>PNAS.</em> 2016. <a href="https://www.pnas.org/doi/full/10.1073/pnas.1610178113" target="_blank">PNAS</a></li>
+        <li id="ref-6">Hatton IA et al. "The human cell count and size distribution." <em>PNAS.</em> 2023. <a href="https://www.pnas.org/doi/10.1073/pnas.2303077120" target="_blank">PNAS</a></li>
+        <li id="ref-7">Zheng J, Meister M. "The Unbearable Slowness of Being." <em>Neuron</em> (Cell Press), 2025. <a href="https://arxiv.org/html/2408.10234v2" target="_blank">arXiv</a></li>
+        <li id="ref-8">Coupe C et al. "Different languages, similar encoding efficiency." <em>Science Advances.</em> 2019. <a href="https://www.science.org/content/article/human-speech-may-have-universal-transmission-rate-39-bits-second" target="_blank">Science</a></li>
+        <li id="ref-9">Attwell D, Laughlin SB. "An energy budget for signaling in the grey matter of the brain." <em>J Cereb Blood Flow Metab.</em> 2001. <a href="https://journals.sagepub.com/doi/10.1097/00004647-200110000-00001" target="_blank">SAGE</a></li>
+        <li id="ref-10">von Bartheld CS et al. "The search for true numbers of neurons and glial cells." <em>J Comp Neurol.</em> 2016. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5063692/" target="_blank">PMC</a></li>
+        <li id="ref-11">Stanford HAI. <em>2025 AI Index Report.</em> <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report" target="_blank">Stanford</a></li>
+        <li id="ref-12">Epoch AI. "LLM Inference Price Trends." <a href="https://epoch.ai/data-insights/llm-inference-price-trends" target="_blank">Epoch AI</a></li>
+        <li id="ref-13">Epoch AI. "ML Hardware Energy Efficiency." <a href="https://epoch.ai/data-insights/ml-hardware-energy-efficiency" target="_blank">Epoch AI</a></li>
+        <li id="ref-14">Paradromics. "BCI Benchmarking." <a href="https://www.paradromics.com/blog/bci-benchmarking" target="_blank">Paradromics</a></li>
+        <li id="ref-15">Gwern. "Embryo Selection for Intelligence." <a href="https://gwern.net/embryo-selection" target="_blank">Gwern.net</a></li>
+        <li id="ref-16">IEA. "Energy and AI." <a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai" target="_blank">IEA</a></li>
+        <li id="ref-17">Goldman Sachs. "AI Infrastructure Investment." <a href="https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026" target="_blank">GS</a></li>
+        <li id="ref-18">USDA. "Cost of Raising a Child." <a href="https://www.usda.gov/about-usda/news/blog/cost-raising-child" target="_blank">USDA</a></li>
+        <li id="ref-19">NIH Office of Budget. <a href="https://officeofbudget.od.nih.gov/" target="_blank">NIH</a></li>
+        <li id="ref-20">BRAIN Initiative. <a href="https://braininitiative.nih.gov/funding/understanding-brain-initiative-budget" target="_blank">Budget</a></li>
+        <li id="ref-21">OpenAI. "Introducing Superalignment." <a href="https://openai.com/index/introducing-superalignment/" target="_blank">OpenAI</a></li>
+        <li id="ref-22">Norretranders T. <em>The User Illusion.</em> 1998.</li>
+        <li id="ref-23">Bostrom N. <em>Superintelligence: Paths, Dangers, Strategies.</em> 2014.</li>
+        <li id="ref-24">Abbott A. "The Human Brain Project: what did it achieve?" <em>Nature.</em> 2023. <a href="https://www.nature.com/articles/d41586-023-02600-x" target="_blank">Nature</a></li>
+        <li id="ref-25">Savage JE et al. "Genome-wide association meta-analysis in 269,867 individuals identifies new genetic and functional links to intelligence." <em>Nature Genetics.</em> 2018. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12416016/" target="_blank">PMC</a></li>
+      </ol>
+    `,
+    connections: [
+      { id: "numbers-of-interest", label: "the data" },
+      { id: "mind-blindness", label: "understanding intelligence" },
+      { id: "information-generating-processes", label: "information theory" },
+      { id: "choiceless-speciation", label: "the augmentation gap" },
+      { id: "end-of-work", label: "economic displacement" },
+      { id: "categorization-of-life", label: "what counts as intelligent" },
+      { id: "complexity-ceiling", label: "computational limits" },
+      { id: "ai-always-tools", label: "beyond tools" }
     ]
   }
 ];
