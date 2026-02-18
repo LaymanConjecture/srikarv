@@ -87,6 +87,7 @@
 
     currentPostId = postId;
     renderPost(post);
+    bindRefLinks();
 
     // Scroll to top of panel
     panel.scrollTop = 0;
@@ -135,6 +136,7 @@
       if (post) {
         currentPostId = event.state.postId;
         renderPost(post);
+        bindRefLinks();
         panel.scrollTop = 0;
         document.title = post.title + ' — Life Panel';
         requestAnimationFrame(() => {
@@ -160,27 +162,29 @@
     }
   });
 
-  // Handle in-text reference links (e.g. href="#ref-6") — scroll panel to matching <li>
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a[href^="#ref-"]');
-    if (!link || !currentPostId) return;
-    e.preventDefault();
-    e.stopPropagation();
-    const refNum = link.getAttribute('href').replace('#ref-', '');
-    // Find the <li> whose id ends with -ref-N within the panel
-    const target = panel.querySelector('li[id$="-ref-' + refNum + '"]');
-    if (target) {
-      // Manual scroll within the panel (scrollIntoView unreliable in overflow containers)
-      var targetTop = target.getBoundingClientRect().top;
-      var panelTop = panel.getBoundingClientRect().top;
-      var offset = targetTop - panelTop + panel.scrollTop - panel.clientHeight / 3;
-      panel.scrollTo({ top: offset, behavior: 'smooth' });
-      // Brief highlight flash
-      target.style.transition = 'background 0.3s ease';
-      target.style.background = '#fff3a8';
-      setTimeout(function () { target.style.background = ''; }, 1500);
-    }
-  });
+  // Bind in-text reference links after each render
+  function bindRefLinks() {
+    var links = panel.querySelectorAll('a');
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (!href || href.indexOf('#ref-') !== 0) return;
+      var refNum = href.replace('#ref-', '');
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var target = panel.querySelector('li[id$="-ref-' + refNum + '"]');
+        if (target) {
+          var targetTop = target.getBoundingClientRect().top;
+          var panelTop = panel.getBoundingClientRect().top;
+          var scrollTo = targetTop - panelTop + panel.scrollTop - panel.clientHeight / 3;
+          panel.scrollTo({ top: scrollTo, behavior: 'smooth' });
+          target.style.transition = 'background 0.3s ease';
+          target.style.background = '#fff3a8';
+          setTimeout(function () { target.style.background = ''; }, 1500);
+        }
+      });
+    });
+  }
 
   // Check URL on load for direct article links
   function checkInitialRoute() {
