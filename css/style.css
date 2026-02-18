@@ -390,6 +390,262 @@ body {
   }
 }
 
+/* --- Annotation System --- */
+
+.ann-highlight {
+  background: #fff3a8;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 1px 0;
+  transition: background 0.15s ease;
+}
+
+.ann-highlight:hover {
+  background: #ffe45c;
+}
+
+.ann-btn {
+  background: none;
+  border: 2px solid #d4d2cf;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  margin-right: 8px;
+}
+
+.ann-btn:hover {
+  background: #eeedeb;
+  color: #1e1e1e;
+  border-color: #b0aeab;
+}
+
+.ann-btn.active {
+  background: #fff3a8;
+  border-color: #e6c619;
+  color: #1e1e1e;
+}
+
+.ann-popup {
+  position: fixed;
+  z-index: 1000;
+  background: #fff;
+  border: 2px solid #d4d2cf;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  width: 280px;
+}
+
+.ann-popup-text {
+  width: 100%;
+  border: 1.5px solid #d4d2cf;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.ann-popup-text:focus {
+  outline: none;
+  border-color: #e6c619;
+}
+
+.ann-popup-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.ann-popup-actions button {
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: 1.5px solid #d4d2cf;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s ease;
+}
+
+.ann-popup-save {
+  background: #fff3a8 !important;
+  border-color: #e6c619 !important;
+  font-weight: 600;
+}
+
+.ann-popup-save:hover {
+  background: #ffe45c !important;
+}
+
+.ann-popup-cancel:hover {
+  background: #eeedeb;
+}
+
+.ann-tooltip {
+  position: fixed;
+  z-index: 1000;
+  background: #fff;
+  border: 2px solid #d4d2cf;
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  max-width: 300px;
+  font-size: 14px;
+}
+
+.ann-tooltip-comment {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  color: #2c2c2c;
+}
+
+.ann-tooltip-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.ann-tooltip-actions button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1.5px solid #d4d2cf;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.15s ease;
+}
+
+.ann-tooltip-edit:hover {
+  background: #eeedeb;
+}
+
+.ann-tooltip-delete:hover {
+  background: #fce4ec;
+  border-color: #e57373;
+  color: #c62828;
+}
+
+.ann-comments {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1.5px solid #e8e6e3;
+}
+
+.ann-comments h3 {
+  font-family: 'Virgil', cursive;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.ann-comment-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0eeeb;
+  align-items: flex-start;
+}
+
+.ann-comment-num {
+  font-family: 'Virgil', cursive;
+  font-size: 14px;
+  color: #999;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.ann-comment-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ann-comment-quote {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.ann-comment-text {
+  font-size: 14px;
+  color: #2c2c2c;
+  line-height: 1.4;
+}
+
+.ann-comment-orphaned {
+  font-size: 12px;
+  color: #e57373;
+  margin-top: 2px;
+}
+
+.ann-comment-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ann-comment-actions button {
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #d4d2cf;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+  transition: all 0.15s ease;
+}
+
+.ann-comment-actions .ann-comment-edit:hover {
+  background: #eeedeb;
+}
+
+.ann-comment-actions .ann-comment-delete:hover {
+  background: #fce4ec;
+  border-color: #e57373;
+  color: #c62828;
+}
+
+.ann-comment-item.ann-orphaned {
+  opacity: 0.6;
+}
+
+.ann-copy-all {
+  display: block;
+  margin: 16px 0 8px;
+  padding: 8px 20px;
+  border: 2px solid #d4d2cf;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Virgil', cursive;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.15s ease;
+}
+
+.ann-copy-all:hover {
+  background: #fff3a8;
+  border-color: #e6c619;
+  color: #1e1e1e;
+}
+
+.ann-copy-all:disabled {
+  background: #dcedc8;
+  border-color: #8bc34a;
+  color: #4a7c2e;
+  cursor: default;
+}
+
 @media (max-width: 600px) {
   #post-panel .post-inner {
     padding: 24px 16px 48px;

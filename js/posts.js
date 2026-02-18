@@ -160,6 +160,23 @@
     }
   });
 
+  // Handle in-text reference links (e.g. href="#ref-6") — scroll panel to matching <li>
+  panel.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href^="#ref-"]');
+    if (!link || !currentPostId) return;
+    e.preventDefault();
+    const refNum = link.getAttribute('href').replace('#ref-', '');
+    // Find the <li> whose id ends with -ref-N within the panel
+    const target = panel.querySelector('li[id$="-ref-' + refNum + '"]');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Brief highlight flash
+      target.style.transition = 'background 0.3s ease';
+      target.style.background = '#fff3a8';
+      setTimeout(function () { target.style.background = ''; }, 1500);
+    }
+  });
+
   // Check URL on load for direct article links
   function checkInitialRoute() {
     const path = window.location.pathname;
