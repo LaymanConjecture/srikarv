@@ -2894,12 +2894,12 @@ const POSTS = [
 // Category → node fill color mapping
 // Colors cluster semantically: same color = same kind of thinking
 const CATEGORY_COLORS = {
-  governance:   { fill: "#e6f4f7", stroke: "#7ab8c7" },  // blue — how we organize
-  epistemics:   { fill: "#f3eefa", stroke: "#b89cd8" },  // purple — how we think
-  critique:     { fill: "#fef3e2", stroke: "#d4a54a" },  // amber — what's wrong now
-  technology:   { fill: "#e6f4f7", stroke: "#7ab8c7" },  // blue (alias)
-  philosophy:   { fill: "#f3eefa", stroke: "#b89cd8" },  // purple (alias)
-  culture:      { fill: "#fef3e2", stroke: "#d4a54a" },  // amber (alias)
-  science:      { fill: "#e8f5e1", stroke: "#8abb76" },  // green — how it works
-  personal:     { fill: "#fce4ec", stroke: "#d4889e" }   // pink — who I am
+  governance:   { fill: "#e8eef3", stroke: "#5b7f9b" },  // slate blue — how we organize
+  epistemics:   { fill: "#f0eaf0", stroke: "#8b6b8b" },  // mauve — how we think
+  critique:     { fill: "#f7efde", stroke: "#b8860b" },  // gold — what's wrong now
+  technology:   { fill: "#e6f0f0", stroke: "#5b8b8b" },  // teal — built things
+  philosophy:   { fill: "#f0eaf0", stroke: "#8b6b8b" },  // mauve (alias)
+  culture:      { fill: "#f5ebe9", stroke: "#b87878" },  // clay — culture
+  science:      { fill: "#ebf0e6", stroke: "#6b8e6b" },  // sage — how it works
+  personal:     { fill: "#f3ece6", stroke: "#a07050" }   // terracotta — who I am
 };

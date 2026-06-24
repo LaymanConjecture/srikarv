@@ -62,8 +62,11 @@
     }
 
     panel.innerHTML = `
-      <div class="post-close">
-        <button onclick="closePost()" aria-label="Close">&times;</button>
+      <div class="post-header">
+        <button class="post-back" onclick="closePost()" aria-label="Back to home">&larr; Back</button>
+        <div class="post-close">
+          <button onclick="closePost()" aria-label="Close">&times;</button>
+        </div>
       </div>
       <div class="post-inner">
         <div class="post-meta">
@@ -100,12 +103,9 @@
     // Update page title
     document.title = post.title + ' — Life Panel';
 
-    // Trigger transitions
+    // Trigger transitions — post page slides up over the graph
     requestAnimationFrame(() => {
       panel.classList.add('open');
-      if (typeof shiftGraph === 'function') {
-        shiftGraph(true);
-      }
     });
   };
 
@@ -115,9 +115,6 @@
     currentPostId = null;
 
     panel.classList.remove('open');
-    if (typeof shiftGraph === 'function') {
-      shiftGraph(false);
-    }
 
     // Update URL (safe for file:// protocol)
     if (!handlingPopstate) {
@@ -141,14 +138,12 @@
         document.title = post.title + ' — Life Panel';
         requestAnimationFrame(() => {
           panel.classList.add('open');
-          if (typeof shiftGraph === 'function') shiftGraph(true);
         });
       }
     } else {
       if (currentPostId) {
         currentPostId = null;
         panel.classList.remove('open');
-        if (typeof shiftGraph === 'function') shiftGraph(false);
         document.title = 'Life Panel — Blog';
       }
     }

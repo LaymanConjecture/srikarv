@@ -1,5 +1,6 @@
 /* ============================================
    Blog Knowledge Graph — Excalidraw-style
+   Warm palette (aicapex Atlas) reskin
    ============================================ */
 
 @font-face {
@@ -8,6 +9,29 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* --- Warm palette (from the aicapex Atlas report) --- */
+
+:root {
+  --bg: #f5f2ed;            /* warm paper */
+  --surface: #ffffff;
+  --surface-2: #f0ede8;
+  --surface-3: #fafaf9;
+  --text: #1c1917;          /* warm near-black */
+  --dim: #78716c;           /* warm gray */
+  --dimmer: #a8a29e;
+  --faint: #d6d3d1;
+  --border: #e7e5e4;
+  --border-dim: #f0eeec;
+  --accent: #4f7942;        /* forest green */
+  --accent-dark: #3d5e33;
+  --accent-glow: rgba(79, 121, 66, 0.08);
+  --amber: #b45309;
+  --red: #dc2626;
+  --highlight: #fbe7a2;     /* warm annotation highlight */
+  --highlight-strong: #f5d97a;
+  --highlight-edge: #d4a93f;
 }
 
 /* --- Reset & Base --- */
@@ -24,8 +48,8 @@ html, body {
 }
 
 body {
-  background: #FAFAF8;
-  color: #1e1e1e;
+  background: var(--bg);
+  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -77,7 +101,7 @@ body {
 
 .node text {
   font-family: 'Virgil', cursive;
-  fill: #1e1e1e;
+  fill: var(--text);
   pointer-events: none;
   user-select: none;
 }
@@ -88,22 +112,22 @@ body {
 
 .node .node-subtitle {
   font-size: 11px;
-  fill: #666;
+  fill: var(--dim);
 }
 
 /* --- Graph Edges --- */
 
 .edge {
   fill: none;
-  stroke: #c0bfbc;
+  stroke: var(--faint);
   stroke-width: 1.5;
   stroke-linecap: round;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .edge.highlighted {
   opacity: 0.9;
-  stroke: #868583;
+  stroke: var(--dim);
   stroke-width: 2;
   transition: opacity 0.2s ease, stroke 0.2s ease;
 }
@@ -118,13 +142,13 @@ body {
 .edge-label {
   font-family: 'Virgil', cursive;
   font-size: 11px;
-  fill: #999;
+  fill: var(--dimmer);
   pointer-events: none;
   user-select: none;
 }
 
 .edge-label.highlighted {
-  fill: #666;
+  fill: var(--dim);
   opacity: 1;
   transition: opacity 0.2s ease, fill 0.2s ease;
 }
@@ -142,17 +166,15 @@ body {
   opacity: 0.4;
 }
 
-/* --- Post Panel --- */
+/* --- Post Page (full-screen reading view) --- */
 
 #post-panel {
   position: absolute;
   top: 0;
   right: 0;
-  width: 55%;
-  max-width: 720px;
+  width: 100%;
   height: 100%;
-  background: #FAFAF8;
-  border-left: 2px solid #e8e6e3;
+  background: var(--bg);
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -164,34 +186,63 @@ body {
 
 #post-panel.open {
   transform: translateX(0);
-  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.08);
+  box-shadow: -8px 0 30px rgba(28, 25, 23, 0.08);
 }
 
 #post-panel .post-inner {
-  padding: 48px 48px 80px;
-  max-width: 600px;
+  padding: 24px 48px 96px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-/* --- Post Header --- */
+/* --- Post Header (sticky bar: back button + tools) --- */
 
-.post-close {
+.post-header {
   position: sticky;
   top: 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 16px 24px;
-  background: linear-gradient(to bottom, #FAFAF8 60%, transparent);
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: linear-gradient(to bottom, var(--bg) 72%, transparent);
+}
+
+.post-back {
+  font-family: 'Virgil', cursive;
+  background: none;
+  border: 2px solid var(--faint);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: var(--dim);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.post-back:hover {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--dimmer);
+}
+
+.post-close {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .post-close button {
   background: none;
-  border: 2px solid #d4d2cf;
+  border: 2px solid var(--faint);
   border-radius: 8px;
   width: 40px;
   height: 40px;
   font-size: 20px;
-  color: #666;
+  color: var(--dim);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -201,9 +252,9 @@ body {
 }
 
 .post-close button:hover {
-  background: #eeedeb;
-  color: #1e1e1e;
-  border-color: #b0aeab;
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--dimmer);
 }
 
 .post-meta {
@@ -215,7 +266,7 @@ body {
 
 .post-date {
   font-size: 14px;
-  color: #888;
+  color: var(--dim);
 }
 
 .post-category {
@@ -231,12 +282,12 @@ body {
   font-size: 32px;
   line-height: 1.3;
   margin-bottom: 8px;
-  color: #1e1e1e;
+  color: var(--text);
 }
 
 .post-subtitle {
   font-size: 17px;
-  color: #777;
+  color: var(--dim);
   margin-bottom: 32px;
   line-height: 1.5;
 }
@@ -246,7 +297,7 @@ body {
 .post-content {
   font-size: 16px;
   line-height: 1.75;
-  color: #2c2c2c;
+  color: var(--text);
 }
 
 .post-content p {
@@ -257,21 +308,21 @@ body {
   font-family: 'Virgil', cursive;
   font-size: 22px;
   margin: 2em 0 0.8em;
-  color: #1e1e1e;
+  color: var(--text);
 }
 
 .post-content h3 {
   font-family: 'Virgil', cursive;
   font-size: 18px;
   margin: 1.6em 0 0.6em;
-  color: #1e1e1e;
+  color: var(--text);
 }
 
 .post-content blockquote {
-  border-left: 3px solid #d4d2cf;
+  border-left: 3px solid var(--accent);
   padding-left: 20px;
   margin: 1.5em 0;
-  color: #555;
+  color: var(--dim);
   font-style: italic;
 }
 
@@ -285,14 +336,14 @@ body {
 }
 
 .post-content code {
-  background: #eeedeb;
+  background: var(--surface-2);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
 .post-content pre {
-  background: #eeedeb;
+  background: var(--surface-2);
   padding: 16px;
   border-radius: 8px;
   overflow-x: auto;
@@ -305,14 +356,18 @@ body {
 }
 
 .post-content a {
-  color: #5b8def;
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
+.post-content a:hover {
+  color: var(--accent-dark);
+}
+
 .post-content hr {
   border: none;
-  border-top: 1.5px solid #e8e6e3;
+  border-top: 1.5px solid var(--border);
   margin: 2em 0;
 }
 
@@ -321,13 +376,13 @@ body {
 .post-related {
   margin-top: 48px;
   padding-top: 24px;
-  border-top: 1.5px solid #e8e6e3;
+  border-top: 1.5px solid var(--border);
 }
 
 .post-related h3 {
   font-family: 'Virgil', cursive;
   font-size: 16px;
-  color: #888;
+  color: var(--dim);
   margin-bottom: 12px;
 }
 
@@ -343,46 +398,40 @@ body {
 .post-related-list a {
   font-family: 'Virgil', cursive;
   font-size: 15px;
-  color: #5b8def;
+  color: var(--accent);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.15s ease;
 }
 
 .post-related-list a:hover {
-  color: #3a6ed8;
+  color: var(--accent-dark);
   text-decoration: underline;
 }
 
-/* --- Category Colors (semantic clusters) --- */
+/* --- Category Colors (warm, earthy clusters) --- */
 
-.category-governance   { background: #daeef3; color: #3a7f91; }
-.category-epistemics   { background: #e8dff5; color: #6e44a0; }
-.category-critique     { background: #fef0d5; color: #9e7a1b; }
-.category-technology   { background: #daeef3; color: #3a7f91; }
-.category-philosophy   { background: #e8dff5; color: #6e44a0; }
-.category-culture      { background: #fef0d5; color: #9e7a1b; }
-.category-science      { background: #dcedc8; color: #4a7c2e; }
-.category-personal     { background: #fce4ec; color: #ad3a5e; }
+.category-governance   { background: #e8eef3; color: #3f5f78; }  /* slate blue */
+.category-epistemics   { background: #f0eaf0; color: #6e4f6e; }  /* mauve */
+.category-critique     { background: #f7efde; color: #8a6508; }  /* gold */
+.category-technology   { background: #e6f0f0; color: #3f6b6b; }  /* teal */
+.category-philosophy   { background: #f0eaf0; color: #6e4f6e; }  /* mauve */
+.category-culture      { background: #f5ebe9; color: #8f5757; }  /* clay */
+.category-science      { background: #ebf0e6; color: #4f6e3f; }  /* sage */
+.category-personal     { background: #f3ece6; color: #7d5238; }  /* terracotta */
 
 /* --- SVG Hand-drawn Filter (applied via defs) --- */
 
 /* --- Responsive --- */
 
 @media (max-width: 900px) {
-  #post-panel {
-    width: 100%;
-    max-width: none;
-    border-left: none;
-  }
-
   #graph-container.shifted {
     transform: scale(0.9);
     opacity: 0.3;
   }
 
   #post-panel .post-inner {
-    padding: 32px 24px 64px;
+    padding: 16px 24px 80px;
   }
 
   .post-title {
@@ -393,7 +442,7 @@ body {
 /* --- Annotation System --- */
 
 .ann-highlight {
-  background: #fff3a8;
+  background: var(--highlight);
   border-radius: 2px;
   cursor: pointer;
   padding: 1px 0;
@@ -401,17 +450,17 @@ body {
 }
 
 .ann-highlight:hover {
-  background: #ffe45c;
+  background: var(--highlight-strong);
 }
 
 .ann-btn {
   background: none;
-  border: 2px solid #d4d2cf;
+  border: 2px solid var(--faint);
   border-radius: 8px;
   width: 40px;
   height: 40px;
   font-size: 18px;
-  color: #666;
+  color: var(--dim);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -421,31 +470,31 @@ body {
 }
 
 .ann-btn:hover {
-  background: #eeedeb;
-  color: #1e1e1e;
-  border-color: #b0aeab;
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--dimmer);
 }
 
 .ann-btn.active {
-  background: #fff3a8;
-  border-color: #e6c619;
-  color: #1e1e1e;
+  background: var(--highlight);
+  border-color: var(--highlight-edge);
+  color: var(--text);
 }
 
 .ann-popup {
   position: fixed;
   z-index: 1000;
-  background: #fff;
-  border: 2px solid #d4d2cf;
+  background: var(--surface);
+  border: 2px solid var(--faint);
   border-radius: 10px;
   padding: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 20px rgba(28, 25, 23, 0.12);
   width: 280px;
 }
 
 .ann-popup-text {
   width: 100%;
-  border: 1.5px solid #d4d2cf;
+  border: 1.5px solid var(--faint);
   border-radius: 6px;
   padding: 8px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -456,7 +505,7 @@ body {
 
 .ann-popup-text:focus {
   outline: none;
-  border-color: #e6c619;
+  border-color: var(--accent);
 }
 
 .ann-popup-actions {
@@ -469,35 +518,35 @@ body {
 .ann-popup-actions button {
   padding: 5px 14px;
   border-radius: 6px;
-  border: 1.5px solid #d4d2cf;
-  background: #fff;
+  border: 1.5px solid var(--faint);
+  background: var(--surface);
   cursor: pointer;
   font-size: 13px;
   transition: all 0.15s ease;
 }
 
 .ann-popup-save {
-  background: #fff3a8 !important;
-  border-color: #e6c619 !important;
+  background: var(--highlight) !important;
+  border-color: var(--highlight-edge) !important;
   font-weight: 600;
 }
 
 .ann-popup-save:hover {
-  background: #ffe45c !important;
+  background: var(--highlight-strong) !important;
 }
 
 .ann-popup-cancel:hover {
-  background: #eeedeb;
+  background: var(--surface-2);
 }
 
 .ann-tooltip {
   position: fixed;
   z-index: 1000;
-  background: #fff;
-  border: 2px solid #d4d2cf;
+  background: var(--surface);
+  border: 2px solid var(--faint);
   border-radius: 10px;
   padding: 10px 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 20px rgba(28, 25, 23, 0.12);
   max-width: 300px;
   font-size: 14px;
 }
@@ -505,7 +554,7 @@ body {
 .ann-tooltip-comment {
   margin-bottom: 8px;
   line-height: 1.4;
-  color: #2c2c2c;
+  color: var(--text);
 }
 
 .ann-tooltip-actions {
@@ -517,33 +566,33 @@ body {
 .ann-tooltip-actions button {
   padding: 3px 10px;
   border-radius: 5px;
-  border: 1.5px solid #d4d2cf;
-  background: #fff;
+  border: 1.5px solid var(--faint);
+  background: var(--surface);
   cursor: pointer;
   font-size: 12px;
   transition: all 0.15s ease;
 }
 
 .ann-tooltip-edit:hover {
-  background: #eeedeb;
+  background: var(--surface-2);
 }
 
 .ann-tooltip-delete:hover {
-  background: #fce4ec;
-  border-color: #e57373;
-  color: #c62828;
+  background: #f7e6e2;
+  border-color: var(--red);
+  color: #b91c1c;
 }
 
 .ann-comments {
   margin-top: 48px;
   padding-top: 24px;
-  border-top: 1.5px solid #e8e6e3;
+  border-top: 1.5px solid var(--border);
 }
 
 .ann-comments h3 {
   font-family: 'Virgil', cursive;
   font-size: 16px;
-  color: #888;
+  color: var(--dim);
   margin-bottom: 16px;
 }
 
@@ -551,14 +600,14 @@ body {
   display: flex;
   gap: 10px;
   padding: 10px 0;
-  border-bottom: 1px solid #f0eeeb;
+  border-bottom: 1px solid var(--border-dim);
   align-items: flex-start;
 }
 
 .ann-comment-num {
   font-family: 'Virgil', cursive;
   font-size: 14px;
-  color: #999;
+  color: var(--dimmer);
   flex-shrink: 0;
   padding-top: 2px;
 }
@@ -570,7 +619,7 @@ body {
 
 .ann-comment-quote {
   font-size: 13px;
-  color: #888;
+  color: var(--dim);
   font-style: italic;
   margin-bottom: 4px;
   word-break: break-word;
@@ -578,13 +627,13 @@ body {
 
 .ann-comment-text {
   font-size: 14px;
-  color: #2c2c2c;
+  color: var(--text);
   line-height: 1.4;
 }
 
 .ann-comment-orphaned {
   font-size: 12px;
-  color: #e57373;
+  color: var(--red);
   margin-top: 2px;
 }
 
@@ -597,22 +646,22 @@ body {
 .ann-comment-actions button {
   padding: 2px 8px;
   border-radius: 4px;
-  border: 1px solid #d4d2cf;
-  background: #fff;
+  border: 1px solid var(--faint);
+  background: var(--surface);
   cursor: pointer;
   font-size: 12px;
-  color: #666;
+  color: var(--dim);
   transition: all 0.15s ease;
 }
 
 .ann-comment-actions .ann-comment-edit:hover {
-  background: #eeedeb;
+  background: var(--surface-2);
 }
 
 .ann-comment-actions .ann-comment-delete:hover {
-  background: #fce4ec;
-  border-color: #e57373;
-  color: #c62828;
+  background: #f7e6e2;
+  border-color: var(--red);
+  color: #b91c1c;
 }
 
 .ann-comment-item.ann-orphaned {
@@ -623,32 +672,32 @@ body {
   display: block;
   margin: 16px 0 8px;
   padding: 8px 20px;
-  border: 2px solid #d4d2cf;
+  border: 2px solid var(--faint);
   border-radius: 8px;
-  background: #fff;
+  background: var(--surface);
   cursor: pointer;
   font-family: 'Virgil', cursive;
   font-size: 14px;
-  color: #666;
+  color: var(--dim);
   transition: all 0.15s ease;
 }
 
 .ann-copy-all:hover {
-  background: #fff3a8;
-  border-color: #e6c619;
-  color: #1e1e1e;
+  background: var(--highlight);
+  border-color: var(--highlight-edge);
+  color: var(--text);
 }
 
 .ann-copy-all:disabled {
-  background: #dcedc8;
-  border-color: #8bc34a;
-  color: #4a7c2e;
+  background: #e6efe1;
+  border-color: var(--accent);
+  color: var(--accent);
   cursor: default;
 }
 
 @media (max-width: 600px) {
   #post-panel .post-inner {
-    padding: 24px 16px 48px;
+    padding: 12px 16px 64px;
   }
 
   .post-title {
