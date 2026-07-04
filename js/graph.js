@@ -18,11 +18,17 @@
   function buildEdges() {
     const edgeSet = new Set();
     const edges = [];
+    // Only link to posts that actually exist. A connection pointing at an
+    // unwritten/renamed post (e.g. a draft referencing a future piece) would
+    // otherwise make d3.forceLink throw "missing: <id>" and break the whole
+    // graph. Skipping the dangling edge degrades gracefully instead.
+    const validIds = new Set(POSTS.map(p => p.id));
     POSTS.forEach(post => {
       (post.connections || []).forEach(conn => {
         // Support both string and {id, label} connection formats
         const targetId = typeof conn === 'string' ? conn : conn.id;
         const label = typeof conn === 'string' ? '' : (conn.label || '');
+        if (!validIds.has(targetId)) return;
         const key = [post.id, targetId].sort().join('--');
         if (!edgeSet.has(key)) {
           edgeSet.add(key);
