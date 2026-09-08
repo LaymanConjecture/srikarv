@@ -95,3 +95,22 @@ test('blocked storage still supports night and second tabs never autoplay', asyn
   await page.getByRole('button', { name: 'Night mode' }).click();
   await expect(page.getByRole('button', { name: 'Night mode' })).toHaveAttribute('aria-pressed', 'true');
 });
+
+test('owl feet stay attached to the artwork branch across viewport crops', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('srikar-theme', 'dark'));
+  await page.goto('/');
+  for (const width of [1440, 1920, 2560, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    await expect.poll(() => page.evaluate(() => {
+      const image = document.querySelector('.landscape-night');
+      const scene = image.getBoundingClientRect();
+      const sprite = document.querySelector('.owl-rest').getBoundingClientRect();
+      const fit = Math.max(scene.width / 1672, scene.height / 941);
+      const pos = getComputedStyle(image).objectPosition.split(' ').map(v => parseFloat(v) / 100);
+      const branchX = scene.left + (scene.width - 1672 * fit) * pos[0] + 980 * fit;
+      const branchY = scene.top + (scene.height - 941 * fit) * pos[1] + 74 * fit;
+      return Math.hypot(sprite.left + sprite.width / 2 - branchX, sprite.top + sprite.height * .88 - branchY);
+    })).toBeLessThan(1.5);
+    await expect(page.getByRole('button', { name: 'Owl sounds' })).toBeInViewport();
+  }
+});

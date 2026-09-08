@@ -22,11 +22,13 @@
 .night-toggle{position:absolute;right:40px;top:32px;width:48px;height:48px;border:1px solid #fff8dd40;border-radius:50%;display:grid;place-items:center;background:#163a3059;color:#fff5d4;backdrop-filter:blur(12px);z-index:3;transition:background .3s}
 .night-toggle:hover{background:#163a3099}.night-toggle .to-day{display:none}[data-theme=dark] .night-toggle .to-night{display:none}[data-theme=dark] .night-toggle .to-day{display:block}
 .shade{pointer-events:none}
-.owl{position:absolute;left:74%;top:6%;width:56px;height:84px;background:none;padding:0;border:0;transform-origin:50% 95%;z-index:1;filter:brightness(.7) saturate(.75);transition:filter .5s}
-.owl:hover{filter:brightness(.95) saturate(.8)}.owl:focus-visible{outline:1px solid #fff4b9;border-radius:24px}
+.owl{position:absolute;left:var(--perch-x);top:var(--perch-y);width:44px;height:44px;margin-left:-22px;margin-top:-38px;background:none;padding:0;border:0;transform-origin:22px 38px;z-index:1}
+.owl:focus-visible{outline:1px solid #fff4b9;border-radius:24px}
+.owl::after{content:"";position:absolute;width:9px;height:2px;left:18px;top:38px;border-radius:50%;background:#030b1199;opacity:0;transition:opacity .7s}.owl.is-settled::after{opacity:1}
 .landscape .owl img{object-fit:contain;object-position:center;transition:opacity .7s;pointer-events:none}
-.landscape .owl .owl-flight{width:180px;height:120px;left:50%;top:auto;bottom:-3px;transform:translateX(-50%);opacity:1}
-.landscape .owl .owl-rest{inset:0;opacity:0}
+.landscape .owl .owl-flight{width:var(--flight-w);height:var(--flight-h);left:calc(22px - var(--flight-w)/2);top:calc(38px - var(--flight-h)*.74);opacity:1;filter:brightness(.48) saturate(.2)}
+.landscape .owl .owl-rest{width:var(--owl-w);height:var(--owl-h);left:calc(22px - var(--owl-w)/2);top:calc(38px - var(--owl-h)*.88);opacity:0;filter:brightness(.68) saturate(.65);}
 .owl.is-settled .owl-flight{opacity:0}.owl.is-settled .owl-rest{opacity:1}
 .owl.is-flying{pointer-events:none}
-@media(max-width:700px){.night-toggle{right:24px;top:24px}.owl{left:63%;top:14%;width:44px;height:66px}.landscape .owl .owl-flight{width:144px;height:96px}}
+@media(max-width:700px){.night-toggle{right:24px;top:24px}}
+@media(min-aspect-ratio:16/9){.landscape > img{object-position:58% 0%}}

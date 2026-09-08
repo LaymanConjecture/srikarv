@@ -32,6 +32,27 @@ addEventListener('keydown', event => { if (event.key === 'Escape' && world.class
 const nightToggle = document.querySelector('#night-toggle');
 const owl = document.querySelector('#owl');
 const sceneStatus = document.querySelector('#scene-status');
+const landscape = document.querySelector('.landscape');
+const nightImage = document.querySelector('.landscape-night');
+
+// Contact point on the upper edge of the exposed limb in the 1672 × 941 artwork.
+// Match object-fit: cover and object-position rather than anchoring to the viewport.
+function positionOwl() {
+  const width = landscape.clientWidth;
+  const height = landscape.clientHeight;
+  const scale = Math.max(width / 1672, height / 941);
+  const position = getComputedStyle(nightImage).objectPosition.split(' ').map(value => parseFloat(value) / 100);
+  const left = (width - 1672 * scale) * position[0];
+  const top = (height - 941 * scale) * position[1];
+  owl.style.setProperty('--perch-x', `${left + 980 * scale}px`);
+  owl.style.setProperty('--perch-y', `${top + 74 * scale}px`);
+  owl.style.setProperty('--owl-w', `${28 * scale}px`);
+  owl.style.setProperty('--owl-h', `${42 * scale}px`);
+  owl.style.setProperty('--flight-w', `${114 * scale}px`);
+  owl.style.setProperty('--flight-h', `${76 * scale}px`);
+}
+new ResizeObserver(positionOwl).observe(landscape);
+positionOwl();
 let flight;
 let sceneVersion = 0;
 let soundVersion = 0;
