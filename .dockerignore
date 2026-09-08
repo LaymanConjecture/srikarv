@@ -1,0 +1,10 @@
+*
+!Dockerfile
+!nginx.conf
+!index.html
+!404.html
+!style.css
+!main.js
+!assets/
+!assets/*.webp
+!assets/favicon.svg

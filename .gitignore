@@ -1,3 +1,11 @@
-.playwright-mcp/
-.DS_Store
+unpublished/
 internal_thoughts/
+node_modules/
+dist/
+qa/
+test-results/
+playwright-report/
+.DS_Store
+.ink
+WEBSITE_MAP.md
+assets/*.png
