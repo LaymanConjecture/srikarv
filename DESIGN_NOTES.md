@@ -31,3 +31,9 @@ The scene uses matching day/night maps and one transparent traveller sprite. Mob
 The latest user direction removes every map control, footer, counter, walking avatar and NPC except Srikar. Only place labels and Srikar appear over the existing artwork. This explicitly overrides the shared visible theme-toggle requirement for the map only; the landing and reading pages retain theme controls. Links activate immediately. Mobile visitors pan the artwork; mouse dragging and focus-based scrolling also work.
 
 About Me is a separate unfolding parchment page, with subtle paper shading and Baskerville headings. Investments is a separate quiet reading page. Neither has a footer. Actual biography and company data await the user; no claims or companies are invented. Srikar's agent panel is explicitly unavailable until the user supplies the existing agent URL or endpoint; no scripted NPC dialogue is presented as live chat.
+
+## Refined letter
+
+About Me now uses ivory stationery with almost imperceptible grain, a fine inset border, broad margins and an italic Baskerville sign-off. The island is softly blurred behind the sheet. Navigation sits above the paper. The previous yellow scroll rods and striped texture are removed. A short perspective settle replaces the clipped unrolling animation; reduced motion remains static. Dark mode uses a muted evergreen sheet. No footer is added.
+
+The map now uses cover sizing: its artwork is at least as wide and tall as the viewport, eliminating sidebars and ocean-colored bands at every aspect ratio. Overflow remains pannable, with readable landmark labels on phones.

@@ -47,9 +47,9 @@
     if (document.querySelector('#explore').hidden) return;
     const oldWidth = mapWidth;
     const center = oldWidth ? (viewport.scrollLeft + viewport.clientWidth / 2) / oldWidth : .5;
-    const width = Math.max(1040, Math.min(viewport.clientWidth, viewport.clientHeight * 1586 / 992));
+    const width = Math.max(1040, viewport.clientWidth, viewport.clientHeight * 1586 / 992);
     stage.style.width = `${width}px`; stage.style.height = `${width * 992 / 1586}px`;
-    stage.style.marginTop = `${Math.max(0, (viewport.clientHeight - width * 992 / 1586) / 2)}px`;
+    stage.style.marginTop = '0px';
     mapWidth = width;
     viewport.scrollLeft = width * center - viewport.clientWidth / 2;
   }
