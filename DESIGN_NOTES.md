@@ -11,3 +11,7 @@ Generated day and night images use the built-in image generation tool. Prompts a
 ## Minimal presentation revision
 
 The user explicitly requested removal of all header/footer branding and controls, ornaments and supporting copy. The title screen now contains only “Hello, wanderer”, “I'm Srikar.” and “Learn More”. This overrides the shared visible dark-mode-toggle rule. The scene defaults to day and no longer reads a saved theme or initializes audio. Learn More retains the existing clear-view interaction pending further content direction.
+
+## Night owl revision
+
+The next user request restores a single day/night symbol, with quiet owl calls and an owl flying to the tree. Header/footer branding remains removed. Night mode crossfades the landscape and brings a generated owl sprite along a 6.2-second glide into the canopy, then blends to a resting pose. Clicking the owl toggles quiet, locally synthesized three-note hoots spaced 18–24 seconds apart. Day mode cancels flight and sound. Calls stop while the tab is hidden. Saved night mode restores a perched, silent owl without autoplay; other tabs synchronize the appearance without playing sound. Reduced motion skips the flight. The final sprites are `assets/owl-flight.webp` and `assets/owl-rest.webp`; original transparent PNGs remain local and ignored.

@@ -18,3 +18,15 @@
 @media(max-width:700px){.world{min-height:600px}.topbar{padding:24px;gap:16px}.wordmark{font-size:22px;gap:8px}.emblem{font-size:28px;margin-right:0}.controls{gap:0;padding:4px}.control-divider{margin:0}.theme-button{min-width:72px;padding:0 8px}.landscape img{object-position:60% center}.intro{left:24px;right:24px;top:29%;max-width:100%}h1{font-size:clamp(42px,10vw,64px);letter-spacing:-1.5px}.eyebrow{font-size:10px;letter-spacing:2px}.welcome{font-size:14px;margin-bottom:32px}.title-ornament{margin-bottom:24px}.shade{background:linear-gradient(90deg,#0f251f99,#0f251f22),linear-gradient(180deg,#0c221a4d,transparent 28%,transparent 68%,#0b1c23b3)}.scene-footer{left:24px;right:24px;bottom:24px}.footer-note{display:none}.return-button{left:24px;bottom:88px}.scene-index span{width:24px}}
 @media(max-width:359px){.topbar{padding:16px}.wordmark{font-size:20px}.emblem{display:none}.intro{left:24px;right:16px}h1{font-size:42px}.scene-footer{left:24px;right:24px}.icon-button{min-width:40px}.theme-button{min-width:66px}.eyebrow{letter-spacing:1.5px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.landscape{transform:scale(1.01)!important}}
+
+.night-toggle{position:absolute;right:40px;top:32px;width:48px;height:48px;border:1px solid #fff8dd40;border-radius:50%;display:grid;place-items:center;background:#163a3059;color:#fff5d4;backdrop-filter:blur(12px);z-index:3;transition:background .3s}
+.night-toggle:hover{background:#163a3099}.night-toggle .to-day{display:none}[data-theme=dark] .night-toggle .to-night{display:none}[data-theme=dark] .night-toggle .to-day{display:block}
+.shade{pointer-events:none}
+.owl{position:absolute;left:74%;top:6%;width:56px;height:84px;background:none;padding:0;border:0;transform-origin:50% 95%;z-index:1;filter:brightness(.7) saturate(.75);transition:filter .5s}
+.owl:hover{filter:brightness(.95) saturate(.8)}.owl:focus-visible{outline:1px solid #fff4b9;border-radius:24px}
+.landscape .owl img{object-fit:contain;object-position:center;transition:opacity .7s;pointer-events:none}
+.landscape .owl .owl-flight{width:180px;height:120px;left:50%;top:auto;bottom:-3px;transform:translateX(-50%);opacity:1}
+.landscape .owl .owl-rest{inset:0;opacity:0}
+.owl.is-settled .owl-flight{opacity:0}.owl.is-settled .owl-rest{opacity:1}
+.owl.is-flying{pointer-events:none}
+@media(max-width:700px){.night-toggle{right:24px;top:24px}.owl{left:63%;top:14%;width:44px;height:66px}.landscape .owl .owl-flight{width:144px;height:96px}}

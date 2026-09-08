@@ -8,23 +8,35 @@
   <title>Srikar · A little corner of the world</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/valley-day.webp" fetchpriority="high">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('srikar-theme') === 'dark' ? 'dark' : 'light'; } catch {}
+  </script>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
 <body>
   <main class="world" id="world" aria-label="An illustrated mountain valley">
-    <div class="landscape" aria-hidden="true">
+    <div class="landscape">
       <img class="landscape-day" src="assets/valley-day.webp" alt="" fetchpriority="high" width="1672" height="941">
       <img class="landscape-night" src="assets/valley-night.webp" alt="" width="1672" height="941">
+      <button class="owl" id="owl" hidden aria-label="Owl sounds" aria-pressed="false" title="Play gentle owl sounds">
+        <img class="owl-flight" src="assets/owl-flight.webp" alt="" width="1536" height="1024">
+        <img class="owl-rest" src="assets/owl-rest.webp" alt="" width="1024" height="1536">
+      </button>
     </div>
     <div class="shade" aria-hidden="true"></div>
     <div class="motes" aria-hidden="true"></div>
+    <button class="night-toggle" id="night-toggle" aria-label="Night mode" aria-pressed="false" title="Night: an owl comes to rest">
+      <svg class="to-night" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14A9 9 0 0 1 10 4a9 9 0 1 0 10 10Z"/></svg>
+      <svg class="to-day" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    </button>
     <section class="intro" aria-labelledby="page-title">
       <h1 id="page-title">Hello, wanderer</h1>
       <p class="welcome">I'm Srikar.</p>
       <button class="enter-button" id="enter"><span>Learn More</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
     </section>
     <button class="return-button" id="return" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg>Back to the clearing</button>
+    <p class="sr-only" id="scene-status" role="status"></p>
   </main>
 </body>
 </html>
