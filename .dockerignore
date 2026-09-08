@@ -10,3 +10,7 @@
 !assets/
 !assets/*.webp
 !assets/favicon.svg
+!about.html
+!investments.html
+!reading.css
+!reading.js

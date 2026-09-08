@@ -10,7 +10,7 @@ test('keyboard return and responsive composition', async ({ page }, testInfo) =>
   await page.screenshot({ path: `qa/${testInfo.project.name}-desktop-day.png` });
   await page.getByRole('button', { name: 'Learn More' }).click();
   await expect(page.getByRole('region', { name: 'World map', exact: true })).toBeFocused();
-  await expect(page.getByRole('button', { name: /^Visit / })).toHaveCount(8);
+  await expect(page.locator('#landmarks > *')).toHaveCount(8);
   await expect(page.getByRole('heading', { name: 'Hello, wanderer' })).toHaveCount(0);
   await page.keyboard.press('Escape');
   await expect(page.getByRole('button', { name: 'Learn More' })).toBeFocused();

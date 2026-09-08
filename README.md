@@ -10,11 +10,11 @@ The landing page shows an illustrated valley with subtle pointer parallax and an
 
 ## World map
 
-Eight landmarks open About Me, Blog, Science of Progress, Eternis, Autonomous Government, Freysa, Holons and Investments. The content and coordinates are in `map.js`; all destination content is short introductory/coming-soon copy. No archived articles are imported.
+The map contains eight place labels and one Srikar character. No toolbar, footer, other characters, walking avatar, route indicators, visit counters or zoom controls remain. Touch scrolling, mouse dragging and keyboard focus keep offscreen labels reachable. Escape returns to the landing. The map inherits the landing's day/night choice and mutes owl calls when entered.
 
-Click a place and the traveller follows connected paths to it. Click open ground to walk to the nearest path; arrow keys or WASD allow wandering on the island, and Enter/E interacts with a nearby destination or character. Srikar's guide, the archivist and the keeper offer authored dialogue choices. These are game characters, not live chat or an AI impersonation. Full collision physics and a 3D engine are outside this iteration.
+Eternis links directly to https://eternis.ai and Freysa to https://freysa.ai. About Me opens `about.html`, with an unfolding parchment (reduced motion skips the animation). Investments opens `investments.html`; its list is intentionally empty until the user supplies companies. Both pages have a return link to `/#world` and a theme toggle, with no footer. Blog remains unpublished; the other unconfigured destinations retain short coming-soon panels.
 
-On phones the map can be panned. Places provides direct destination access; zoom and Find my traveller manage the view. Visits are stored locally when available. Dialogs support keyboard focus and Escape; Escape closes a dialog or Places first, then returns from the world to the landing. Day/night applies to the map and dialogs too. The map adds a mute control for the existing owl calls.
+Clicking Srikar opens an agent panel. **Live chat is not connected:** no agent URL or API endpoint has been supplied. The panel states this clearly and sends no messages. Replace this unavailable state with the user's actual agent integration once provided; never put private agent credentials in this static repository. Biography and investment copy also await the user.
 
 Public assets are explicitly allowlisted in `scripts/build.mjs`, `Dockerfile` and `.dockerignore`. When changing frontend assets, update their URL version in index.html to avoid stale CDN combinations.
 

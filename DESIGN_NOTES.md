@@ -25,3 +25,9 @@ The resting sprite is now `assets/owl-rest-v2.webp`, repainted using the nightti
 Learn More now opens an interactive island with all eight requested destinations. Each building is a focusable HTML hit area aligned to the generated map, with a readable label. Paths connect a central plaza to the destinations; the traveller follows a shortest route over these paths when visiting. Three authored NPCs offer dialogue choices. They do not claim to be live chat. The user's actual biography, project details and company list remain to be supplied; destination panels use explicit introductory/coming-soon text, and Blog has no published essays.
 
 The scene uses matching day/night maps and one transparent traveller sprite. Mobile uses a pannable map plus a Places list, preserving label size and touch targets. Zoom, recenter, keyboard movement, reduced motion, visited progress, focus return and native modal dialogs are supported. Map controls are part of the game view; the simple landing presentation and icon-only day/night toggle remain intact.
+
+## Quiet island revision
+
+The latest user direction removes every map control, footer, counter, walking avatar and NPC except Srikar. Only place labels and Srikar appear over the existing artwork. This explicitly overrides the shared visible theme-toggle requirement for the map only; the landing and reading pages retain theme controls. Links activate immediately. Mobile visitors pan the artwork; mouse dragging and focus-based scrolling also work.
+
+About Me is a separate unfolding parchment page, with subtle paper shading and Baskerville headings. Investments is a separate quiet reading page. Neither has a footer. Actual biography and company data await the user; no claims or companies are invented. Srikar's agent panel is explicitly unavailable until the user supplies the existing agent URL or endpoint; no scripted NPC dialogue is presented as live chat.

@@ -1,6 +1,5 @@
 const world = document.querySelector('#world');
 const intro = document.querySelector('.intro');
-const returnButton = document.querySelector('#return');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 world.addEventListener('pointermove', event => {
   if (reducedMotion.matches || event.pointerType !== 'mouse') return;
@@ -20,6 +19,8 @@ for (let i = 0; i < 20; i++) {
 
 function immerse(value) {
   world.classList.toggle('map-open', value);
+  document.querySelector('#night-toggle').hidden = value;
+  if (value && typeof muteOwl === 'function') muteOwl();
   intro.inert = value;
   intro.setAttribute('aria-hidden', String(value));
   document.querySelector('.landscape').inert = value;
@@ -27,10 +28,11 @@ function immerse(value) {
   dispatchEvent(new Event(value ? 'world-map:open' : 'world-map:close'));
   (value ? document.querySelector('#map-viewport') : document.querySelector('#enter')).focus({ preventScroll: true });
 }
-document.querySelector('#enter').addEventListener('click', () => immerse(true));
-returnButton.addEventListener('click', () => immerse(false));
+document.querySelector('#enter').addEventListener('click', () => { location.hash = 'world'; });
+addEventListener('DOMContentLoaded', () => { if (location.hash === '#world') immerse(true); });
+addEventListener('hashchange', () => immerse(location.hash === '#world'));
 addEventListener('keydown', event => {
-  if (event.key === 'Escape' && world.classList.contains('map-open') && !document.querySelector('dialog[open]') && document.querySelector('#places-menu').hidden) immerse(false);
+  if (event.key === 'Escape' && world.classList.contains('map-open') && !document.querySelector('dialog[open]')) { history.replaceState(null, '', location.pathname + location.search); immerse(false); }
 });
 
 const nightToggle = document.querySelector('#night-toggle');
@@ -70,9 +72,7 @@ function updateSoundState(enabled) {
   soundEnabled = enabled;
   owl.setAttribute('aria-pressed', String(enabled));
   owl.title = enabled ? 'Quiet the owl' : 'Play gentle owl sounds';
-  document.querySelector('#map-sound').setAttribute('aria-pressed', String(enabled));
 }
-document.querySelector('#map-sound').addEventListener('click', () => owl.click());
 
 function stopCalls() {
   clearTimeout(callTimer);
