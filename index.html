@@ -8,9 +8,6 @@
   <title>Srikar · A little corner of the world</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/valley-day.webp" fetchpriority="high">
-  <script>
-    try { document.documentElement.dataset.theme = localStorage.getItem('srikar-theme') === 'dark' ? 'dark' : 'light'; } catch {}
-  </script>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -22,37 +19,12 @@
     </div>
     <div class="shade" aria-hidden="true"></div>
     <div class="motes" aria-hidden="true"></div>
-    <header class="topbar">
-      <a class="wordmark" href="/" aria-label="Srikar, home"><span class="emblem" aria-hidden="true">✧</span> srikar<span class="wordmark-dot">.</span></a>
-      <div class="controls" aria-label="Scene controls">
-        <button class="icon-button" id="motion" aria-label="Pause animation" aria-pressed="false" title="Pause animation">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause-icon" d="M9 5v14M15 5v14"/><path class="play-icon" d="m9 5 10 7-10 7Z"/></svg>
-        </button>
-        <button class="icon-button" id="sound" aria-label="Ambient sound" aria-pressed="false" title="Ambient sound">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z"/><path class="sound-on" d="M17 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-off" d="m17 10 4 4m0-4-4 4"/></svg>
-        </button>
-        <span class="control-divider" aria-hidden="true"></span>
-        <button class="theme-button" id="theme" aria-label="Dark mode" aria-pressed="false" title="Switch day and night">
-          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14A9 9 0 0 1 10 4a9 9 0 1 0 10 10Z"/></svg>
-          <span id="time-label">Day</span>
-        </button>
-      </div>
-    </header>
     <section class="intro" aria-labelledby="page-title">
-      <div class="title-ornament" aria-hidden="true"><span></span>✧<span></span></div>
-      <p class="eyebrow">A little corner of the world</p>
-      <h1 id="page-title">Hello, wanderer.</h1>
-      <p class="welcome">I'm Srikar. Stay a while.</p>
-      <button class="enter-button" id="enter"><span>Take in the view</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+      <h1 id="page-title">Hello, wanderer</h1>
+      <p class="welcome">I'm Srikar.</p>
+      <button class="enter-button" id="enter"><span>Learn More</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
     </section>
     <button class="return-button" id="return" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg>Back to the clearing</button>
-    <footer class="scene-footer">
-      <div class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/><circle cx="12" cy="12" r="2"/></svg><span>The quiet valley</span></div>
-      <span class="footer-note">Somewhere between wonder and possibility.</span>
-      <div class="scene-index" aria-label="Scene one"><span></span>01</div>
-    </footer>
-    <p class="sr-only" id="status" role="status"></p>
   </main>
 </body>
 </html>

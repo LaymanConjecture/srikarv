@@ -7,3 +7,7 @@ The first iteration is a full-screen illustrated title scene with restrained par
 Writing is archived locally under ignored `unpublished/`. Nothing imports that archive. The build uses an explicit public-file allowlist. Existing public articles are retired by removing their deployed files; source history and the original local blog remain available.
 
 Generated day and night images use the built-in image generation tool. Prompts are in `ASSET_PROMPTS.md`; deployment assets are `assets/valley-day.webp` and `assets/valley-night.webp`. Original PNGs remain locally in assets and are ignored by git.
+
+## Minimal presentation revision
+
+The user explicitly requested removal of all header/footer branding and controls, ornaments and supporting copy. The title screen now contains only “Hello, wanderer”, “I'm Srikar.” and “Learn More”. This overrides the shared visible dark-mode-toggle rule. The scene defaults to day and no longer reads a saved theme or initializes audio. Learn More retains the existing clear-view interaction pending further content direction.

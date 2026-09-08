@@ -6,7 +6,7 @@ A Zelda-inspired illustrated landing scene for srikarv.com. Vanilla HTML, CSS an
 
 Run `npm ci`, then `npm run dev`. The local server serves only the allowlisted `dist/` output. `npm run build` creates that output; `npm test` runs browser checks in Chromium and WebKit (install engines with `npx playwright install chromium webkit`).
 
-The landing page has day/night art, subtle pointer parallax, animated motes, pause, opt-in ambient wind and a clear-view mode. Escape returns to the title. The theme is stored locally and synchronized across tabs. Reduced-motion preferences are respected.
+The landing page shows a daylight valley with subtle pointer parallax and animated motes. The minimal title contains “Hello, wanderer”, “I'm Srikar.” and “Learn More”. Learn More currently opens the existing clear-view mode; Escape returns to the title. Header/footer branding, theme and audio controls were removed at the user's request. Reduced-motion preferences are respected.
 
 ## Content
 
