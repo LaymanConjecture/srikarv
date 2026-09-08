@@ -19,15 +19,19 @@ for (let i = 0; i < 20; i++) {
 }
 
 function immerse(value) {
-  world.classList.toggle('immersed', value);
+  world.classList.toggle('map-open', value);
   intro.inert = value;
   intro.setAttribute('aria-hidden', String(value));
-  returnButton.hidden = !value;
-  (value ? returnButton : document.querySelector('#enter')).focus({ preventScroll: true });
+  document.querySelector('.landscape').inert = value;
+  document.querySelector('#explore').hidden = !value;
+  dispatchEvent(new Event(value ? 'world-map:open' : 'world-map:close'));
+  (value ? document.querySelector('#map-viewport') : document.querySelector('#enter')).focus({ preventScroll: true });
 }
 document.querySelector('#enter').addEventListener('click', () => immerse(true));
 returnButton.addEventListener('click', () => immerse(false));
-addEventListener('keydown', event => { if (event.key === 'Escape' && world.classList.contains('immersed')) immerse(false); });
+addEventListener('keydown', event => {
+  if (event.key === 'Escape' && world.classList.contains('map-open') && !document.querySelector('dialog[open]') && document.querySelector('#places-menu').hidden) immerse(false);
+});
 
 const nightToggle = document.querySelector('#night-toggle');
 const owl = document.querySelector('#owl');
@@ -66,7 +70,9 @@ function updateSoundState(enabled) {
   soundEnabled = enabled;
   owl.setAttribute('aria-pressed', String(enabled));
   owl.title = enabled ? 'Quiet the owl' : 'Play gentle owl sounds';
+  document.querySelector('#map-sound').setAttribute('aria-pressed', String(enabled));
 }
+document.querySelector('#map-sound').addEventListener('click', () => owl.click());
 
 function stopCalls() {
   clearTimeout(callTimer);

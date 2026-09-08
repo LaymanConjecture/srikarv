@@ -6,7 +6,17 @@ A Zelda-inspired illustrated landing scene for srikarv.com. Vanilla HTML, CSS an
 
 Run `npm ci`, then `npm run dev`. The local server serves only the allowlisted `dist/` output. `npm run build` creates that output; `npm test` runs browser checks in Chromium and WebKit (install engines with `npx playwright install chromium webkit`).
 
-The landing page shows an illustrated valley with subtle pointer parallax and animated motes. The minimal title contains “Hello, wanderer”, “I'm Srikar.” and “Learn More”. Learn More currently opens the existing clear-view mode; Escape returns to the title. Header/footer branding stays removed. A moon symbol switches to night, starts quiet synthesized owl calls, and brings an owl gliding into the tree. Click the resting owl to mute/unmute it; daylight stops the calls. Night preference persists, but reloads and synchronized tabs stay silent until a click. Reduced-motion preferences skip the flight.
+The landing page shows an illustrated valley with subtle pointer parallax and animated motes. The minimal title contains “Hello, wanderer”, “I'm Srikar.” and “Learn More”. Learn More opens an explorable island map. Header/footer branding stays removed from the landing page. A moon symbol switches to night, starts quiet synthesized owl calls, and brings an owl gliding into the tree. Click the resting owl to mute/unmute it; daylight stops the calls. Night preference persists, but reloads and synchronized tabs stay silent until a click. Reduced-motion preferences skip the flight.
+
+## World map
+
+Eight landmarks open About Me, Blog, Science of Progress, Eternis, Autonomous Government, Freysa, Holons and Investments. The content and coordinates are in `map.js`; all destination content is short introductory/coming-soon copy. No archived articles are imported.
+
+Click a place and the traveller follows connected paths to it. Click open ground to walk to the nearest path; arrow keys or WASD allow wandering on the island, and Enter/E interacts with a nearby destination or character. Srikar's guide, the archivist and the keeper offer authored dialogue choices. These are game characters, not live chat or an AI impersonation. Full collision physics and a 3D engine are outside this iteration.
+
+On phones the map can be panned. Places provides direct destination access; zoom and Find my traveller manage the view. Visits are stored locally when available. Dialogs support keyboard focus and Escape; Escape closes a dialog or Places first, then returns from the world to the landing. Day/night applies to the map and dialogs too. The map adds a mute control for the existing owl calls.
+
+Public assets are explicitly allowlisted in `scripts/build.mjs`, `Dockerfile` and `.dockerignore`. When changing frontend assets, update their URL version in index.html to avoid stale CDN combinations.
 
 ## Content
 

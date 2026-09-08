@@ -1,5 +1,21 @@
 # Scene assets
 
+## Island map assets
+
+Saved with the built-in image generation tool as `assets/world-map-day.webp`, `assets/world-map-night.webp`, and `assets/traveller.webp`. Original PNGs are local and gitignored.
+
+Day map prompt:
+
+Use case: stylized-concept. Asset: 16:10 landscape interactive fantasy world map for a personal website, extremely beautiful cohesive Zelda Breath of the Wild / cozy adventure game painterly cel-shaded 3D art. High bird's eye oblique orthographic view of one lush green island village surrounded by blue-green water, no horizon. Handcrafted winding paths, stone bridges, grass, little waterfalls, flowers, ancient ruins, rolling green hills and forest. EXACTLY eight clearly distinct destination landmarks arranged around a spacious central circular crossroads/plaza, enough breathing room between them for HTML labels: at 18% across 24% down a cozy small cottage with chimney and garden; 17% across 49% down a handsome stone library with blue roof; 42% across 18% down a white astronomical observatory with a brass telescope; 74% across 23% down an enormous ancient luminous tree with a tiny timber sanctuary at its roots; 80% across 49% down a dignified classical circular council hall with columns; 70% across 74% down an elegant small magical crystal shrine with lilac crystals; 45% across 76% down a cluster of three interconnected glass geodesic domes; 20% across 76% down a charming market courtyard with golden awnings and tiny trading stalls. All connect to the central plaza at 48% across 47% down by legible winding sandy footpaths. A small stone campfire circle near central plaza. Clear geographic separation. Sunny late-afternoon golden light, rich sage greens, cream stone, turquoise streams, subtle blue shadows. Rich painterly detail, exceptional landscape artistry. View encompasses the entire island with safe margins. NO people or characters, NO labels, NO text, NO symbols or UI, NO map pins, NO borders, NO vignette. It should feel like a real explorable game environment, not a diagram.
+
+Night map edit prompt (day map as the edit target):
+
+Edit the reference world map into a magical peaceful nighttime version. Preserve EXACTLY every landmark, path, island shoreline, camera angle, framing and layout. Change only lighting and atmosphere: cool blue moonlight on stone roofs and paths, deep teal ocean, dim woodland canopy, a few warm amber cottage/library/market windows, subtle cyan light inside the ancient tree, gentle violet crystal glow and warm observatory lanterns. Keep the map clearly legible, painted in the same sophisticated Zelda-inspired cel-shaded game art direction. No labels, no characters, no added landmarks, no UI, no border.
+
+Traveller prompt:
+
+Use case: stylized-concept. Asset: a tiny character sprite for an overhead oblique Zelda-inspired painted island map. One friendly anonymous adult traveller, entire body visible, wearing a muted moss green hooded cape, brown boots and a small leather backpack. Viewed from above at approximately 45 degrees, three-quarter back view facing toward the upper right, standing with relaxed arms. Correct small game-world proportions, no huge cartoon head, soft broad painterly details, soft neutral outdoor light, no sharp studio highlights. Exactly one isolated character centered. Genuinely transparent alpha background, no checkerboard, no floor, no landscape, no drop shadow, no text. Keep feet fully visible.
+
 Website files: `assets/valley-day.webp`, `assets/valley-night.webp`, `assets/owl-flight.webp`, `assets/owl-rest-v2.webp`. All generated with the built-in tool; originals remain locally as PNGs. Owl sprites retain generated transparency. The original resting owl is retained for history but replaced in the active scene.
 
 ## Resting owl revision: match landscape

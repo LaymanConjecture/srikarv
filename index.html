@@ -11,8 +11,10 @@
   <script>
     try { document.documentElement.dataset.theme = localStorage.getItem('srikar-theme') === 'dark' ? 'dark' : 'light'; } catch {}
   </script>
-  <link rel="stylesheet" href="style.css?v=branch-owl-2">
-  <script src="main.js?v=branch-owl-2" defer></script>
+  <link rel="stylesheet" href="style.css?v=world-map-1">
+  <link rel="stylesheet" href="map.css?v=world-map-1">
+  <script src="main.js?v=world-map-1" defer></script>
+  <script src="map.js?v=world-map-1" defer></script>
 </head>
 <body>
   <main class="world" id="world" aria-label="An illustrated mountain valley">
@@ -35,7 +37,31 @@
       <p class="welcome">I'm Srikar.</p>
       <button class="enter-button" id="enter"><span>Learn More</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
     </section>
-    <button class="return-button" id="return" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg>Back to the clearing</button>
+    <section class="explore" id="explore" aria-label="Srikar's world" hidden>
+      <div class="map-topbar">
+        <button class="map-back map-control" id="return" aria-label="Back to the clearing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg><span>Clearing</span></button>
+        <div class="map-title"><h2>Srikar's world</h2><span id="discovery-count">0 of 8 places visited</span></div>
+        <button class="map-control map-places-toggle" id="places-toggle" aria-expanded="false" aria-controls="places-menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Z M9 3v16m6-14v16"/></svg><span>Places</span></button>
+        <button class="map-control map-sound" id="map-sound" aria-label="Owl sounds" aria-pressed="false" title="Owl sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4Z"/><path d="M17 8a6 6 0 0 1 0 8"/></svg></button>
+      </div>
+      <div class="map-viewport" id="map-viewport" tabindex="0" role="region" aria-label="World map" aria-describedby="map-hint">
+        <div class="map-stage" id="map-stage">
+          <img class="map-art map-art-day" src="assets/world-map-day.webp" alt="A green island with eight landmarks connected by paths, rivers and bridges" width="1586" height="992" loading="lazy">
+          <img class="map-art map-art-night" src="assets/world-map-night.webp" alt="" width="1586" height="992" loading="lazy">
+          <svg class="walking-route" viewBox="0 0 1000 625.47" preserveAspectRatio="none" aria-hidden="true"><polyline id="walking-route" points=""/></svg>
+          <div id="landmarks"></div>
+          <div id="characters"></div>
+          <div class="traveller" id="traveller" style="left:49%;top:53%" aria-label="Your traveller"><span class="traveller-ring"></span><img src="assets/traveller.webp" alt="" width="1024" height="1536"><span class="traveller-name">You</span></div>
+          <div class="walk-marker" id="walk-marker" hidden aria-hidden="true"></div>
+        </div>
+      </div>
+      <p class="map-loading" id="map-loading" role="status">Opening the island…</p>
+      <nav class="places-menu" id="places-menu" aria-label="Places to visit" hidden></nav>
+      <div class="map-help"><button id="meet-guide" class="map-control"><span class="speech-mark" aria-hidden="true">…</span>Meet your guide</button><p id="map-hint">Click a place to visit. Arrow keys to wander.</p></div>
+      <div class="map-zoom" aria-label="Map view controls"><button class="map-control" id="zoom-out" aria-label="Zoom out">−</button><button class="map-control" id="recenter" aria-label="Find my traveller"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg></button><button class="map-control" id="zoom-in" aria-label="Zoom in">+</button></div>
+      <p class="sr-only" id="map-status" role="status"></p>
+    </section>
+    <dialog class="world-dialog" id="world-dialog" aria-labelledby="dialog-title"></dialog>
     <p class="sr-only" id="scene-status" role="status"></p>
   </main>
 </body>

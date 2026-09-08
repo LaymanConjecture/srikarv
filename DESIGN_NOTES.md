@@ -19,3 +19,9 @@ The next user request restores a single day/night symbol, with quiet owl calls a
 ## Branch and lighting correction
 
 The resting sprite is now `assets/owl-rest-v2.webp`, repainted using the nighttime landscape as a lighting/style reference. Its source-space height is 42px, with soft cool shading; the flight sprite is scaled and dimmed to match. A 44px interactive target remains around the small bird. The talon contact point is at (980, 74) on the upper edge of the exposed branch in the original 1672 × 941 landscape. Placement now follows the image's cover scale and object-position through ResizeObserver, rather than arbitrary viewport percentages. The artwork and bird share the same parallax/zoom container. A faint contact shadow rests on the bark. The user requested that the existing icon-only toggle remain unchanged.
+
+## Explorable island
+
+Learn More now opens an interactive island with all eight requested destinations. Each building is a focusable HTML hit area aligned to the generated map, with a readable label. Paths connect a central plaza to the destinations; the traveller follows a shortest route over these paths when visiting. Three authored NPCs offer dialogue choices. They do not claim to be live chat. The user's actual biography, project details and company list remain to be supplied; destination panels use explicit introductory/coming-soon text, and Blog has no published essays.
+
+The scene uses matching day/night maps and one transparent traveller sprite. Mobile uses a pannable map plus a Places list, preserving label size and touch targets. Zoom, recenter, keyboard movement, reduced motion, visited progress, focus return and native modal dialogs are supported. Map controls are part of the game view; the simple landing presentation and icon-only day/night toggle remain intact.
