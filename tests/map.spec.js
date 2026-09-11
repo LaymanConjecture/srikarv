@@ -33,7 +33,8 @@ test('About Me opens a parchment page and returns directly to the island',async(
   await page.getByRole('link',{name:'Investments',exact:true}).click();
   await expect(page).toHaveURL(/investments.html$/);
   await expect(page.getByRole('heading',{name:'Investments'})).toBeVisible();
-  await expect(page.getByText('The company list is coming soon.')).toBeVisible();
+  await expect(page.getByRole('list', {name: "Companies I've backed"}).getByRole('link')).toHaveCount(12);
+  await expect(page.getByRole('link',{name:'Conduit'})).toHaveAttribute('href','https://condu.it/');
   await expect(page.locator('footer')).toHaveCount(0);
 });
 
