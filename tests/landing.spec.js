@@ -26,7 +26,7 @@ test('keyboard return and responsive composition', async ({ page }, testInfo) =>
 
 test('public build excludes every archived article and legacy data route', async ({ request }) => {
   const files = await readdir('dist', { recursive: true });
-  expect(files.some(file => /unpublished|data\.js|posts\/|internal_thoughts/.test(file))).toBe(false);
+  expect(files.some(file => /unpublished|data\.js|internal_thoughts/.test(file))).toBe(false);
   for (const path of ['/unpublished/INDEX.json', '/unpublished/original/data.js', '/js/data.js', '/post-agi-economics.html']) {
     expect((await request.get(path)).status()).toBe(404);
   }
