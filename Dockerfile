@@ -6,3 +6,4 @@ COPY assets/owl-flight.webp assets/owl-rest-v2.webp /usr/share/nginx/html/assets
 COPY map.js map.css /usr/share/nginx/html/
 COPY assets/world-map-day.webp assets/world-map-night.webp assets/traveller.webp /usr/share/nginx/html/assets/
 COPY about.html investments.html reading.css reading.js /usr/share/nginx/html/
+COPY blog.html /usr/share/nginx/html/

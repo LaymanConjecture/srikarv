@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog · Srikar</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('srikar-theme') === 'dark' ? 'dark' : 'light'; } catch {}</script>
+  <link rel="stylesheet" href="reading.css?v=investments-4">
+  <script src="reading.js?v=quiet-map-2" defer></script>
+  <style>
+    .blog-intro { color:var(--muted);font-size:14px;margin-bottom:32px; }
+    .blog-posts { list-style:none;padding:0;margin:0;counter-reset:posts; }
+    .blog-posts li { counter-increment:posts;display:grid;grid-template-columns:24px minmax(0,1fr);gap:24px;padding:28px 0;border-top:1px solid var(--line);align-items:baseline; }
+    .blog-posts li::before { content:counter(posts,decimal-leading-zero);font-size:12px;color:var(--muted); }
+    .blog-posts h2 { font:400 26px/1.4 Baskerville,Georgia,serif;margin:0; }
+    @media(max-width:600px) { .blog-posts li { gap:16px;padding:24px 0; }.blog-posts h2 { font-size:24px; } }
+  </style>
+</head>
+<body>
+  <main class="paper investment-paper">
+    <nav class="reading-controls" aria-label="Page controls">
+      <a class="back-link" href="./#world"><span aria-hidden="true">←</span> Back to the island</a>
+      <button class="theme-toggle" aria-label="Night mode" aria-pressed="false"><svg class="to-night" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14A9 9 0 0 1 10 4a9 9 0 1 0 10 10Z"/></svg><svg class="to-day" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+    </nav>
+    <h1>Blog</h1>
+    <p class="blog-intro">Upcoming essays</p>
+    <ol class="blog-posts" aria-label="Upcoming essays">
+<li><h2>Inside every man there are two wolves</h2></li>
+<li><h2>AI Safety and the future</h2></li>
+<li><h2>A verifiable, autonomous government</h2></li>
+<li><h2>Accelerando</h2></li>
+<li><h2>Musing on Identity</h2></li>
+    </ol>
+  </main>
+</body>
+</html>

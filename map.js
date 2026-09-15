@@ -4,7 +4,7 @@
   const dialog = document.querySelector('#world-dialog');
   const places = [
     {id:'about', title:'About Me', x:21, y:29.5, href:'about.html'},
-    {id:'blog', title:'Blog', x:21, y:51.5, text:'No essays are published here yet.'},
+    {id:'blog', title:'Blog', x:21, y:51.5, href:'blog.html'},
     {id:'progress', title:'Science of Progress', x:51, y:21.5, text:'More about Science of Progress is coming soon.'},
     {id:'eternis', title:'Eternis', x:76, y:32.5, href:'https://eternis.ai'},
     {id:'government', title:'Autonomous Government', x:79, y:59.5, text:'More about Autonomous Government is coming soon.'},
