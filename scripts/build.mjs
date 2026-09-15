@@ -15,3 +15,9 @@ await mkdir('dist/posts', { recursive: true });
 for (const file of ['inside-every-man-there-are-two-wolves.html', 'ai-safety-and-the-future.html', 'a-verifiable-autonomous-government.html', 'accelerando.html', 'musing-on-identity.html', 'taxonomy-of-living-systems.html', 'capitalism-and-post-human-markets.html']) {
   await copyFile(`posts/${file}`, `dist/posts/${file}`);
 }
+
+await mkdir('dist/assets/h100/vendor', { recursive: true });
+await copyFile('posts/inside-an-h100.html', 'dist/posts/inside-an-h100.html');
+for (const file of ['atlas.css', 'atlas.js', 'vendor/three.core.js', 'vendor/three.module.js', 'vendor/OrbitControls.js', 'vendor/THREE-LICENSE.txt']) {
+  await copyFile(`assets/h100/${file}`, `dist/assets/h100/${file}`);
+}

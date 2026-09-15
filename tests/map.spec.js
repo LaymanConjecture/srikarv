@@ -13,7 +13,7 @@ test('quiet map has eight labels, only Srikar, and correct direct links', async(
     await page.getByRole('link',{name,exact:true}).click();await expect(page).toHaveURL(href+'/');await page.goBack();
   }
   await page.getByRole('link',{name:'Blog',exact:true}).click();
-  await expect(page.getByRole('list',{name:'Upcoming essays'}).getByRole('heading')).toHaveCount(7);
+  await expect(page.getByRole('list',{name:'Essays and explorations'}).getByRole('link',{name:'Inside an H100',exact:true})).toBeVisible();
   await page.getByRole('link',{name:'Back to the island'}).click();await expect(page.getByRole('region',{name:'World map',exact:true})).toBeVisible();
   await page.getByRole('button',{name:'Chat with Srikar’s agent'}).click();
   await expect(page.getByRole('dialog')).toContainText('The agent is not connected yet.');

@@ -29,3 +29,21 @@ Established repository: `LaymanConjecture/srikarv`, branch `public`. GitHub Page
 Ink deployment: workspace `eternis`, project/service `srikar-homepage`, same GitHub repository and `public` branch. Docker serves an explicit allowlist using nginx on port 80. Verify both the GitHub Pages build revision and Ink active revision after pushing.
 
 The original personal_blog checkout has separate unpublished work. Do not push its stale public branch over this replacement. Continue website work in this homepage checkout.
+
+### H100 interactive article
+
+`posts/inside-an-h100.html` is the public H100 SXM 80 GB atlas. Its forty
+component explanations are authored in `scripts/h100-content.mjs`; run
+`node scripts/render-h100.mjs` after editing that catalogue. The rest of the
+article is ordinary HTML. The procedural model, accessible controls, and
+idealized roofline calculator live in `assets/h100/atlas.js` and `atlas.css`.
+Three.js 0.186.0 and OrbitControls are served locally from `assets/h100/vendor/`
+with their MIT license. The catalogue remains readable without JavaScript;
+search and explanations still work if WebGL or a 3D module fails.
+
+The model is explicitly schematic, not CAD, a teardown, or a transistor map.
+Keep architecture counts separate from shipping-product performance rates,
+and preserve dense/sparse and bidirectional-bandwidth qualifiers when editing.
+Run `npm test -- tests/h100.spec.js tests/blog.spec.js tests/map.spec.js` for the
+interactive article and its navigation. Build and Docker use explicit public
+file allowlists; the research notes and unpublished writing remain local.
