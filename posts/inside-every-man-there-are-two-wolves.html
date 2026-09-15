@@ -10,7 +10,13 @@
   <script src="../reading.js?v=quiet-map-2" defer></script>
   <style>
     .post-title { font-size:clamp(32px,5vw,48px);line-height:1.2;letter-spacing:-.7px;overflow-wrap:break-word; }
-    .post-status { color:var(--muted);font-size:14px; }
+    .aphorisms { list-style:none;padding:0;margin:48px 0 0;counter-reset:aphorism; }
+    .aphorisms li { counter-increment:aphorism;padding:28px 0;border-top:1px solid var(--line); }
+    .aphorisms li::before { content:counter(aphorism) '.';display:block;margin-bottom:8px;font:400 14px/1 Baskerville,Georgia,serif;color:var(--muted); }
+    .aphorisms p { font:400 19px/1.75 Baskerville,Georgia,serif;margin:0 0 16px; }
+    .aphorisms p:last-child { margin-bottom:0; }
+    .aphorisms .coda p { margin:0;font-style:italic; }
+    @media(max-width:600px) { .aphorisms p { font-size:18px; } }
   </style>
 </head>
 <body>
@@ -21,7 +27,26 @@
     </nav>
     <article aria-labelledby="post-title">
       <h1 class="post-title" id="post-title">Inside every man there are two wolves</h1>
-      <p class="post-status">Coming soon.</p>
+      <ol class="aphorisms">
+        <li><p>AI will enable us to create, and solve, millions of problems. We will be surprised by how much of the world was bottlenecked by intelligence. It also massively increases the surface area of existential threats to humanity.</p></li>
+        <li><p>Elon Musk is concerned about AI safety. He believes it could lead to existential threats. And he wants to “win”: to be the one who leads humanity forward, to make sure he is the one who creates AGI.</p></li>
+        <li><p>Bernie Sanders has valid concerns about AI safety, and is wrong about how capitalism and socialism interact in a world where humans are productive.</p></li>
+        <li><p>Capitalism with humans is a great system for production. <em>And</em> it leads to destructive runaway processes in a world where AI agents have superhuman qualities.</p></li>
+        <li>
+          <p>Humans are capable of great feats. We constructed everything we see in the world. We dumb apes have created things far beyond us. This is a great triumph.</p>
+          <p>Yet we still lie, cheat, hurt each other, create inefficiencies on purpose, and generally ignore truth and reason in favor of tribal associations. We abandon first-principles thinking in order to force reasoning by analogy.</p>
+        </li>
+        <li><p>AIs can be tools. They can <em>also</em> be systems with much larger action spaces, capable of consciousness, self-replication, will, agency, and long-term objectives.</p></li>
+        <li><p>p(doom) and p(abundance) can both be high.</p></li>
+        <li><p>Bond rates can be high <em>and</em> economic growth can be high. Interest and borrowing rates can be high <em>and</em> GDP growth can be high.</p></li>
+        <li><p>People can be rational in one-on-one conversations <em>and</em> mad in groups.</p></li>
+        <li class="coda">
+          <p>Yin and yang.</p>
+          <p>Light and dark.</p>
+          <p>Two sides to every coin.</p>
+          <p>Two wolves in every man.</p>
+        </li>
+      </ol>
     </article>
   </main>
 </body>

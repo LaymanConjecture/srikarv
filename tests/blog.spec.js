@@ -9,7 +9,7 @@ test('each blog title opens its own reloadable post page and returns',async({pag
   await page.getByRole('link',{name:title,exact:true}).click();
   await expect(page).toHaveURL(new RegExp(href+'$'));
   await expect(page.getByRole('heading',{level:1,name:title,exact:true})).toBeVisible();
-  await page.reload();await expect(page.locator('.post-status, .essay').first()).toBeVisible();
+  await page.reload();await expect(page.locator('.aphorisms, .post-body, .post-status, .essay').first()).toBeVisible();
   await page.getByRole('link',{name:'Back to Blog'}).click();
  }
  await page.setViewportSize({width:320,height:844});
