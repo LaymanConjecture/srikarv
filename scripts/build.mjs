@@ -12,6 +12,6 @@ for (const file of ['valley-day.webp', 'valley-night.webp', 'owl-flight.webp', '
 console.log('Built public website. Unpublished writing excluded.');
 
 await mkdir('dist/posts', { recursive: true });
-for (const file of ['inside-every-man-there-are-two-wolves.html', 'ai-safety-and-the-future.html', 'a-verifiable-autonomous-government.html', 'accelerando.html', 'musing-on-identity.html']) {
+for (const file of ['inside-every-man-there-are-two-wolves.html', 'ai-safety-and-the-future.html', 'a-verifiable-autonomous-government.html', 'accelerando.html', 'musing-on-identity.html', 'taxonomy-of-living-systems.html', 'capitalism-and-post-human-markets.html']) {
   await copyFile(`posts/${file}`, `dist/posts/${file}`);
 }

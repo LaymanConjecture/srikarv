@@ -3,7 +3,7 @@ test('each blog title opens its own reloadable post page and returns',async({pag
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/blog.html');
  const links=await page.locator('.blog-posts a').evaluateAll(els=>els.map(e=>({title:e.textContent,href:e.getAttribute('href')})));
- expect(links).toHaveLength(5);
+ expect(links).toHaveLength(7);
  for(const {title,href} of links){
   await page.getByRole('link',{name:title,exact:true}).click();
   await expect(page).toHaveURL(new RegExp(href+'$'));
