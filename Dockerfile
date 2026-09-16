@@ -13,3 +13,5 @@ COPY posts/taxonomy-of-living-systems.html posts/capitalism-and-post-human-marke
 COPY posts/inside-an-h100.html /usr/share/nginx/html/posts/
 COPY assets/h100/atlas.css assets/h100/atlas.js /usr/share/nginx/html/assets/h100/
 COPY assets/h100/vendor/three.core.js assets/h100/vendor/three.module.js assets/h100/vendor/OrbitControls.js assets/h100/vendor/THREE-LICENSE.txt /usr/share/nginx/html/assets/h100/vendor/
+
+COPY assets/autonomous-government.webp /usr/share/nginx/html/assets/

@@ -21,3 +21,5 @@ await copyFile('posts/inside-an-h100.html', 'dist/posts/inside-an-h100.html');
 for (const file of ['atlas.css', 'atlas.js', 'vendor/three.core.js', 'vendor/three.module.js', 'vendor/OrbitControls.js', 'vendor/THREE-LICENSE.txt']) {
   await copyFile(`assets/h100/${file}`, `dist/assets/h100/${file}`);
 }
+
+await copyFile('assets/autonomous-government.webp', 'dist/assets/autonomous-government.webp');
