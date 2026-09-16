@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humans, digital twins, and governance over verifiable autonomous institutions. What would it take to close the gap between public decisions and their execution?">
+  <link rel="canonical" href="https://srikarv.com/posts/a-verifiable-autonomous-government.html">
   <title>A verifiable, autonomous government · Srikar</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <script>try { document.documentElement.dataset.theme = localStorage.getItem('srikar-theme') === 'dark' ? 'dark' : 'light'; } catch {}</script>
@@ -10,7 +12,16 @@
   <script src="../reading.js?v=quiet-map-2" defer></script>
   <style>
     .post-title { font-size:clamp(32px,5vw,48px);line-height:1.2;letter-spacing:-.7px;overflow-wrap:break-word; }
-    .post-status { color:var(--muted);font-size:14px; }
+    .paper { min-width:0; }
+    .post-body { margin-top:48px;min-width:0; }
+    .post-body p { font:400 18px/1.8 Baskerville,Georgia,serif;margin:0 0 24px; }
+    .post-body a, .post-sources a { text-decoration-color:var(--line);text-underline-offset:4px; }
+    .post-body a:hover, .post-sources a:hover { text-decoration-color:currentColor; }
+    .post-sources { margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px;line-height:1.8; }
+    .post-sources summary { cursor:pointer;min-height:44px;padding:8px 0; }
+    .post-sources summary:focus-visible { outline:2px solid #739068;outline-offset:5px; }
+    .post-sources p { font-size:12px; }
+    @media(max-width:600px) { .post-body p { font-size:17px; } }
   </style>
 </head>
 <body>
@@ -21,7 +32,43 @@
     </nav>
     <article aria-labelledby="post-title">
       <h1 class="post-title" id="post-title">A verifiable, autonomous government</h1>
-      <p class="post-status">Coming soon.</p>
+      <div class="post-body">
+        <p>As a kid, I was struck by the rampant corruption in India. How could a road take years to fix while politicians became wealthy, promising to improve people’s lives? How could children without hands be begging on the streets, digging through trash for food?</p>
+        <p>This is true all around the world. Politics is an avenue for power for most.</p>
+        <p>And within every man there are two wolves. People want to do good <em>and</em> be self-serving, to use their power for profit. People fall along a spectrum. A system that depends on the right person resisting the wrong incentive will eventually disappoint us.</p>
+        <p>This is why I was fascinated by crypto. Could important systems function provably, autonomously, without giving the people participating in them the option to quietly manipulate the rules in their favor?</p>
+        <p>Bitcoin showed what that could look like for money. Ethereum extended it to programmable rules. But computation directly on these networks is expensive and constrained. Much of what governments do also involves interpreting messy situations, weighing evidence, and making decisions that are difficult to express as a short program.</p>
+        <p>With LLMs, the range of things a system can attempt changes dramatically. We can begin to imagine agents administering institutions, reasoning about their work, and acting without a human approving every step. We can also begin to ask which parts of their execution we can verify.</p>
+        <p>How could this work?</p>
+        <p>Imagine AI agents operating inside trusted execution environments, or TEEs. Different agents perform different roles in government. Each has been built for particular functions and tested across thousands of scenarios. Planning, procurement, payments, auditing. Their authority is explicit. Their actions leave records we can check.</p>
+        <p>Simulations would help us learn how they behave. They would not tell us everything they might do. So the ability to act would also have limits enforced outside the model: which funds it can spend, which recipients it can pay, what evidence it needs, and when it must stop for review.</p>
+        <p>A persuasive answer from an agent should not be enough to move public money.</p>
+        <p>But who decides what these agents are supposed to do?</p>
+        <p>This is where the idea of a digital twin becomes important. In Freysa’s <a href="https://www.freysa.ai/manifesto">Exocortex Manifesto</a>, a twin is the agent of your extended mind: a system that knows something about your values and can represent you. The manifesto connects that to participation in governance, shared institutions, and ownership of the infrastructure on which intelligence runs.</p>
+        <p>The direction I am interested in is:</p>
+        <p><strong>Humans → twins → governance over autonomous institutions → the world.</strong></p>
+        <p>Every human can still participate. But participation no longer has to end when you run out of time to read another document or attend another meeting. Your twin can study a proposal, compare alternatives, ask questions, and represent your preferences within the authority you have given it.</p>
+        <p>Freysa has already explored a small version of this. Its <a href="https://freysa-ai-blog.ghost.io/it-begins-with-privacy/">account of Act IV</a> describes twins acting for people in polls, payments, and a private social network. That is an experiment in the direction of the system, rather than evidence that we already know how to govern a country this way.</p>
+        <p>A twin would not get an additional political identity just because it exists. Ten copies of my agent should not give me ten votes. Nor should the person who can afford more computation automatically get more authority over everyone else.</p>
+        <p>And it has to remain <em>my</em> representative. I should be able to see what it has done, correct it, withdraw its authority, replace it, or participate directly. It may infer what I care about, but an inference should not quietly become permission. If it is unsure what I would want, asking me is part of doing its job.</p>
+        <p>The distinction between the personal twin and the government agent matters. My twin represents me. A government agent has to operate under the rules we have collectively adopted. It does not get to decide that its own understanding of my interests overrides those rules.</p>
+        <p>Freysa’s <a href="https://framework.freysa.ai/sovereign-agents-framework/architecture">technical framework</a> describes several relevant pieces: agents controlling credentials, governed software updates, continuity of state, and authenticated observations of the outside world. These give us a starting point. But applying them to government raises a further question: who controls the controls?</p>
+        <p>If an administrator can install new instructions whenever they want, then the administrator still holds the real power. If a recovery process gives someone unrestricted access to the treasury, the possibility of a side deal remains. The rules for updates, recovery, and emergencies have to be part of the system we govern. They cannot be a private exception to it.</p>
+        <p>TEEs can give us evidence that approved software is operating inside a protected environment, under the hardware’s security assumptions. We would need that evidence to cover the relevant model, configuration, state, and path to action. A protected proxy talking to an outside model does not automatically make that model’s computation verifiable.</p>
+        <p>Where we do not want to rely on hardware guarantees alone, we can also use cryptographic proofs of execution, including zero-knowledge proofs. These can establish that a specified computation followed its rules. Producing proofs for large models can be costly, so an initial system might prove narrower things: that a tally was computed correctly, a payment stayed within an approved budget, or a state change was authorized.</p>
+        <p>There is an important limit to all this. A system can follow its rules perfectly and still make a bad decision. The rules can be bad. The information can be false. The model can misunderstand a situation.</p>
+        <p>Return to the road.</p>
+        <p>People and their twins could decide which repairs matter most. An agent could run procurement under an approved process. A payment could be limited to the agreed contractor, amount, and milestone. Anyone entitled to inspect the record could see which rule authorized it.</p>
+        <p>But someone still has to establish that the road was repaired. A cryptographic signature on an inspection report tells us who signed it. It does not make the report true. We would still need inspections, independent evidence, ways to challenge a claim, and consequences when someone lies.</p>
+        <p>This is where the architecture has to meet the world. If we automate payments while leaving the evidence in the hands of one corrupt official, we have only moved the opportunity for corruption.</p>
+        <p>The same applies to appeals. A person needs a way to challenge a decision, including a decision made by their own twin. Verifiability should make it easier to find the mistake and establish who had authority. It should not make an incorrect decision permanent merely because the computation was valid.</p>
+        <p>There is also a question of who owns the machinery. If everyone has a twin but one company controls the models, memories, updates, and access to compute, that company has extraordinary influence over what everyone’s representative sees and does. Portability, privacy, the ability to switch providers, and access to infrastructure are part of governance itself. They shape whether representation is real.</p>
+        <p>I would start with something small enough to understand from beginning to end. A shared maintenance budget. A bounded procurement process. A system where we can follow a decision from a person’s preferences to an authorized action, and then to what actually happened.</p>
+        <p>That would let us test the parts separately. Does the twin represent the person? Did the institution follow the adopted policy? Was the evidence reliable? Could anyone bypass the rules? What happened when someone objected?</p>
+        <p>The future I want is a government that operates as intended, where humans still govern and express their preferences while execution becomes increasingly autonomous and verifiable. Public actions should follow public authority. They should not depend on a private conversation with the person holding office.</p>
+        <p>We will still disagree about what the government should do. We should be able to. But once we have decided, there is no reason to accept an unaccountable gap between the decision and its execution as a permanent feature of government.</p>
+      </div>
+      <details class="post-sources"><summary>Technical references</summary><p>Technical background: <a href="https://www.rfc-editor.org/rfc/rfc9334">remote attestation architecture</a>, <a href="https://ethereum.org/developers/docs/scaling/zk-rollups/">validity proofs and state transitions</a>, and <a href="https://framework.freysa.ai/tls-attestations/architecture">Freysa’s observation / attestation design</a>. These are proposed extensions, not claims about Freysa’s deployed capabilities.</p></details>
     </article>
   </main>
 </body>
